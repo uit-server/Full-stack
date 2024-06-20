@@ -1,0 +1,39 @@
+.translateBtn{
+    min-width: 142px;
+    height: 72px;
+    border: none;
+    outline: none;
+    background: none;
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding: 0 0 0 30px;
+}
+
+.translateBtn span{
+    font-size: 24px;
+    font-weight: 500;
+    color: #1C1D20;
+    transition-duration: 0.3s;
+    padding: 5px;
+    padding-top: 2px;
+    letter-spacing: 0.7px;
+}
+
+@media only screen and (max-width:1024px){
+    .translateBtn{
+        position: absolute;
+        top: 2.6rem;
+        left: 0.2rem;
+        padding: 0;
+        width: auto;
+        height: auto;
+        gap: 8px;
+    }
+    .translateBtn span{
+        color: #fff;
+        font-size: 20px;
+    }
+}

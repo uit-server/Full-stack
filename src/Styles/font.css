@@ -1,0 +1,14 @@
+/* @font-face {
+    font-family: 'DegularRegular';
+    src: local('DegularRegular'),
+    url('../Font/DegularDisplay-Medium.otf') format('opentype');
+}
+    p
+    /* url('../Font/pyidaungsu.ttf') format('truetype') */
+
+  @font-face {
+    font-family: 'DegularRegular';
+    src: local('DegularRegular'),
+    url('../Fonts/OldschoolGrotesk-NormalRegular.otf') format('opentype');
+         
+  }

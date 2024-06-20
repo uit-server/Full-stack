@@ -1,0 +1,38 @@
+.frame2 p{
+    line-height: 2.25rem!important;
+    color: var(--clDark);
+}
+
+.frame1 p{
+    color: var(--clDark);
+}
+
+.pale{
+    color: #1c1d20ad!important;
+    font-weight: 500;
+}
+
+.bold{
+    color: #1c1d20c9!important;
+    font-weight: 600;
+}
+
+@media only screen and (min-width:1700px) and (max-width:1849px){
+    .frame3{
+        padding-right: 20rem;
+    }
+}
+
+@media only screen and (min-width:1500px) and (max-width:1699px){
+    .frame3{
+        padding-right: 10rem;
+    }
+}
+
+@media only screen and (min-width:1850px){
+    .frame3{
+        padding-left: 17rem!important;
+        padding-right: 20rem;
+        
+    }
+}

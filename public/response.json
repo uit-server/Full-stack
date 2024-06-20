@@ -1,0 +1,74 @@
+{
+    "confrence":[
+        {
+            "id": 1,
+            "name": "Sample Conference 2024",
+            "paperCall": "Call for Papers 2023",
+            "updated_deadline": "2023-06-01",
+            "original_deadline": "2023-05-01",
+            "status": "open",
+            "accept_noti": "2023-07-01",
+            "email": "conference@example.com",
+            "book": "conference_book.pdf",
+            "brochure": "conference_brochure.pdf",
+            "local_fee": 100,
+            "foreign_fee": 200,
+            "conference_date": "2023-08-15",
+            "paper_format": "PDF",
+            "topics": ["Ai", "Cloud", "Deep Learning"],
+            "images": [
+              {"img":"20240516171320_Americano.jpg","style":"landscape"},
+              {"img":"20240516171320_Americano.jpg","style":"portrait"},
+              {"img":"20240516171320_Americano.jpg","style":"portrait"},
+              {"img":"20240516171320_Americano.jpg","style":"landscape"},
+              {"img":"20240516171320_Americano.jpg","style":"portrait"},
+              {"img":"20240516171320_Americano.jpg","style":"portrait"},
+              {"img":"20240516171320_Americano.jpg","style":"portrait"},
+              {"img":"20240516171320_Americano.jpg","style":"portrait"},
+              {"img":"20240516171320_Americano.jpg","style":"landscape"}
+            ],
+            "created_at": "2024-05-16T17:13:20.000000Z",
+            "updated_at": "2024-05-16T17:13:20.000000Z",
+            "invited_speakers": [
+              "Associate Professor.Jane Smith, Deputy Head, Oxford University Myanmar",
+              "Professor.Sophia Davis, Chair of Faculty, Heidelberg University Germany",
+              "Professor.Liam Anderson, University of Rome Italy"
+            ],
+            "keynote_speakers": [
+              "Professor.John Doe, Head of Department, Harvard University USA",
+              "Senior Lecturer.Michael Brown, Research Lead, University of Melbourne Australia",
+              "Assistant Professor.Olivia Martinez, Coordinator, University of Barcelona Spain",
+              "Professor.James White, Dean, MIT USA"
+            ],
+            "program_committee": {
+              "local": [],
+              "foreign": [
+                "Associate Professor.Jane Smith, Deputy Head, Oxford University Myanmar",
+                "Professor.Sophia Davis, Chair of Faculty, Heidelberg University Germany",
+                "Assistant Professor.Olivia Martinez, Coordinator, University of Barcelona Spain",
+                "Associate Professor.Isabella Thomas, Leiden University Netherlands"
+              ]
+            },
+            "organizing_committee": [
+              "Professor.John Doe, Head of Department, Harvard University USA",
+              "Lecturer.Emily Johnson, University of Toronto Canada",
+              "Research Fellow.William Wilson, Sorbonne University France",
+              "Professor.Liam Anderson, University of Rome Italy",
+              "Professor.James White, Dean, MIT USA"
+            ],
+            "general_chair": [
+              "Professor.John Doe, Head of Department, Harvard University USA",
+              "Professor.Liam Anderson, University of Rome Italy",
+              "Professor.James White, Dean, MIT USA"
+            ],
+            "general_co_chair": [
+              "Senior Lecturer.Michael Brown, Research Lead, University of Melbourne Australia"
+            ],
+            "program_chair": [
+              "Associate Professor.Jane Smith, Deputy Head, Oxford University Myanmar",
+              "Assistant Professor.Olivia Martinez, Coordinator, University of Barcelona Spain"
+            ]
+          }
+          
+    ]
+}
