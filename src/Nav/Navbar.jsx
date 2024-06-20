@@ -53,7 +53,7 @@ function Navbar({sendDataToParent}){
     
 
     return (
-        <header>
+        <header className="relative">
             <Link reloadDocument to="/"><LogoAnimation className='uitLogo'/></Link>
             <nav
              ref={navRef}>

@@ -11,7 +11,7 @@ module.exports = {
         'md': '768px',    // Default medium screen size
         'lg': '1024px',   // Default large screen size
         'xl': '1280px',   // Default extra-large screen size
-        '2xl': '1536px',  // Default 2x-large screen size
+        '2xl': '1670px',  // Default 2x-large screen size
       }
     }
   },
