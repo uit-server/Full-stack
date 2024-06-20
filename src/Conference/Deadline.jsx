@@ -4,15 +4,15 @@ import { useSelector } from 'react-redux';
 export default function Deadline(){
 
     const date = useSelector((state) => state.data.value.updated_deadline);
-    const date2 = useSelector((state) => state.data.value.original_deadline)
+    const date2 = useSelector((state) => state.data.value.original_deadline);
 
-    let updatedDeadline = date.split("-");
-    let originalDeadline = date2.split("-");
+    let updatedDeadline = date ? date.split("-") : [];
+    let originalDeadline = date2 ? date2.split("-") : [];
 
     const month = new Date(date);   
     const month2 = new Date(date2);
-    updatedDeadline[1] = month.toLocaleDateString('en-US', { month: 'long' });
-    originalDeadline[1] = month2.toLocaleDateString('en-US', { month: 'long' });
+    updatedDeadline[1] = month.toLocaleDateString('en-US', { month: 'short' });
+    originalDeadline[1] = month2.toLocaleDateString('en-US', { month: 'short' });
     
     
 

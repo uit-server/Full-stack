@@ -31,7 +31,7 @@ function MajorImg() {
 
     const Pic = styled.div`
 
-    background: url(${props => props.image});
+    background: url(${props => require(`../Images/${props.image}`)});
     background-size: cover;
     width: 100%;
     height: 100%;

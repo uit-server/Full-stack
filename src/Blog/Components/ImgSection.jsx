@@ -68,8 +68,6 @@ function MajorImg({Img,potrait,landscape}) {
          
     }
 
-    console.log(data,boxOne);
-
 
  
 

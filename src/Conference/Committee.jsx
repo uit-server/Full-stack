@@ -19,8 +19,8 @@ export default function Committee() {
     aspect-ratio: 16/9;
     object-fit: cover;
     background-position: center center;
-    
-    
+    width: 60px;
+    height: 60px;
         
 
 
@@ -37,7 +37,7 @@ export default function Committee() {
                   sumChair.map(
                     (item,index) =>
                       <div className=" flex justify-start gap-[10px] w-[350px]">
-                  <Div className="w-[50px] md:w-[75px]  bg-[#ccc] rounded-md" image={item[0]}></Div>
+                  <Div className="flex-none w-[50px] md:w-[75px]  bg-[#ccc] rounded-md" image={item[0]}></Div>
                   <div className="flex flex-col">
                     <p className="text-[11px] md:text-[16px] text-[#3798a6]">{(index <= generalChair.length) ? "General chair by" : (index <= generalChair.length + generalCoChair.length) ? "General co-chair by" : "Program chair by"  }</p>
                     <p className="text-[10px] md:text-[16px] text-[#1c1d20]">{item[1].split(",")[0]}</p>

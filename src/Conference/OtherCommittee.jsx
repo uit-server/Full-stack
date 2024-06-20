@@ -16,8 +16,8 @@ function OtherCommittie(){
     aspect-ratio: 16/9;
     object-fit: cover;
     background-position: center center;
-    
-    
+    width: 60px;
+    height: 60px;
         
 
 
@@ -133,7 +133,7 @@ function OtherCommittie(){
                   {getCategoryData().map((person,index) => (
                     
                     <div key={index} className=" flex justify-start gap-[10px] w-[350px]">
-                      <Div className="w-[50px] md:w-[75px]  bg-[#ccc] rounded-md" image={person[0]}></Div>
+                      <Div className="flex-none w-[50px] md:w-[75px]  bg-[#ccc] rounded-md" image={person[0]}></Div>
                       <div className="flex flex-col">
                         <p className="text-[11px] md:text-[16px] text-[#3798a6]">{person[1].split(",")[0]}</p>
                         <p className="text-[10px] md:text-[16px] text-[#1c1d20] opacity-70">{person[1].split(",")[1]}</p>

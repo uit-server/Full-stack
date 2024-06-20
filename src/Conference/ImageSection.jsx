@@ -14,7 +14,16 @@ const Container = styled.div`
 `;
 
 const Pic1 = styled.div`
-  background: url(${Img});
+  background: url(${props => require(`../Images/${props.img}`)});
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-position: center center;
+  border-radius: 32px;
+`;
+
+const Pic3 = styled.div`
   background-size: cover;
   width: 100%;
   height: 100%;
@@ -82,27 +91,39 @@ function ImageSection() {
   const imgOne = useSelector((state) => state.data.value.images.landscape);
   const imgTwo = useSelector((state) => state.data.value.images.portrait);
 
-  const landscapes = (imgOne.length == 0) ? images.filter(image => image.style === 'landscape') : imgOne;
-  const portraits = (imgTwo.length == 0) ? images.filter(image => image.style === 'portrait') : imgTwo;
+  const landscapes =  imgOne;
+  const portraits =  imgTwo;
 
   // const landscapes = useSelector((state) => state.data.value.images.landscape) || useSelector((state) => state.data.value.images.potrait) ;
   // const portraits = useSelector((state) => state.data.value.images.potrait) || images.filter(image => image.style === 'portrait');
+
+  console.log(landscapes);
 
 
 
   const groupedImages = [];
   let i = 0, j = 0;
 
-  while (i < landscapes.length && j < portraits.length - 1) {
+  while (i < landscapes.length || j < portraits.length - 1 ) {
+   
     const group = [
-      landscapes[i],
-      portraits[j],
-      portraits[j + 1]
     ];
+    if(i < landscapes.length) {
+      group.push(landscapes[i]);
+      i++;
+    }
+
+    if(j < portraits.length - 1) {
+      group.push(portraits[j]);
+      group.push(portraits[j + 1]);
+      j += 2;
+    }
     groupedImages.push(group);
-    i++;
-    j += 2;
+    
+    
   } 
+
+  console.log(groupedImages);
 
 
 
@@ -111,12 +132,13 @@ function ImageSection() {
       {groupedImages.map((group, index) => (
         <div key={index} className='flex flex-col gap-[6px] md:gap-[15px]'>
           <Container>
-            <Pic1 img={group[0].img} />
+           {(landscapes.length != 0) ? <Pic1 img={group[0]} /> : <Pic3 />}
           </Container>
           <GroupContainer>
             {group.slice(1).map((image, idx) => (
               <PortraitWrapper key={idx}>
-                <Pic2 img={image.img} className="pic" />
+                {(portraits.length != 0) ? <Pic2 img={image} className="pic" /> : <Pic3 />}
+                
               </PortraitWrapper>
             ))}
           </GroupContainer>
