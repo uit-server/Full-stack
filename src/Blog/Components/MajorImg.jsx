@@ -26,11 +26,13 @@ function MajorImg({Img}) {
 
     `;
 
+    console.log(Img);
+
 
   return (
         <div className="pt-[10px] lg:scroll-mt-[134px] h-auto" id="image">
             <Container>
-            {Img.map((img) => <Pic className="rounded-[32px] lg:mb-0 mb-10" image={img}></Pic>   )}
+            {(Img.length !== 0) ?  Img.map((img) => <Pic className="rounded-[32px] lg:mb-0 mb-10" image={img}></Pic>   ) : <p></p>}
             </Container>
             
       

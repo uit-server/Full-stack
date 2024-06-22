@@ -7,7 +7,7 @@ import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import { useLocation } from 'react-router-dom';
+import { domRenderShort } from '../../utils/domRender';
 function CuroselDesktop() {
   
   const carouselRef = useRef(null);
@@ -23,7 +23,7 @@ function CuroselDesktop() {
 
   const dataa = useSelector((state) => state.post.value).filter((item) => item.id !== parsedId);
 
-  console.log(dataa);
+
 
   const responsive = {
     desktop: {
@@ -122,7 +122,16 @@ function CuroselDesktop() {
           afterChange={afterChange}
         >
           {dataa.map((item, index) => (
-            <div key={index} className="flex flex-col me-[32px]">
+            <Link to= {`/about/news/${item.id}`} className="" onClick={
+              (event) => {
+                
+                setTimeout(() => {
+                  window.location.reload(false);
+                },200);
+                
+              }}
+              >
+                <div key={index} className="flex flex-col me-[32px]">
               {(item.image) ? <Div className="rounded-[32px] w-full aspect-video bg-[#D9D9D9]" image={item.image}></Div> : <Div2 className="rounded-[32px] w-full aspect-video bg-[#D9D9D9]"></Div2> }
               <div className="relative mt-5">
                 <ul className="absolute top-0 left-[15px] list-disc marker:text-[#3798A6]">
@@ -141,10 +150,12 @@ function CuroselDesktop() {
                   
                 </h5>
               </div>
-              <p className="pt-3 lg:pt-5 font-[350] leading-[21px] lg:leading-[27px] text-sm lg:text-lg">
-                {shortenIt(item.body)}...
+              <p className="pt-3 lg:pt-5 font-[350] leading-[21px] lg:leading-[27px] text-sm lg:text-lg inline-block" dangerouslySetInnerHTML={{ __html: domRenderShort(item.body) }}>
+            
               </p>
             </div>
+              </Link>
+            
           ))}
         </Carousel>
       </div>

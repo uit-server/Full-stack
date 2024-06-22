@@ -5,7 +5,7 @@ function Profile({title,name}) {
         <div className="w-14 lg:w-16 aspect-square bg-[#D9D9D9] rounded-[10px]"> </div>
         <div className="flex flex-col justify-between py-[3px]">
             <h6 className="font-norml text-[#3798A6]  
-             leading-[18px] text-xs md:text-base ">Written by</h6>
+             leading-[18px] text-xs md:text-base ">Post by</h6>
               <h6 className="font-normal 
              leading-[18px] text-xs md:text-base ">{name}
              </h6>

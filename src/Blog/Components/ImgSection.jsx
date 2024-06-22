@@ -51,8 +51,9 @@ function MajorImg({Img,potrait,landscape}) {
         let landscape;
         let potrait = [];
         if(boxOne.length >= 1 )  {
+            
             potrait[0] = boxOne.pop();
-            potrait[1] = boxOne.pop(); 
+            potrait[1] = boxOne.pop();
 
 
 
@@ -68,6 +69,8 @@ function MajorImg({Img,potrait,landscape}) {
          
     }
 
+    console.log(data)
+
 
  
 
@@ -79,9 +82,10 @@ function MajorImg({Img,potrait,landscape}) {
                         {item.landscape && <Div image={item.landscape}></Div> }
                     
                             {(item.potrait.length != 0) &&
-                            <div className="grid grid-cols-2 gap-x-[10px] lg:gap-x-8">    
-                            <Div2  image={item.potrait[0]}></Div2>
-                            <Div2  image={item.potrait[1]}></Div2>
+                            <div className="grid grid-cols-2 gap-x-[10px] lg:gap-x-8">
+                                {item.potrait[0] && <Div2  image={item.potrait[0]}></Div2>}    
+                            
+                            {item.potrait[1] && <Div2  image={item.potrait[1]}></Div2>}
                             </div>}
                       
                     </>
