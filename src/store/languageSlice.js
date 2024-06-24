@@ -11,7 +11,7 @@ export const languageSlice = createSlice({
     
 
       changeLanguage: (state) => {
-        state.value = (state.value == "EN") ? "MYN": "EN";
+        state.value = (state.value == "EN") ? "မြန်မာ": "EN";
         sessionStorage.setItem('language',state.value);
         window.location. reload();
       }

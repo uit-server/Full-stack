@@ -1,7 +1,7 @@
 import React,{useState,useEffect} from "react";
 import '../../Styles/Faculty.css';
 import styled from 'styled-components';
-
+import { Link } from 'react-router-dom';
 
 
 export default function Major({numText,desktopLeftRow,desktopRightRow,mobile,faculty,infoText}){
@@ -30,7 +30,7 @@ export default function Major({numText,desktopLeftRow,desktopRightRow,mobile,fac
 
     return(
         <div className="majorSection py-[72px] ">
-            {!hideDiv && <DesktopSize numText={numText} desktopLeftRow={desktopLeftRow} desktopRightRow={desktopRightRow}  faculty={faculty} infoText={infoText} />}
+            {!hideDiv && <DesktopSize numText={numText} desktopLeftRow={desktopLeftRow} desktopRightRow={desktopRightRow}  faculty={faculty} infoText={infoText}/>}
             {hideDiv && <MobileSize mobile={mobile} faculty={faculty} infoText={infoText} />}
         </div>
     )
@@ -76,8 +76,12 @@ const Div = styled.div`
                         <div className="grid grid-col-1 gap-32 w-full" >
                             {desktopLeftRow.map((item) => 
                             <div>
-                            <Div2 className="fakeImg w-full aspect-square" image={item.image}></Div2>
-                            <h4 className="mt-5">{item.name}</h4>
+                                <Link to={item.link} id="navigation" >
+                                <Div2 className="fakeImg w-full aspect-square" image={item.image}></Div2>
+                                </Link>
+                           
+                            <Link to={item.link} id="navigation" ><h4 className="mt-5">{item.name}</h4></Link>
+                            
                             <p className="mt-5 font-[350px] text-lg leading-7">{infoText}</p>
                             </div>
                             )}
@@ -99,8 +103,15 @@ const Div = styled.div`
                         <div className="grid grid-col-1 gap-32 w-full">
                             {desktopRightRow.map((item) => 
                             <div className="w-full">
+                                
+                                <Link to={item.link} id="navigation" >
                                 <Div className="fakeImg w-full aspect-square" image={item.image}></Div>
+                                </Link>
+                                
+                                <Link to={item.link} id="navigation" >
                                 <h4 className="mt-5">{item.name}</h4>
+                                </Link>
+                                
                                 <p className="mt-5 font-[350px] text-lg leading-7">{infoText}</p>
                             </div>
                             )}
@@ -137,8 +148,15 @@ function MobileSize({numText,faculty,mobile,infoText}){
                 {
                     mobile.map((item) =>
                 <div className="grid grid-col-1 w-full">
+                    
+                    <Link to={item.link} id="navigation" >
                     <Div2 className="w-full aspect-square bg-[#d9d9d9] rounded-[32px] mb-[12px]" image={item.image}></Div2>
-                    <h4>{item.name}</h4>
+                                </Link>
+                    
+                                <Link to={item.link} id="navigation" >
+                                <h4>{item.name}</h4>
+                                </Link>
+                    
                     <p className="my-5 font-[350px] text-lg leading-7">{infoText}</p>
                 </div>
                     )

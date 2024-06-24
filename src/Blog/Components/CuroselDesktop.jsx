@@ -14,6 +14,7 @@ function CuroselDesktop() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [left, setLeft] = useState(false);
   const [right, setRight] = useState(true);
+  const [stop, setStop] = useState(0);
   const { id } = useParams();
   
 
@@ -22,6 +23,8 @@ function CuroselDesktop() {
 
 
   const dataa = useSelector((state) => state.post.value).filter((item) => item.id !== parsedId);
+
+  
 
 
 
@@ -76,6 +79,10 @@ function CuroselDesktop() {
   }
   ];
 
+  useEffect(() => {
+    setStop((window.innerWidth < 1024) ? Math.ceil(data.length/2) : Math.ceil(data.length/3) )
+  },[])
+
   const handlePrevious = () => {
     if (carouselRef.current) {
       carouselRef.current.previous();
@@ -95,17 +102,13 @@ function CuroselDesktop() {
     } else {
       setLeft(true);
     }
-    if (currentSlide >= data.length/2) {
+    if (currentSlide >= stop) {
       setRight(false);
     } else {
       setRight(true);
     }
   };
 
-  function shortenIt(text) {
-    let sample = text.split(" ");
-    return sample.splice(0, 8).join(" ");
-  }
 
   return (
     <div className="lg:py-20 py-16 relative flex lg:flex-row flex-col w-full lg:w-[111%] lg:ms-[-5.5%] lg:gap-y-0 gap-10 lg:gap-0">
@@ -122,7 +125,9 @@ function CuroselDesktop() {
           afterChange={afterChange}
         >
           {dataa.map((item, index) => (
-            <Link to= {`/about/news/${item.id}`} className="" onClick={
+           
+                <div key={index} className="flex flex-col me-[32px]">
+                   <Link to= {`/about/news/${item.id}`} className="" onClick={
               (event) => {
                 
                 setTimeout(() => {
@@ -131,8 +136,9 @@ function CuroselDesktop() {
                 
               }}
               >
-                <div key={index} className="flex flex-col me-[32px]">
-              {(item.image) ? <Div className="rounded-[32px] w-full aspect-video bg-[#D9D9D9]" image={item.image}></Div> : <Div2 className="rounded-[32px] w-full aspect-video bg-[#D9D9D9]"></Div2> }
+                {(item.image) ? <Div className="rounded-[32px] w-full aspect-video bg-[#D9D9D9]" image={item.image}></Div> : <Div2 className="rounded-[32px] w-full aspect-video bg-[#D9D9D9]"></Div2> }
+              </Link>
+              
               <div className="relative mt-5">
                 <ul className="absolute top-0 left-[15px] list-disc marker:text-[#3798A6]">
                   <li className="font-normal text-xs lg:text-base leading-[18px] text-[#1C1D2080]">{item.type}</li>
@@ -154,7 +160,7 @@ function CuroselDesktop() {
             
               </p>
             </div>
-              </Link>
+              
             
           ))}
         </Carousel>

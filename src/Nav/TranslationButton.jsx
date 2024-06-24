@@ -17,7 +17,7 @@ const ToggleButton = () => {
 
 
   const toggleLanguage = () => {
-    setLanguage(prevLanguage => prevLanguage === 'MYN' ? 'EN' : 'MYN');
+    setLanguage(prevLanguage => prevLanguage === 'မြန်မာ' ? 'EN' : 'MYN');
     
     dispatch(changeLanguage());
    
@@ -28,7 +28,7 @@ const ToggleButton = () => {
     <button onClick={toggleLanguage} className='translateBtn'>
       <span style={{opacity:language==='EN'?1:0.5}}>EN</span>
       <span>|</span>
-      <span style={{opacity:language==='MYN'?1:0.5}}>MYN</span>
+      <span style={{opacity:language==='မြန်မာ'?1:0.5}}>မြန်မာ</span>
     </button>
   );
 };

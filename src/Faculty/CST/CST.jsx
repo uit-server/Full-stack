@@ -72,33 +72,39 @@ function Faculty(){
     const desktopLeftRow = [
       {
         name: "Embedded Systems (ES)",
-        image: High
+        image: High,
+        link: "/academic/degree/bachelor/es"
       },
       {
         name: "Cyber Security (CSec)",
-        image: High
+        image: High,
+        link: "/academic/degree/bachelor/csec"
       }
     ]
 
     const desktopRightRow = [
       {
         name: "Communication and Networking (CN)",
-        image: Img
+        image: Img,
+        link: "/academic/degree/bachelor/networking"
       }
     ]
 
     const mobile = [
       {
         name: "Embedded Systems (ES)",
-        image: High
+        image: High,
+        link: "/academic/degree/bachelor/es"
       },
       {
         name: "Communication and Networking (CN)",
-        image: Img
+        image: Img,
+        link: "/academic/degree/bachelor/networking"
       },
       {
         name: "Cyber Security (CSec)",
-        image: Img
+        image: Img,
+        link: "/academic/degree/bachelor/csec"
       }
     ]
 

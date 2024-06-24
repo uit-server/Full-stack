@@ -27,11 +27,11 @@ function Item2(){
           items: [
           {
             text: 'LMS',
-            link: '/academic/lms'
+            link: 'https://lms.uit.edu.mm/'
           },
           {
             text: 'Student Registeration',
-            link: '/academic/student-registeration'
+            link: 'https://stu-reg.uit.edu.mm/'
           },
           {
             text: 'Email Service',
@@ -67,10 +67,6 @@ function Item2(){
         {
           title: 'Updated',
           items: [
-            {
-              text: 'Computer Science',
-              link: '/faculties/computer-science'
-            },
             {
               text: 'Conference',
               link: '/about/conference'

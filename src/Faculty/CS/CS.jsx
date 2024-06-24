@@ -72,41 +72,29 @@ function Faculty(){
     const desktopLeftRow = [
       {
         name: "High Performance Computing (HPC)",
-        image: High
-      },
-      {
-        name: "High Performance Computing (HPC)",
-        image: High
+        image: High,
+        link: "/academic/degree/bachelor/hpc"
       }
     ]
 
     const desktopRightRow = [
       {
         name: "Knowledge Engineering (KE)",
-        image: Img
-      },
-      {
-        name: "Knowledge Engineering (KE)",
-        image: Img
+        image: Img,
+        link: "/academic/degree/bachelor/ke"
       }
     ]
 
     const mobile = [
       {
         name: "High Performance Computing (HPC)",
-        image: High
+        image: High,
+        link: "/academic/degree/bachelor/hpc"
       },
       {
         name: "Knowledge Engineering (KE)",
-        image: Img
-      },
-      {
-        name: "High Performance Computing (HPC)",
-        image: High
-      },
-      {
-        name: "Knowledge Engineering (KE)",
-        image: Img
+        image: Img,
+        link: "/academic/degree/bachelor/ke"
       }
     ]
 

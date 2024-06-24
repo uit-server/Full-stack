@@ -72,25 +72,29 @@ function Faculty(){
     const desktopLeftRow = [
       {
         name: "Software Engineering (SE)",
-        image: High
+        image: High,
+        link: "/academic/degree/bachelor/se"
       }
     ]
 
     const desktopRightRow = [
       {
         name: "Business Information System (BIS)",
-        image: Img
+        image: Img,
+        link: "/academic/degree/bachelor/bis"
       }
     ]
 
     const mobile = [
       {
         name: "Software Engineering (SE)",
-        image: High
+        image: High,
+        link: "/academic/degree/bachelor/se"
       },
       {
         name: "Business Information System (BIS)",
-        image: Img
+        image: Img,
+        link: "/academic/degree/bachelor/bis"
       }
     ]
 
