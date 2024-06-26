@@ -14,7 +14,7 @@ function NavBody() {
     const history = [0];
 
     const links = [
-        ["discription","#overview"],
+        ["Description","#overview"],
         ["Photo","#photo"]
     ]
 

@@ -1,7 +1,9 @@
 import React from "react";
 import { AnimationButton } from "../Components/Footer";
 import { useSelector } from 'react-redux';
-
+import Mailto from '../utils/Mailto';
+  
+   
 
 export default function RegistrationFees(){
 
@@ -16,7 +18,10 @@ export default function RegistrationFees(){
                 <p style={{fontWeight:350}} className="text-[14px] md:text-[18px] text-[#1c1d20] opacity-80">Local participants - {localFee} MMK </p>
                 <div className="flex items-center sm:justify-start justify-between sm:gap-[10px]">
                     <p style={{fontWeight:350}} className="text-[14px] md:text-[18px] text-[#1c1d20] opacity-80">To submit- </p>
+                    <Mailto email={email} subject="" body="">
                     <AnimationButton value={email} width='400px' left='48%' />
+    </Mailto>
+                    
                 </div>
             </div>
         </div>

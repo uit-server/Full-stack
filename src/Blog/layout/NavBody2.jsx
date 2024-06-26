@@ -12,7 +12,7 @@ function NavBody2() {
     const [appear, setAppear] = useState(false);
 
     const links = [
-        ["discription","#overview"],
+        ["Description","#overview"],
         ["Photo","#photo"]
     ]
 

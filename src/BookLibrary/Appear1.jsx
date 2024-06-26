@@ -48,7 +48,7 @@ function Appear1() {
                                 </div>
                                 <div className="w-full">
                                 <AppearTwo className="rounded-[32px] w-full bg-[#D9D9D9] aspect-square "></AppearTwo>
-                            <h3 className="text-2xl font-normal leading-7 w-full mt-[12px]">Meral Portal</h3>
+                            <h3 className="text-2xl font-normal leading-7 w-full mt-[12px]">MERAL Portal</h3>
                                 </div>
                                 
                            

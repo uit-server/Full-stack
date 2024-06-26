@@ -50,7 +50,7 @@ function Appear2() {
                                     <h1 className="font-normal max-[1355px]:text-6xl text-7xl leading-[72px]">We're proud to share you</h1>
                                 </div>
                             <AppearTwo className="rounded-[32px] w-full bg-[#D9D9D9] aspect-square "></AppearTwo>
-                            <h3 className="text-[32px] font-normal leading-9 w-full mt-[20px]">Meral Portal</h3>
+                            <h3 className="text-[32px] font-normal leading-9 w-full mt-[20px]">MERAL Portal</h3>
                             </div>
                             
                             
