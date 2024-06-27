@@ -80,7 +80,7 @@ const Div = styled.div`
                                 <Div2 className="fakeImg w-full aspect-square" image={item.image}></Div2>
                                 </Link>
                            
-                            <Link to={item.link} id="navigation" ><h4 className="mt-5">{item.name}</h4></Link>
+                            <Link to={item.link} id="navigation" ><h4 className="mt-5 hover:hoverMode">{item.name}</h4></Link>
                             
                             <p className="mt-5 font-[350px] text-lg leading-7">{infoText}</p>
                             </div>
@@ -109,7 +109,7 @@ const Div = styled.div`
                                 </Link>
                                 
                                 <Link to={item.link} id="navigation" >
-                                <h4 className="mt-5">{item.name}</h4>
+                                <h4 className="mt-5 hover:hoverMode">{item.name}</h4>
                                 </Link>
                                 
                                 <p className="mt-5 font-[350px] text-lg leading-7">{infoText}</p>
@@ -154,7 +154,7 @@ function MobileSize({numText,faculty,mobile,infoText}){
                                 </Link>
                     
                                 <Link to={item.link} id="navigation" >
-                                <h4>{item.name}</h4>
+                                <h4 className="hover:hoverMode">{item.name}</h4>
                                 </Link>
                     
                     <p className="my-5 font-[350px] text-lg leading-7">{infoText}</p>

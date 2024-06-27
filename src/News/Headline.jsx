@@ -42,7 +42,7 @@ function Headline() {
             language="EN"
             
             />
-            <motion.span initial={{opacity:0}} animate={{opacity:1}} transition={{duration:.3,ease:'easeIn',delay:.4}} className='absolute top-0 right-[-10px] text-xl'>(7)</motion.span> 
+            <motion.span initial={{opacity:0}} animate={{opacity:1}} transition={{duration:.3,ease:'easeIn',delay:.4}} className='absolute top-0 right-[-10px] text-xl'>(6)</motion.span> 
         </span>)}
 
        

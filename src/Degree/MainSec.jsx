@@ -82,7 +82,7 @@ function MainSec() {
                 
                   <h1 className="max-[1170px]:text-[70px] text-[108px]  font-normal leading-[96px]  lg:py-8 border-b border-[#ffffff] block w-[100%] "  onClick={onClick.bind(this,h1.id )}>
                     <AnimatePresence>
-                    <motion.span className="animator" initial={{ color: "#1C1D2080"}} animate={{ color: (h1.id === activeId) ? "#ffffff" : "#FFFFFF80"}} exit={{ color: "#1C1D2080"}} transition={{ type: "spring", stiffness: 100 }}>{h1.heading}</motion.span>
+                    <motion.span whileHover={{color:'#ffffff'}} className="animator " initial={{ color: "#1C1D2080"}} animate={{ color: (h1.id === activeId) ? "#ffffff" : "#FFFFFF80"}} exit={{ color: "#1C1D2080"}} transition={{ type: "spring", stiffness: 100 }}>{h1.heading}</motion.span>
                     </AnimatePresence>
                     
                   <AnimatePresence>
@@ -115,13 +115,13 @@ function MainSec() {
                 <h1 className={`text-[32px] leading-[45px] tracking-[0.06em] font-medium mb-3`}>{item.category1}</h1>
                 <div className="ps-6 pb-8">
                   {item.title1.map((li) => (<Link reloadDocument to={li[1]} id="navigation" >
-                  <li className={`leading-[35px] text-xl font-medium smallLink tracking-[0.06em] text-[#FFFFFF80] mb-2 `}>{li[0]} </li>
+                  <li className={`leading-[35px] text-xl font-medium smallLink tracking-[0.06em] text-[#FFFFFF80] mb-2 hover:text-[#ffffff] transition duration-500`}>{li[0]} </li>
                   </Link>))}
                 </div>
                   <h1 className="text-[32px] leading-[45px] tracking-[0.06em] font-medium mb-3">{item.category2}</h1>
                   <div className="ps-6">
                   {item.title2.map((li) => (<Link reloadDocument to={li[1]} id="navigation" >
-                  <li className="leading-[35px] text-xl font-medium smallLink tracking-[0.06em] text-[#FFFFFF80] mb-2">{li[0]} </li>
+                  <li className="leading-[35px] text-xl font-medium smallLink tracking-[0.06em] text-[#FFFFFF80] mb-2 "><span className="hover:text-[#ffffff] transition duration-500 ">{li[0]}</span> </li>
                   </Link>))}
                   </div>
 
@@ -143,9 +143,9 @@ function MainSec() {
               { headingLine.map((h1) => 
                 <div className="coverr " >
                 
-                  <h1 className="font-normal max-[450px]:text-xl text-2xl lg:py-8 leading-7"  onClick={onClicker.bind(this,h1.id )}>
+                  <h1 className="font-normal max-[450px]:text-xl text-2xl lg:py-8 leading-7 "  onClick={onClicker.bind(this,h1.id )}>
                     <AnimatePresence>
-                    <motion.span className="animator" initial={{ color: "#ffffff"}} animate={{ color: (h1.id === activeIds) ? "#ffffff" : "#FFFFFF80"}} exit={{ color: "#ffffff"}} transition={{ type: "spring", stiffness: 100 }} >{h1.heading}</motion.span>
+                    <motion.span whileHover={{color:'#ffffff'}} className="animator " initial={{ color: "#ffffff"}} animate={{ color: (h1.id === activeIds) ? "#ffffff" : "#FFFFFF80"}} exit={{ color: "#ffffff"}} transition={{ type: "spring", stiffness: 100 }} >{h1.heading}</motion.span>
                     </AnimatePresence>
                     
                   <AnimatePresence>

@@ -31,11 +31,11 @@ function Item1(){
           items: [
             {
               text: 'Library',
-              link: '/about/facilities-library'
+              link: '/academic/library'
             },
             {
               text: 'LMS',
-              link: '/about/facilities-lms'
+              link: 'https://lms.uit.edu.mm/'
             },
             {
               text: 'Email Service',
