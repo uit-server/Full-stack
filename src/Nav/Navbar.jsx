@@ -96,7 +96,7 @@ function Navbar({sendDataToParent}){
 
                 <div className="Menu" onMouseEnter={()=>handleHover("menu3")} onMouseLeave={handleLeave} onClick={()=>handleToggleAccordion("menu3")}>
                     <a className={windowWidth>1429?"hoverActive menu3":"menu3"} style={{opacity:hoveredTab==='menu3'&&0.7}}>
-                        <span>News</span>
+                        <span>Conference</span>
                         <svg width="18" height="9" viewBox="0 0 18 9" fill="none" xmlns="http://www.w3.org/2000/svg" className="arrow">
                             <path d={activeTab==="menu3"?"M17 8L8.57895 2L1 8":"M1 1.64285L9.42105 7.64285L17 1.64285"} stroke={windowWidth <= 1429 ? "white" : "black"} strokeWidth="2" strokeLinecap="round"/>
                         </svg>
@@ -110,7 +110,7 @@ function Navbar({sendDataToParent}){
 
                 <div className="Menu" onMouseEnter={()=>handleHover("menu4")} onMouseLeave={handleLeave} onClick={()=>handleToggleAccordion("menu4")}>
                     <a className={windowWidth>1429?"hoverActive menu4":"menu4"} style={{opacity:hoveredTab==='menu4'&&0.7}}>
-                        <span>Conferences</span>
+                        <span>News</span>
                         <svg width="18" height="9" viewBox="0 0 18 9" fill="none" xmlns="http://www.w3.org/2000/svg" className="arrow">
                             <path d={activeTab==="menu4"?"M17 8L8.57895 2L1 8":"M1 1.64285L9.42105 7.64285L17 1.64285"} stroke={windowWidth <= 1429 ? "white" : "black"} strokeWidth="2" strokeLinecap="round"/>
                         </svg>

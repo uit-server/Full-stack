@@ -114,6 +114,10 @@ header .nav-btn{
     z-index: 3;
     /* visibility: hidden; */
 }
+
+.item2{
+    width: 400%;
+}
     
 .frame{
     display: flex;

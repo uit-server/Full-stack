@@ -87,6 +87,7 @@ const PdfView = ({file}) => {
                 <Document
                     file={file}
                     onLoadSuccess={onDocumentLoadSuccess}
+                    // onLoadError={console.error}
                 >
                     <Page pageNumber={pageNumber} scale={scale} />
                 </Document>
