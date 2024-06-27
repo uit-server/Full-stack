@@ -21,8 +21,9 @@ body {
 
 }
 
-.mainCon {
-  height: auto; }
+.main {
+  height: auto; 
+}
 
 
 .mainUnactive {
@@ -30,6 +31,7 @@ body {
   height: 85vh;
   
   overflow: hidden;
+  
 }
 
 

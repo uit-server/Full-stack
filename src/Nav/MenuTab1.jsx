@@ -23,6 +23,10 @@ function Item1(){
             {
               text: 'FAQS',
               link: '/about/faqs'
+            },
+            {
+              text: '6th Year Journey',
+              link: ''
             }
           ]
         },
@@ -31,7 +35,7 @@ function Item1(){
           items: [
             {
               text: 'Library',
-              link: '/about/facilities-library'
+              link: '/academic/library'
             },
             {
               text: 'LMS',

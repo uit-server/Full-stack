@@ -30,17 +30,14 @@ function Item2(){
             link: 'https://lms.uit.edu.mm/'
           },
           {
-            text: 'Student Registeration',
+            text: 'Student Registration',
             link: 'https://stu-reg.uit.edu.mm/'
           },
           {
             text: 'Email Service',
             link: '/academic/email-service'
           },
-          {
-            text: 'Library',
-            link: '/academic/library'
-          }
+          
         ]
         },
         {
@@ -53,10 +50,6 @@ function Item2(){
             {
               text: 'Academic Rules',
               link: '/academic/academic-rules'
-            },
-            {
-              text: 'Campus',
-              link: '/academic/campus'
             },
             {
               text: 'Requirements',
