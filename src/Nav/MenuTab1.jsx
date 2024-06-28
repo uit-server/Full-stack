@@ -23,6 +23,10 @@ function Item1(){
             {
               text: 'FAQS',
               link: '/about/faqs'
+            },
+            {
+              text: '6th Year Journey',
+              link: ''
             }
           ]
         },

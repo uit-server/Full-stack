@@ -26,14 +26,13 @@ function UltiWrapper({children,className}) {
 
 },[])
    
-
  
 
   
   return (
       <>
       <Navbar sendDataToParent={handleDataFromNav} />
-      <div className={windowWidth <= 1024 && !dataFromNav ? `mainUnactive main px-2 ${className}` : `main px-2 ${className}`} style={{ backgroundColor: "#FFFFFF",marginBottom: 20}}>
+      <div className={windowWidth <= 1429 && !dataFromNav ? `mainUnactive main px-2 ${className}` : `main px-2 ${className}`} style={{ backgroundColor: "#FFFFFF",marginBottom: 20}}>
 
         {children}
 
