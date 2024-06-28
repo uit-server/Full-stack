@@ -37,8 +37,9 @@ function Appear2() {
        
                          <div className="py-[72px] grid grid-cols-2 gap-8">
                             <div className="w-full pt-14">
-                            <AppearOne className="rounded-[32px] w-full bg-[#D9D9D9] aspect-square"></AppearOne>
-                            <h3 className="text-[32px] font-normal leading-9 w-full mt-[20px]">Library Management System</h3>
+                            <a href="http://uit.bestbookbuddies.com/"><AppearOne className="rounded-[32px] w-full bg-[#D9D9D9] aspect-square"></AppearOne></a>
+                            
+                            <h3 className="text-[32px] font-normal leading-9  mt-[20px]  hover:hoverMode"><a href="http://uit.bestbookbuddies.com/">Library Management System</a></h3>
                             </div>
                             <div className="w-full relative">
                                 <div className="w-[75%] mx-auto mb-14 h-[186px] flex items-end">
@@ -49,8 +50,9 @@ function Appear2() {
                             </span>
                                     <h1 className="font-normal max-[1355px]:text-6xl text-7xl leading-[72px]">We're proud to share you</h1>
                                 </div>
-                            <AppearTwo className="rounded-[32px] w-full bg-[#D9D9D9] aspect-square "></AppearTwo>
-                            <h3 className="text-[32px] font-normal leading-9 w-full mt-[20px]">Meral Portal</h3>
+                                <a href="https://meral.edu.mm/c/uit/?page=1&size=20&sort=controlnumber"><AppearTwo className="rounded-[32px] w-full bg-[#D9D9D9] aspect-square "></AppearTwo></a>
+                            
+                            <h3 className="text-[32px] font-normal leading-9  mt-[20px] hover:hoverMode"><a href="https://meral.edu.mm/c/uit/?page=1&size=20&sort=controlnumber">MERAL Portal</a></h3>
                             </div>
                             
                             

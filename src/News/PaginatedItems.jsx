@@ -93,9 +93,11 @@ const PaginatedItems = () => {
             <div className='flex flex-col gap-[20px]'>
               {
                 (item.image) ? 
-                <Div className='xl:w-[550px] xl:h-[380px] w-[300px] h-[350px] rounded-[32px] bg-[#d9d9d9]' image={item.image}></Div>
+                <Link to= {`/about/news/${item.id}`} ><Div className='xl:w-[550px] xl:h-[380px] w-[300px] h-[350px] rounded-[32px] bg-[#d9d9d9]' image={item.image}></Div></Link>
+                
                 :
-                <Div2 className='xl:w-[550px] xl:h-[380px] w-[300px] h-[350px] rounded-[32px] bg-[#d9d9d9]'></Div2>
+                <Link to= {`/about/news/${item.id}`}  ><Div2 className='xl:w-[550px] xl:h-[380px] w-[300px] h-[350px] rounded-[32px] bg-[#d9d9d9]'></Div2></Link>
+                
               }
               
               <div className='flex flex-col gap-[8px] '>
@@ -104,7 +106,7 @@ const PaginatedItems = () => {
                   <p className='text-[#1c1d20] opacity-50 text-[16px] ps-[5px]'>{item.type}</p>
                 </div>
                 <h5 className='text-[#1c1d20] text-[20px] ps-[5px]'>
-                <Link to= {`/about/news/${item.id}`} className="" >{item.title}</Link>
+                <Link to= {`/about/news/${item.id}`} className="hover:hoverMode" >{item.title}</Link>
                 </h5>
               </div>
             </div>

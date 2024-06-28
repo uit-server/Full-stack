@@ -144,7 +144,7 @@ function CuroselDesktop() {
                   <li className="font-normal text-xs lg:text-base leading-[18px] text-[#1C1D2080]">{item.type}</li>
                 </ul>
                 <h5 className="lg:text-xl text-base font-normal leading-7 pt-[22px] lg:pt-[26px]">
-                  <Link to= {`/about/news/${item.id}`} className="" onClick={
+                  <Link to= {`/about/news/${item.id}`} className="hover:hoverMode" onClick={
                     (event) => {
                       
                       setTimeout(() => {

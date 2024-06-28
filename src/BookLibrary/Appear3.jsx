@@ -58,16 +58,23 @@ function Appear3() {
                 <h1 className="font-normal  max-[490px]:text-3xl text-4xl leading-[38px]">Find the right help for you</h1>
             </div>
             <div className="w-full">
-            <AppearThree className="rounded-[32px] w-full bg-[#D9D9D9] aspect-square "></AppearThree>
-        <h3 className="text-2xl font-normal leading-7 w-full mt-[12px]">IEEE Digital Library</h3>
+            <a href="https://ieeexplore.ieee.org/Xplore/home.jsp"><AppearThree className="rounded-[32px] w-full bg-[#D9D9D9] aspect-square "></AppearThree></a>
+            
+        <h3 className="text-2xl font-normal leading-7 hover:hoverMode mt-[12px]"><a href="https://ieeexplore.ieee.org/Xplore/home.jsp">IEEE Digital Library</a></h3>
             </div>
             <div className="w-full">
+            <a href="https://www.uclmyanmar.org/">
             <AppearFour className="rounded-[32px] w-full bg-[#D9D9D9] aspect-square "></AppearFour>
-        <h3 className="text-2xl font-normal leading-7 w-full mt-[12px]">Universities' Central library</h3>
+            </a>
+            
+        <h3 className="text-2xl font-normal leading-7 hover:hoverMode mt-[12px]"><a href="https://www.uclmyanmar.org/">Universities' Central library</a></h3>
             </div>
             <div className="w-full">
+            <a href="https://www.turnitin.com/">
             <AppearFive className="rounded-[32px] w-full bg-[#D9D9D9] aspect-square "></AppearFive>
-        <h3 className="text-2xl font-normal leading-7 w-full mt-[12px]">Education with Integrity</h3>
+            </a>
+            
+        <h3 className="text-2xl font-normal leading-7 hover:hoverMode mt-[12px]"><a href="https://www.turnitin.com/">Education with Integrity</a></h3>
             </div>
             
        

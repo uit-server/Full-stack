@@ -39,7 +39,7 @@ function Item1(){
             },
             {
               text: 'LMS',
-              link: '/about/facilities-lms'
+              link: 'https://lms.uit.edu.mm/'
             },
             {
               text: 'Email Service',

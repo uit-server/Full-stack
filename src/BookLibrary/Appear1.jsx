@@ -43,12 +43,13 @@ function Appear1() {
                                     <h1 className="font-normal  max-[475px]:text-3xl text-4xl leading-[38px]">We're proud to share you</h1>
                                 </div>
                                 <div className="w-full">
-                                <AppearOne className="rounded-[32px] w-full bg-[#D9D9D9] aspect-square "></AppearOne>
-                            <h3 className="text-2xl font-normal leading-7 w-full mt-[12px]">Library Management System</h3>
+                                <a href="http://uit.bestbookbuddies.com/"><AppearOne className="rounded-[32px] w-full bg-[#D9D9D9] aspect-square "></AppearOne></a>
+                               
+                            <h3 className="text-2xl font-normal leading-7 hover:hoverMode mt-[12px] hover:hoverMode inline-block"><a href="http://uit.bestbookbuddies.com/">Library Management System</a></h3>
                                 </div>
                                 <div className="w-full">
-                                <AppearTwo className="rounded-[32px] w-full bg-[#D9D9D9] aspect-square "></AppearTwo>
-                            <h3 className="text-2xl font-normal leading-7 w-full mt-[12px]">Meral Portal</h3>
+                                <a href="https://meral.edu.mm/c/uit/?page=1&size=20&sort=controlnumber"><AppearTwo className="rounded-[32px] w-full bg-[#D9D9D9] aspect-square "></AppearTwo></a>
+                            <h3 className="text-2xl font-normal leading-7 hover:hoverMode mt-[12px]"><a href="https://meral.edu.mm/c/uit/?page=1&size=20&sort=controlnumber">MERAL Portal</a></h3>
                                 </div>
                                 
                            
