@@ -1,12 +1,8 @@
 import React from "react";
 import { useStateContext } from "./StateContext";
-import { AnimatePresence,motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 
-const Data = {
-    mission: ["Mission","In support of its vision, we are committed to:"],
-    vision: ["Vision","The visions of faculty of computer science are:"]
-}
 
 export default function LeftTextCon({leftText}){
 
@@ -37,11 +33,5 @@ export default function LeftTextCon({leftText}){
     )
 }
 
-//styleName: H6;
-// font-family: Oldschool Grotesk;
-// font-size: 16px;
-// font-weight: 400;
-// line-height: 18px;
-// text-align: left;
 
 

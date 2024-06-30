@@ -14,7 +14,7 @@ function FaciLms() {
   
   const MyanText = "သင်ယူမှုစီမံခန့်ခွဲမှုစနစ်";
 
-  const display = (language == "EN") ? title : MyanText;
+  const display = (language === "EN") ? title : MyanText;
 
   const [dataFromNav, setDataFromNav] = useState(true);
 

@@ -40,23 +40,23 @@ function Trivia() {
     <div className="h-fit lg:p-14 p-4 mx-auto triviaMain">
         <div className="trivia-container w-full">
             
-              {(language == "EN") ? textsEn.map((item) => (
+              {(language === "EN") ? textsEn.map((item) => (
                 <>
                 <div className="lg:w-1/2 w-full  mb-6">
                   <h1 className="font-medium text-xl sm:text-3xl leading-5 triviaHead  py-8  ">{item.head}</h1>
                   <p className="text-sxl sm:text-lg font-normal leading-8 sm:leading-10 w-full sm:w-5/6 opacity-80 tracking-wide">
-                  {item.body.map((ab) => <span className="block">{ab}</span>)}
+                  {item.body.map((ab,index) => <span key={index} className="block">{ab}</span>)}
                 </p>
                 </div>
                 </>
                 
                 
-              )) :  textsMyn.map((item) => (
+              )) :  textsMyn.map((item,index) => (
                 <>
-                <div className="lg:w-1/2 w-full  mb-6">
+                <div key={index} className="lg:w-1/2 w-full  mb-6">
                   <h1 className="font-medium text-lg sm:text-2xl leading-5 triviaHead  py-8  ">{item.head}</h1>
                   <p className="text-sm sm:text-base font-normal leading-8 sm:leading-10 w-full sm:w-5/6 opacity-80 tracking-wide">
-                  {item.body.map((ab) => <span className="block">{ab}</span>)}
+                  {item.body.map((ab,index) => <span key={index} className="block">{ab}</span>)}
                 </p>
                 </div>
                 </>

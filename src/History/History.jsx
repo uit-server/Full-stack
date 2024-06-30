@@ -14,7 +14,7 @@ function History() {
   
   const MyanText = "သမိုင်း";
 
-  const display = (language == "EN") ? title : MyanText;
+  const display = (language === "EN") ? title : MyanText;
 
   const [dataFromNav, setDataFromNav] = useState(true);
 

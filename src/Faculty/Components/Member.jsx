@@ -7,16 +7,17 @@ import styled from 'styled-components';
 
 const Div2 = styled.div``;
 
+const Div = styled.div`
+background: url(${props => props.image});
+background-size: cover;
+object-fit: cover;
+background-position: center center;
+opacity: 70%;`;
 
 
 export default function Member({members}){
 
-    const Div = styled.div`
-    background: url(${props => props.image});
-    background-size: cover;
-    object-fit: cover;
-    background-position: center center;
-    opacity: 70%;`;
+ 
 
 
     return(
@@ -30,8 +31,8 @@ export default function Member({members}){
                     <h2 className="text-[36px] md:text-[72px] font-normal leading-[38px] md:leading-[72px]">Meet our Faculty members</h2>
                 </div>
                 <Div2 className="grid gap-5 md:gap-8 w-full grid-cols-2 md:grid-cols-3 lg:grid-cols-4 ">
-                    {members.map((img) => 
-                    <>
+                    {members.map((img,index) => 
+                    <div key={index}>
                         <div className="memberImgCon w-full">
                         <Div className="rounded-[32px] aspect-[4/5] w-[100%]" image={img.image}></Div>
                         <div className="memberDetails">
@@ -40,7 +41,7 @@ export default function Member({members}){
                         </div>
                     </div>
 
-                    </>)}
+                    </div>)}
                     
                 </Div2>
             </div>

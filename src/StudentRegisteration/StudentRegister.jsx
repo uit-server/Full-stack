@@ -15,7 +15,7 @@ function StudentRegister() {
 
   const MyanText = "ကျောင်းသားမှတ်ပုံတင်";
 
-  const display = (language == "EN") ? title : MyanText;
+  const display = (language === "EN") ? title : MyanText;
 
   const [dataFromNav, setDataFromNav] = useState(true);
 

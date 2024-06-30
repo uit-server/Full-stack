@@ -11,7 +11,7 @@ function EmailService() {
   const title = "Email Service";
   const MyanText = "အီးမေးလ်ဝန်ဆောင်မှု";
 
-  const display = (language == "EN") ? title : MyanText;
+  const display = (language === "EN") ? title : MyanText;
   const windowWidth = useResize(title);
 
   const [dataFromNav, setDataFromNav] = useState(true);

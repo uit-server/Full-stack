@@ -4,7 +4,7 @@ function ShareSpace() {
 
     const currentPageUrl = window.location.href;
     const bgStyle = {
-      fill: '#1c1d20', // Change to your desired background color
+      fill: '#1c1d20',
     };
 
 

@@ -22,13 +22,6 @@ import { useSelector } from 'react-redux';
 
     `;
 
-function MajorImg() {
-
-    const majorImg = useSelector((state) => state.data.value.images.heading[0]) || Img;
-
-
-
-
     const Pic = styled.div`
 
     background: url(${props => require(`../Images/${props.image}`)});
@@ -43,6 +36,15 @@ function MajorImg() {
 
 
     `;
+
+function MajorImg() {
+
+    const majorImg = useSelector((state) => state.data.value.images.heading[0]) || Img;
+
+
+
+
+   
 
 
   return (

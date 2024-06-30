@@ -42,11 +42,10 @@ const dpData = [
     }
 ]
 
-// "114px" : "136px"
+
 
 function Dropdown() {   
     const [signal, setSignal ] = useState(0);
-    const [define, setDefine ] = useState(true);
     const height = (window.innerWidth < 1024) ? "60px" : "68px";
     const bgHeight = (window.innerWidth <= 392) ? "156px" : (window.innerWidth < 1024) ? "114px" : (window.innerWidth <= 1280) ? "176px" :'136px';
     const justifyHeight = (window.innerWidth <= 392) ? "156px" : (window.innerWidth < 1024) ? "46px" : (window.innerWidth <= 1280) ? "156px" :'56px';

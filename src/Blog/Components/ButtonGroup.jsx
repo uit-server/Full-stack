@@ -21,9 +21,3 @@ const ButtonGroup = ({ handleNext, handlePrevious, left, right }) => {
 
 export default ButtonGroup;
 
-// width: Hug (44px)px;
-// height: Hug (43.7px)px;
-// padding: 16px 0px 0px 0px;
-// gap: 10px;
-// border-radius: 32px 0px 0px 0px;
-// opacity: 0px;

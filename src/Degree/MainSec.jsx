@@ -1,7 +1,7 @@
 import '../Styles/Degree.css';
 import {motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 const headingLine = [
@@ -77,8 +77,8 @@ function MainSec() {
       <div className="customHide pt-24 h-fit w-100 text-[#ffffff] mt-[72px]">
         <div className="degree-container h-fit ms-[96px] gap-[177px] ">
             <div className="compo-1 h-fit mb-[253px]">
-              { headingLine.map((h1) => 
-                <div className="coverr">
+              { headingLine.map((h1,index) => 
+                <div className="coverr" key={index}>
                 
                   <h1 className="max-[1170px]:text-[70px] text-[108px]  font-normal leading-[96px]  lg:py-8 border-b border-[#ffffff] block w-[100%] "  onClick={onClick.bind(this,h1.id )}>
                     <AnimatePresence>
@@ -107,20 +107,20 @@ function MainSec() {
                 
         <div>
         {discription.map(
-          (item) => (
+          (item,index) => (
             item.id === activeId)
              &&
              <AnimatePresence>
-               <motion.div initial={{ x: 500, opacity: 0}} animate={{ x: 0, opacity: 1}} exit={{ x: 500, opacity: 0}}  transition={{ease: 'linear'}} className={(item.id == 1) ? `pt-[174px]` : (item.id == 2) ? `pt-[325px]` : `` }>
+               <motion.div initial={{ x: 500, opacity: 0}} animate={{ x: 0, opacity: 1}} exit={{ x: 500, opacity: 0}}  transition={{ease: 'linear'}} className={(item.id === 1) ? `pt-[174px]` : (item.id === 2) ? `pt-[325px]` : `` } key={index}>
                 <h1 className={`text-[32px] leading-[45px] tracking-[0.06em] font-medium mb-3`}>{item.category1}</h1>
                 <div className="ps-6 pb-8">
-                  {item.title1.map((li) => (<Link reloadDocument to={li[1]} id="navigation" >
+                  {item.title1.map((li,index) => (<Link key={index} reloadDocument to={li[1]} id="navigation" >
                   <li className={`leading-[35px] text-xl font-medium smallLink tracking-[0.06em] text-[#FFFFFF80] mb-2 hover:text-[#ffffff] transition duration-500`}>{li[0]} </li>
                   </Link>))}
                 </div>
                   <h1 className="text-[32px] leading-[45px] tracking-[0.06em] font-medium mb-3">{item.category2}</h1>
                   <div className="ps-6">
-                  {item.title2.map((li) => (<Link reloadDocument to={li[1]} id="navigation" >
+                  {item.title2.map((li,index) => (<Link key={index} reloadDocument to={li[1]} id="navigation" >
                   <li className="leading-[35px] text-xl font-medium smallLink tracking-[0.06em] text-[#FFFFFF80] mb-2 "><span className="hover:text-[#ffffff] transition duration-500 ">{li[0]}</span> </li>
                   </Link>))}
                   </div>
@@ -140,8 +140,8 @@ function MainSec() {
     <div className="hideMe pb-14 gap-2.5 h-fit w-100 rounded-t-[32px]">
         <div className="degree-container w-[90%] h-fit m-auto center">
             <div className="compo-1 h-fit pt-14 w-full  ps-[7.5%] pe-[7.5%] mb-8 mt-1 ">
-              { headingLine.map((h1) => 
-                <div className="coverr " >
+              { headingLine.map((h1,index) => 
+                <div className="coverr " key={index}>
                 
                   <h1 className="font-normal max-[450px]:text-xl text-2xl lg:py-8 leading-7 "  onClick={onClicker.bind(this,h1.id )}>
                     <AnimatePresence>
@@ -168,20 +168,20 @@ function MainSec() {
                 <div className="sm:p-3">
         <div>
         {discription.map(
-          (item) => (
+          (item,index) => (
             item.id === activeIds)
              &&
              <AnimatePresence mode="sync">
                <motion.div initial={{ y: -500, opacity: 0}} animate={{ y: 0, opacity: 1}} key={item.id} exit={{ y: -500, opacity: 1}}  transition={{ease: 'linear'}} >
                <h1 className="mb-[8px] pt-8 font-[500] text-xl leading-[35px]  text-left degreeHead mt-[30px]">{item.category1}</h1>
                 <div className="ps-6">
-                  {item.title1.map((li) => (<Link reloadDocument to={li[1]} id="navigation" >
+                  {item.title1.map((li,index) => (<Link key={index} reloadDocument to={li[1]} id="navigation" >
                   <li className="leading-[30px] font-[500] text-xs md:text-lg smallLink tracking-[0.06em] text-[#FFFFFF80] pb-2">{li[0]} </li>
                   </Link>))}
                 </div>
                   <h1 className="mb-[8px] pt-4 font-[500] text-xl leading-[35px]  text-left degreeHead">{item.category2}</h1>
                   <div className="ps-6">
-                  {item.title2.map((li) => (<Link reloadDocument to={li[1]} id="navigation" >
+                  {item.title2.map((li,index) => (<Link key={index} reloadDocument to={li[1]} id="navigation" >
                   <li className="leading-[30px] font-[500] text-xs md:text-lg smallLink tracking-[0.06em] text-[#FFFFFF80] pb-2">{li[0]}</li>
                   </Link>))}
                   </div>

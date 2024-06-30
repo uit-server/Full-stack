@@ -51,7 +51,7 @@ function Blog() {
       });
 
       
-  }, []);
+  }, [url,dispatch]);
 
   //comments
 
@@ -71,7 +71,7 @@ function Blog() {
 
    
 
-const img = [Image];
+
 const Img = data.images.heading ?  [data.images.heading] : [];
 const title = "Rector";
 const name = "Prof. Daw Saw Sanda Aye";

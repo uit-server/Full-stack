@@ -1,7 +1,6 @@
 import '../Styles/Degree.css';
 import { AnimatedText } from '../Components/AnimatedText';
-import React,{ useState } from 'react';
-import { useSelector } from 'react-redux';
+import React from 'react';
 import { motion } from "framer-motion";
 
 
@@ -33,8 +32,8 @@ function Headline() {
     <>
     <motion.div initial={{ opacity: 0}} animate={{ opacity: 1}} exit={{ opacity: 0 }} >
     <div className="hide hero py-14">
-    {header.map((header) => 
-       <span className="overflow-hidden fade">
+    {header.map((header,index) => 
+       <span className="overflow-hidden fade" key={index}>
           <AnimatedText
           once
           text={header}
@@ -49,8 +48,8 @@ function Headline() {
 )}
 </div>
 <div className="sm:hidden hero pt-14 pb-5">
-{headerMobile.map((header) => 
-       <span className="overflow-hidden fade">
+{headerMobile.map((header,index) => 
+       <span className="overflow-hidden fade" key={index}>
         <AnimatedText
        once
        text={header}

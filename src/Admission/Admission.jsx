@@ -1,7 +1,6 @@
 import '../Styles/Degree.css';
 import Headline from './Headline';
 import Navbar from '../Nav/Navbar';
-import Image from '../Degree/Image';
 import Frame4 from './Frame4';
 import Frame6 from './Frame6';
 import Frame7 from './Frame7';

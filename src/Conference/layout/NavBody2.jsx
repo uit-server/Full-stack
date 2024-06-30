@@ -4,22 +4,7 @@ import React from 'react';
 import { AnimatePresence,motion } from "framer-motion";
 import { HashLink } from 'react-router-hash-link';
 
-
-function NavBody2() {
-
-    const [data, setData ] = useState(0);
-    const [prev, setPrev ] = useState(0);
-    const [appear, setAppear ] = useState(false);
-
-    const links = [
-        ["Calls for paper","#callsforpaper"],
-        ["Topics","#topics"],
-        ["Committee","#committee"],
-        ["Guidelines",'#guidelines'],
-        ["Deadline","#deadline"],
-    ]
-
-    const Ball = styled.div`
+const Ball = styled.div`
         width: 10px;
         height: 100%;
         position: absolute;
@@ -39,6 +24,24 @@ function NavBody2() {
         }
 
     `;
+
+
+
+function NavBody2() {
+
+    const [data, setData ] = useState(0);
+    const [prev, setPrev ] = useState(0);
+    const [appear, setAppear ] = useState(false);
+
+    const links = [
+        ["Calls for paper","#callsforpaper"],
+        ["Topics","#topics"],
+        ["Committee","#committee"],
+        ["Guidelines",'#guidelines'],
+        ["Deadline","#deadline"],
+    ]
+
+    
 
     const handleClick = (event,index) => {
         event.stopPropagation();
@@ -88,11 +91,4 @@ function NavBody2() {
 
 
 
-//   width: Hug (134px)px;
-//   height: Hug (58px)px;
-//   padding: 20px 32px 20px 32px;
-//   gap: 20px;
-//   border-radius: 32px 0px 0px 0px;
-//   opacity: 0px;
-  
 
