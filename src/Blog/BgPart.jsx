@@ -14,7 +14,7 @@ const Img =[Image];
 function BgPart() {
 
 
-  // DOMPurify.sanitize(htmlString)
+
   let body = domRender(useSelector((state) => state.blog.value.body));
 
   const potrait = useSelector((state) => state.blog.value.images.portrait);

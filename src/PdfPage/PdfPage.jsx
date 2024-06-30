@@ -1,7 +1,7 @@
 import '../Styles/Faq.css';
 import Headline from './Headline';
 import useResize from '../utils/useResize';
-import React,{ useState } from 'react';
+import React from 'react';
 import PdfView from './PdfView';
 import UltiWrapper from '../Components/UltiWrapper';
 

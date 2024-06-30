@@ -3,7 +3,7 @@ import '../../Styles/Faculty.css';
 import Headline from '../Components/Headline';
 import Vision from './Vision';
 import useResize from '../../utils/useResize';
-import React,{ useState } from 'react';
+import React from 'react';
 import Member from '../Components/Member';
 import UltiWrapper from '../../Components/UltiWrapper';
 import Img1 from '../../Images/Faculty/CS/Teachers/Teacher_1.png';
@@ -77,34 +77,34 @@ function Faculty(){
     
     ]
 
-    const numText = "two";
-    const faculty= "FCS";
-    const infoText = "lorem ipsum";
+    // const numText = "two";
+    // const faculty= "FCS";
+    // const infoText = "lorem ipsum";
 
-    const desktopLeftRow = [
-      {
-        name: "Software Engineering (SE)",
-        image: High
-      }
-    ]
+    // const desktopLeftRow = [
+    //   {
+    //     name: "Software Engineering (SE)",
+    //     image: High
+    //   }
+    // ]
 
-    const desktopRightRow = [
-      {
-        name: "Software Engineering (SE)",
-        image: Img
-      }
-    ]
+    // const desktopRightRow = [
+    //   {
+    //     name: "Software Engineering (SE)",
+    //     image: Img
+    //   }
+    // ]
 
-    const mobile = [
-      {
-        name: "Software Engineering (SE)",
-        image: High
-      },
-      {
-        name: "Business Information System (BIS)",
-        image: Img
-      }
-    ]
+    // const mobile = [
+    //   {
+    //     name: "Software Engineering (SE)",
+    //     image: High
+    //   },
+    //   {
+    //     name: "Business Information System (BIS)",
+    //     image: Img
+    //   }
+    // ]
 
 
  

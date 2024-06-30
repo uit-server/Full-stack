@@ -5,10 +5,8 @@ import '../Images/plus.svg';
 import '../Images/minus.svg';
 import Category from './Category';
 import Question from './Question';
-import Navbar from '../Nav/Navbar';
-import { motion, AnimatePresence } from "framer-motion"
+import { motion } from "framer-motion"
 import useResize from '../utils/useResize';
-import { useState } from 'react';
 import { useSelector } from 'react-redux';
 import UltiWrapper from '../Components/UltiWrapper';
 
@@ -30,11 +28,6 @@ import UltiWrapper from '../Components/UltiWrapper';
 function Faq() {
   const language = useSelector((state) => state.language.value);
   const windowWidth = useResize("Frequently Asked Questions");
-  const [dataFromNav, setDataFromNav] = useState(true);
-
-    const handleDataFromNav = (data) => {
-        setDataFromNav(data);
-    };
   const quiz = [
     {id :  1,
       questionEn: "When was the UIT founded?",
@@ -83,8 +76,8 @@ function Faq() {
 
       <div className="w-90 main">
       <div className="alignment"><Category name="General" /></div>
-      {quiz.map(item => (
-        <Question id={item.id} question={(language == "EN") ? item.questionEn : item.questionMyn } answer={(language == "EN") ? item.answerEn : item.answerMyn} />
+      {quiz.map((item,index) => (
+        <Question key={index} id={item.id} question={(language === "EN") ? item.questionEn : item.questionMyn } answer={(language === "EN") ? item.answerEn : item.answerMyn} />
       ))}
 
 

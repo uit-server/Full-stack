@@ -4,29 +4,31 @@ import { faDownload } from '@fortawesome/free-solid-svg-icons'
 import styled from "styled-components";
 import { useSelector } from 'react-redux';
 
+const DownloadIcon = styled(FontAwesomeIcon)`
+transform: translateX(-300%);
+transition: transform 0.3s ease;
+
+@media only screen and (max-width:1023px){
+    transform: translateX(-120%);
+}
+`
+
+const DownloadText = styled.span`
+cursor: pointer;
+overflow-x: hidden;
+
+&:hover ${DownloadIcon} {
+    transform: translateX(-120%);
+}
+`
+
 
 export default function DownloadLinks({className}){
 
     const conferenceBook = useSelector((state) => state.data.value.book);
     const brochure = useSelector((state) => state.data.value.brochure);
 
-    const DownloadIcon = styled(FontAwesomeIcon)`
-        transform: translateX(-300%);
-        transition: transform 0.3s ease;
-
-        @media only screen and (max-width:1023px){
-            transform: translateX(-120%);
-        }
-    `
-
-    const DownloadText = styled.span`
-        cursor: pointer;
-        overflow-x: hidden;
-
-        &:hover ${DownloadIcon} {
-            transform: translateX(-120%);
-        }
-    `
+   
 
     
 

@@ -2,7 +2,7 @@ import Mobile from './layout/Mobile';
 import Pc from './layout/Pc';
 import BgPart from './BgPart';
 import CuroselDesktop from './Components/CuroselDesktop';
-function BodyPart({condition}) {
+function BodyPart() {
 
   const bgPart = BgPart;
 

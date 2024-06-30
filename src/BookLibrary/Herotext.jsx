@@ -17,7 +17,7 @@ function HeroText() {
                 </ul>
                 </span>Optimal study space for focused learning</h1>
                 <div className="mt-5 lg:mt-10 block">
-            {points.map((item) => <Point text={item} />)}
+            {points.map((item,index) => <Point key={index} text={item} />)}
         </div>
         </div>
         

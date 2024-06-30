@@ -29,8 +29,8 @@ function MainFocus() {
                     <div className="flex flex-col">
                     {
                         requirements.map(
-                            (item) => 
-                            <div className="flex flex-row font-normal lg:text-base text-xs leading-[18px]">
+                            (item,index) => 
+                            <div className="flex flex-row font-normal lg:text-base text-xs leading-[18px]" key={index}>
                                 <span className="me-[6px] lg:me-[12px] opacity-50">{item.id}</span>
                                 <span className="">{item.item}</span>
                             </div>

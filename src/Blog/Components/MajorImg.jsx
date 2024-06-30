@@ -9,8 +9,6 @@ import styled from 'styled-components'
 
     `;
 
-function MajorImg({Img}) {
-
     const Pic = styled.div`
 
     background: url(${props => props.image});
@@ -26,13 +24,16 @@ function MajorImg({Img}) {
 
     `;
 
-    console.log(Img);
+function MajorImg({Img}) {
+
+   
+
 
 
   return (
         <div className="pt-[10px] lg:scroll-mt-[134px] h-auto" id="image">
             <Container>
-            {(Img.length !== 0) ?  Img.map((img) => <Pic className="rounded-[32px] lg:mb-0 mb-10" image={img}></Pic>   ) : <p></p>}
+            {(Img.length !== 0) ?  Img.map((img,index) => <Pic key={index} className="rounded-[32px] lg:mb-0 mb-10" image={img}></Pic>   ) : <p></p>}
             </Container>
             
       

@@ -15,7 +15,7 @@ function Home() {
   const title = "Home";
   const MyanText = "အိမ်";
 
-  const display = (language == "EN") ? title : MyanText;
+  const display = (language === "EN") ? title : MyanText;
   const windowWidth = useResize(title);
 
   const [dataFromNav, setDataFromNav] = useState(true);

@@ -1,6 +1,6 @@
 import Img from '../Images/syllabus.png';
 import styled from 'styled-components';
-import React,{useState,useEffect} from 'react';
+import React from 'react';
 import { useSelector } from 'react-redux';
 
 const Container = styled.div`
@@ -76,17 +76,17 @@ function ImageSection() {
   // if (error) return <div>Error: {error}</div>;
   // if (!data || !data.images || data.images.length === 0) return <div>No images found</div>;
 
-  const images = [
-    {"img":"20240516171320_Americano.jpg","style":"landscape"},
-    {"img":"20240516171320_Americano.jpg","style":"portrait"},
-    {"img":"20240516171320_Americano.jpg","style":"portrait"},
-    {"img":"20240516171320_Americano.jpg","style":"landscape"},
-    {"img":"20240516171320_Americano.jpg","style":"portrait"},
-    {"img":"20240516171320_Americano.jpg","style":"landscape"},
-    {"img":"20240516171320_Americano.jpg","style":"portrait"},
-    {"img":"20240516171320_Americano.jpg","style":"portrait"},
-    {"img":"20240516171320_Americano.jpg","style":"portrait"}
-  ]
+  // const images = [
+  //   {"img":"20240516171320_Americano.jpg","style":"landscape"},
+  //   {"img":"20240516171320_Americano.jpg","style":"portrait"},
+  //   {"img":"20240516171320_Americano.jpg","style":"portrait"},
+  //   {"img":"20240516171320_Americano.jpg","style":"landscape"},
+  //   {"img":"20240516171320_Americano.jpg","style":"portrait"},
+  //   {"img":"20240516171320_Americano.jpg","style":"landscape"},
+  //   {"img":"20240516171320_Americano.jpg","style":"portrait"},
+  //   {"img":"20240516171320_Americano.jpg","style":"portrait"},
+  //   {"img":"20240516171320_Americano.jpg","style":"portrait"}
+  // ]
 
   const imgOne = useSelector((state) => state.data.value.images.landscape);
   const imgTwo = useSelector((state) => state.data.value.images.portrait);
@@ -97,7 +97,7 @@ function ImageSection() {
   // const landscapes = useSelector((state) => state.data.value.images.landscape) || useSelector((state) => state.data.value.images.potrait) ;
   // const portraits = useSelector((state) => state.data.value.images.potrait) || images.filter(image => image.style === 'portrait');
 
-  console.log(landscapes);
+
 
 
 
@@ -123,7 +123,7 @@ function ImageSection() {
     
   } 
 
-  console.log(groupedImages);
+
 
 
 
@@ -132,12 +132,12 @@ function ImageSection() {
       {groupedImages.map((group, index) => (
         <div key={index} className='flex flex-col gap-[6px] md:gap-[15px]'>
           <Container>
-           {(landscapes.length != 0) ? <Pic1 img={group[0]} /> : <Pic3 />}
+           {(landscapes.length !== 0) ? <Pic1 img={group[0]} /> : <Pic3 />}
           </Container>
           <GroupContainer>
             {group.slice(1).map((image, idx) => (
               <PortraitWrapper key={idx}>
-                {(portraits.length != 0) ? <Pic2 img={image} className="pic" /> : <Pic3 />}
+                {(portraits.length !== 0) ? <Pic2 img={image} className="pic" /> : <Pic3 />}
                 
               </PortraitWrapper>
             ))}

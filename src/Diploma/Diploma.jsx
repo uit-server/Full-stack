@@ -2,10 +2,10 @@
 import '../Styles/Degree.css';
 import Headline from './Headline';
 import MainSec from './MainSec';
-import Trivia from './Trivia';
+
 import Image from './Image';
 import Text from './Text';
-import React,{useState,useEffect} from 'react';
+import React from 'react';
 import useResize from '../utils/useResize';
 import UltiWrapper from '../Components/UltiWrapper';
 

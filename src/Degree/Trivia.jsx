@@ -51,8 +51,8 @@ function Trivia() {
     <div className="h-fit  lg:pb-[72px] py-4 mx-auto triviaMain bg-[#1c1d20] text-[#ffffff] w-[90%]">
         <div className=" w-[112%] grid lg:grid-cols-3 lg:gap-x-8">
             
-              {(language == "EN") ? textsEn.map((item) => (
-                <>
+              {(language === "EN") ? textsEn.map((item,index) => (
+                <div key={index}>
                 <div className=" w-full">
                 <div className="flex flex-row w-full md:w-[100%] items-center lg:pt-8 lg:pb-5 pb-[25.33px]">
                 <svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg" className="lg:me-[7.25px] me-[12px]">
@@ -64,8 +64,8 @@ function Trivia() {
                 </div>
                   <p className="lg:min-h-[324px] pb-7 lg:pb-0 mb-7 lg:mb-0 border-b border-[#ffffff]">
                   { 
-                  (item.type != "para") && item.body.map((item) => 
-            <div className="flex flex-row w-full md:w-[100%] mb-[8px]">
+                  (item.type !== "para") && item.body.map((item,index) => 
+            <div key={index} className="flex flex-row w-full md:w-[100%] mb-[8px]">
                 <svg width="22" height="22" viewBox="0 0 22 29" fill="none" xmlns="http://www.w3.org/2000/svg" className="me-[6px] lg:me-[10px] text-[16px] flex-none lg:w-[22px] lg:h-[22px] w-[18px] h-[20px]">
 <path d="M11 3.92883C8.82441 3.92883 6.69767 4.57397 4.88873 5.78267C3.07979 6.99136 1.66989 8.70933 0.83733 10.7193C0.00476612 12.7293 -0.213071 14.941 0.211367 17.0748C0.635804 19.2086 1.68345 21.1686 3.22183 22.707C4.76021 24.2454 6.72022 25.293 8.85401 25.7175C10.9878 26.1419 13.1995 25.9241 15.2095 25.0915C17.2195 24.2589 18.9375 22.849 20.1462 21.0401C21.3549 19.2312 22 17.1044 22 14.9288C22 13.4843 21.7155 12.0539 21.1627 10.7193C20.6099 9.38473 19.7996 8.1721 18.7782 7.15066C17.7567 6.12921 16.5441 5.31896 15.2095 4.76616C13.8749 4.21336 12.4445 3.92883 11 3.92883ZM15.73 12.2998L10.703 18.8998C10.6005 19.0329 10.4689 19.1408 10.3183 19.2152C10.1677 19.2896 10.002 19.3284 9.834 19.3288C9.66692 19.3297 9.50183 19.2926 9.35126 19.2201C9.20069 19.1477 9.06859 19.0419 8.965 18.9108L6.281 15.4898C6.19216 15.3757 6.12667 15.2452 6.08827 15.1058C6.04986 14.9664 6.03929 14.8207 6.05717 14.6772C6.07505 14.5337 6.12101 14.3951 6.19245 14.2694C6.26388 14.1436 6.35939 14.0332 6.4735 13.9443C6.70398 13.7649 6.99628 13.6844 7.28612 13.7205C7.42963 13.7384 7.56822 13.7843 7.69397 13.8558C7.81972 13.9272 7.93016 14.0227 8.019 14.1368L9.812 16.4248L13.97 10.9248C14.0581 10.8093 14.1681 10.7122 14.2938 10.6391C14.4194 10.5661 14.5582 10.5185 14.7022 10.4991C14.8462 10.4797 14.9927 10.4889 15.1332 10.526C15.2737 10.5632 15.4054 10.6277 15.521 10.7158C15.6366 10.8039 15.7336 10.914 15.8067 11.0396C15.8797 11.1652 15.9273 11.304 15.9467 11.448C15.9661 11.5921 15.957 11.7385 15.9198 11.879C15.8826 12.0195 15.8181 12.1513 15.73 12.2668V12.2998Z" fill="#3798A6"/>
 </svg>
@@ -74,23 +74,23 @@ function Trivia() {
 
             </div>)}
             {
-                  (item.type == "para") && item.body.map((item) => 
-            <div className="flex flex-row w-full md:w-[100%] mb-[12px]">
+                  (item.type === "para") && item.body.map((item,index) => 
+            <div key={index} className="flex flex-row w-full md:w-[100%] mb-[12px]">
 
                 <p className="lg:leading-7 leading-[20px] text-sm font-[350] lg:text-lg">{item}</p>
 
             </div>)}
                 </p>
                 </div>
-                </>
+                </div>
                 
                 
-              )) :  textsMyn.map((item) => (
+              )) :  textsMyn.map((item,index) => (
                 <>
-                <div className="lg:w-1/2 w-full  mb-6">
+                <div key={index} className="lg:w-1/2 w-full  mb-6">
                   <h1 className="font-medium lg:text-[32px] sm:text-2xl lg:leading-9 triviaHead  py-8  ">{item.head}</h1>
                   <p className="text-sm sm:text-base font-normal leading-8 sm:leading-10 w-full sm:w-5/6 opacity-80 tracking-wide">
-                  {item.body.map((ab) => <span className="block">{ab}</span>)}
+                  {item.body.map((ab,index) => <span key={index} className="block">{ab}</span>)}
                 </p>
                 </div>
                 </>

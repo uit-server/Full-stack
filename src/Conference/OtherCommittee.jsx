@@ -5,7 +5,6 @@ import { styled } from 'styled-components';
 import ReactPaginate from 'react-paginate';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
-import { Link } from 'react-router-dom';
 
 const Div = styled.div`
   background: url(${props => require(`../Images/${props.image}`)});

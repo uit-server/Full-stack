@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from 'react';
+import React from 'react';
 import './../Styles/Faq.css';
 import Headline from './Headline';
 import UltiWrapper from '../Components/UltiWrapper';
