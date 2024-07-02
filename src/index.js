@@ -14,13 +14,14 @@ import DownloadLinks from './Conference/DownloadLinks.jsx';
 import LogoAnimation from './Images/LogoAnimation.jsx';
 import Navbar from './Nav/Navbar.jsx';
 import PdfPage from './PdfPage/PdfPage.jsx';
+import Research from './Research/Research.jsx';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   
     <Provider store={store}>
     <Router>
-      <Navigator />
+      <Research />
 
     </Router>
     </Provider>
