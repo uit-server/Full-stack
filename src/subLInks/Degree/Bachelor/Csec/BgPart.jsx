@@ -47,23 +47,33 @@ const career = [
 const syllabus = [
   {
     name: "First year syllabus",
-    image: Img2
+    image: Img2,
+    id: 1,
+    paragraph: "lorem ipsum"
   },
   {
     name: "Second year syllabus",
-    image: Img2
+    image: Img2,
+    id: 2,
+    paragraph: "lorem ipsum"
   },
   {
     name: "Third year syllabus",
-    image: Img2
+    image: Img2,
+    id: 3,
+    paragraph: "lorem ipsum"
   },
   {
     name: "Fourth year syllabus",
-    image: Img2
+    image: Img2,
+    id: 4,
+    paragraph: "lorem ipsum"
   },
   {
     name: "Fifth year syllabus",
-    image: Img2
+    image: Img2,
+    id: 5,
+    paragraph: "lorem ipsum"
   }
 ]
   
