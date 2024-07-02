@@ -9,7 +9,7 @@ function useResize(title) {
         };
 
         window.addEventListener('resize', handleResize);
-        document.title = title;
+       
 
         
         return () => {
