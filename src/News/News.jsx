@@ -3,10 +3,12 @@ import './../Styles/Faq.css';
 import Headline from './Headline';
 import UltiWrapper from '../Components/UltiWrapper';
 import PaginatedItems from './PaginatedItems';
+import Name from '../utils/Name';
 
 
 
 function News(){
+    Name("News");
 
  
  
