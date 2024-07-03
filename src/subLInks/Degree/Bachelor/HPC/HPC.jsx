@@ -1,15 +1,15 @@
 
-import React,{useState,useEffect } from 'react';
-import useResize from '../../../../utils/useResize';
+import React,{ useEffect } from 'react';
 import '../../../../Styles/Degree.css';
 import Heading from '../Components/Heading';
 import BodyPart from './BodyPart';
 import { useLocation } from 'react-router-dom';
 import UltiWrapper from '../../../../Components/UltiWrapper';
+import Name from '../../../../utils/Name';
 
 function HPC() {
 
-  const windowWidth = useResize("High Performance Computing (HPC)");
+  Name("High Performance Computing (HPC)")
   const { pathname } = useLocation();
 
   useEffect(()=>{

@@ -1,16 +1,11 @@
-
-
 import React from 'react';
-import UltiWrapper from '../Components/UltiWrapper';
 import Name from '../utils/Name';
-import ImageHeader from '../Components/ImageHeader';
-import BodyPart from './BodyPart';
-import useResize from '../utils/useResize';
-    
-function Visimisi() {
+import Vision from './Vision';
+import Mission from './Mission';
+import Value from './Value';
+function BgContentGroup() {
   const title = "Vision and Mission";
   Name(title);
-  useResize();
   // const language = useSelector((state) => state.language.value);
 
   
@@ -19,11 +14,17 @@ function Visimisi() {
   // const display = (language == "EN") ? title : MyanText;
 
   return (
-    <UltiWrapper>
-      <ImageHeader name="Vision and Mission" />
-      <BodyPart />
-      
-    </UltiWrapper>
+    <div className="ps-6 lg:pt-0 pt-10">
+        <div className="grid grid-cols-1 gap-16 lg:mt-[50px]">
+        <Vision />
+        <Mission />
+        <Value />
+        </div>
+        
+    
+       
+    </div>
+    
      
   );
 
@@ -32,4 +33,4 @@ function Visimisi() {
 
 
 
-export default Visimisi;
+export default BgContentGroup;
