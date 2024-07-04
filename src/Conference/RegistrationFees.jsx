@@ -32,7 +32,7 @@ export default function RegistrationFees(){
                     <p style={{fontWeight:350}} className="text-[14px] md:text-[18px] text-[#1c1d20] opacity-80">To submit- </p>
 
                     <Mailto email={email} subject="" body="">
-                    <AnimationButton value={email} width='400px' left='48%' />
+                    <AnimationButton value={email} />
     </Mailto>
                     
                 </div>

@@ -9,9 +9,9 @@ import Headline from './Headline';
 import PdfView from './PdfView';
 
     
-function AcademicRule() {
+function SixYearJourney() {
 
-  const pdfFile = `${process.env.PUBLIC_URL}/AcademicRules.pdf`;
+  const pdfFile = `${process.env.PUBLIC_URL}/UIT6YearsJourney.pdf`;
   
 return (
   <>
@@ -27,4 +27,4 @@ return (
 
 
 
-export default AcademicRule;
+export default SixYearJourney;
