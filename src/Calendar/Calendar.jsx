@@ -10,7 +10,7 @@ import Upcoming from './Upcoming';
 import TableConditioner from './TableConditioner';
 import Name from '../utils/Name';
 import useResize from '../utils/useResize';
-
+import PaginatedItems from '../Components/PaginatedItems';
 
     
 function Calendar() {
@@ -28,7 +28,9 @@ return (
       
       <div className="lg:mt-[72px] w-full flex items-center justify-center pt-14 pb-10 lg:pt-[72px] lg:pb-14">
         <TrivialText />
+        
       </div>
+      <PaginatedItems />
       <Upcoming />
      
 

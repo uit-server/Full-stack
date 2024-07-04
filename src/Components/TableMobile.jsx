@@ -1,42 +1,19 @@
 function TableMobile({dataHeader, data}) {
     return (
        
-        
-        <table className="w-full border-collapse">
-        <thead>
-            <tr className="bg-[#3798A6] text-white">
-                {
-                    dataHeader.map((item, index) =>
-                    
-                            <th key={index} className={` bg-[ #006d71] text-white py-8 center ${item.style} font-normal leading-7 text-xl`}>{item.name}</th>
-                        
-                        
-                    
-                        ) 
-                }
-                
-            </tr>
-        </thead>
-        <tbody>
-            {data.map((item,index) =>
-            <tr key={index} className={`${(index % 2 !== 0) && 'bg-[#F5F5F5]' } hover:bg-[#F5F5F5] ${(item[3] === "-") && 'bg-[#F0F8FF]' }`}>
-                {
-                    item.map((item,index) =>
-                        <td key={index} className="">
-                            <div className={`flex justify-center items-center font-normal leading-[18px] text-base text-[#1C1D2080] py-8 `}>{item}</div>
-                            
-                            </td>
-                    )
-                }
+        <div className="mt-5 mb-14">
+            {data.map((item,index) =>  <div key={index} className={`py-6 grid grid-cols-[0.5fr_1fr] gap-4 ${(index % 2 !== 0) && 'bg-[#F5F5F5]'}`}>
+                <div className="flex flex-col">
+                    {dataHeader.map((item,index) => <h6 key={index} className="font-normal text-base leading-[22px] py-2 px-4">{item.name}</h6>)}
+                </div>
+                <div>
+                    {data[index].map((item,index) => <h6 key={index} className="font-normal text-xs leading-[18px] py-[10px] px-4 text-[#1C1D2080]">{item}</h6>)}
+                </div>
 
-          
-        </tr>
-            
-            )}
-            
-            
-        </tbody>
-    </table>
+        </div>)}
+        </div>
+        
+           
 
         
 
@@ -51,10 +28,11 @@ function TableMobile({dataHeader, data}) {
 
 export default TableMobile;
 
-//styleName: H6;
+//styleName: H6 - mobile;
 // font-family: Oldschool Grotesk;
-// font-size: 16px;
+// font-size: 12px;
 // font-weight: 400;
 // line-height: 18px;
 // text-align: left;
+
 

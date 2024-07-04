@@ -24,7 +24,7 @@ function Upcoming() {
 
   
     return (
-        <div className="w-full grid grid-cols-1 lg:grid-cols-[0.5fr_1fr] lg:gap-x-16 gap-10">
+        <div className="w-full grid grid-cols-1 lg:grid-cols-[0.5fr_1fr] lg:gap-x-16 gap-10 lg:py-[72px] py-14">
             <HeadingStyle2 name="What're coming up" tinyText="upcoming activities" space="pt-[42px]" sizeLead="leading-[72px]" size="text-7xl" mobileSize="text-4xl" mobileSizeLead="leading-[38px]" mobileSpace="pt-8" />
         <div className="flex flex-col gap-6">
             {

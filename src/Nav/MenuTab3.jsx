@@ -10,11 +10,11 @@ function Item3(){
             items: [
                 {
                     text: 'Call for paper',
-                    link: '',
+                    link: '/about/conference',
                 },
                 {
                     text: 'Previous',
-                    link: '',
+                    link: '/about/conference',
                 }
             ]
         }
