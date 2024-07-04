@@ -18,7 +18,7 @@ function Item2(){
           },
           {
             text: 'Diploma',
-            link: '/academic/diploma'
+            link: ''
           }
         ]
         },
