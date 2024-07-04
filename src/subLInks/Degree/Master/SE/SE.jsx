@@ -7,10 +7,12 @@ import BodyPart from './BodyPart';
 import { useLocation } from 'react-router-dom';
 import UltiWrapper from '../../../../Components/UltiWrapper';
 import ImageHeader from '../../../../Components/ImageHeader';
+import Name from '../../../../utils/Name';
 
 function HPC() {
 
-  useResize("Business Information Systems (BIS)");
+  useResize();
+  Name("M.C.Sc. ( Software Engineering )")
   const { pathname } = useLocation();
 
   useEffect(()=>{
