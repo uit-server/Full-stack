@@ -13,6 +13,10 @@ function Item1(){
               link: '/about/vision-mission'
             },
             {
+              text: 'Six Year Journey',
+              link: '/about/sixyearjourney'
+            },
+            {
               text: 'History',
               link: '/about/history'
             },
@@ -24,10 +28,7 @@ function Item1(){
               text: 'FAQS',
               link: '/about/faqs'
             },
-            {
-              text: '6th Year Journey',
-              link: ''
-            }
+            
           ]
         },
         {

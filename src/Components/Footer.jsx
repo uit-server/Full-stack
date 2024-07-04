@@ -101,6 +101,7 @@ const Button = styled.button`
     font-size: 16px;
     border: none;
     cursor: pointer;
+    position: relative;
 `
 
 const IconContainer = styled(motion.div)`
@@ -120,7 +121,8 @@ const CircleDiv = styled(motion.div)`
   height: 28px;
   background-color: #3798a6;
   position: absolute;
-  left: ${props => props.left};
+  right: -10px;
+  top: 8px;
 `;
 
 const containerVariants = {
@@ -155,28 +157,31 @@ function TextContainer(){
     )
 }
 
-export function AnimationButton({value='Get in touch',width='194.37px',left='59.7%'}){
+export function AnimationButton({value='Get in touch'}){
     return (
        <>
         <ButtonContainer
-                width={width}
+                
                 variants={containerVariants}
                 initial="rest"
                 whileHover="hover"
                 animate="rest"
                 
             >
-                <Button>{value}</Button>
+                <Button>{value}
+                <CircleDiv
+                 
+                variants={circleVariants}
+                />
+                </Button>
                 <IconContainer
                 variants={iconVariants}
                 transition={{ duration: 0.3 }}
                 >
-                <FontAwesomeIcon icon={faArrowRight} className="text-[14px] text-[#fff]" />
+                    <FontAwesomeIcon icon={faArrowRight} className="text-[14px] text-[#fff]" />
+                    
                 </IconContainer>
-                <CircleDiv
-                left={left}
-                variants={circleVariants}
-                />
+                
             </ButtonContainer>
        </>
     )

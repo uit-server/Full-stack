@@ -58,19 +58,19 @@ function Item2(){
           ]
         },
         {
-          title: 'Updated',
+          title: 'Collaboration',
           items: [
             {
-              text: 'Conference',
-              link: '/about/conference'
+              text: 'University Collaboration',
+              link: ''
             },
             {
-              text: 'Pdf',
-              link: '/about/pdf'
+              text: 'Industry Collaboration',
+              link: ''
             },
             {
-              text: 'News',
-              link: '/about/news'
+              text: 'Collaboration with Organizations',
+              link: ''
             },
           ]
         }
