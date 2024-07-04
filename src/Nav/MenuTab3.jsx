@@ -9,12 +9,12 @@ function Item3(){
             title: 'Our Conferences',
             items: [
                 {
-                    text: 'Call for paper',
-                    link: '',
+                    text: 'Call For Papers',
+                    link: '/about/conference/1',
                 },
                 {
-                    text: 'Previous',
-                    link: '',
+                    text: 'Previous Conferences',
+                    link: '/about/conference',
                 }
             ]
         }

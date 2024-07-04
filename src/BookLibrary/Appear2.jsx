@@ -1,4 +1,4 @@
-import ImgOne from '../Images/BookLibrary/photo/library_1.png';
+import ImgOne from '../Images/BookLibrary/photo/moodle.jpg';
 import ImgTwo from '../Images/BookLibrary/photo/library_2.png';
 import styled from 'styled-components';
 
@@ -8,7 +8,7 @@ const AppearOne = styled.div`
     background-size: cover;
     object-fit: cover;
     background-position: center center;
-    
+    background-repeat: no-repeat;
     
         
 

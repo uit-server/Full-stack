@@ -4,65 +4,79 @@ import useResize from '../utils/useResize';
 import React,{ useState } from 'react';
 import { useSelector } from 'react-redux';
 import { motion } from "framer-motion";
-
+import arrow from '../Images/history1.svg';
+import item1 from '../Images/logoIcon.svg';
+import item2 from '../Images/graduateIcon.svg';
+import item3 from '../Images/buildingIcon.svg';
+import toward from '../Images/towards.svg';
+import UltiWrapper from '../Components/UltiWrapper';
+import Headline from './Headline';
     
 function History() {
-  const title = "History";
-  const windowWidth = useResize(title);
-  const language = useSelector((state) => state.language.value);
 
+  const itemsData =[
+    {
+      id:1,
+      logo: item1,
+      title:"Officially renamed in 15th January, 2015",
+      p:"UIT produces about 200 Undergraduate students every year."
+    },
+    {
+      id:2,
+      logo: item2,
+      title:"What we offers",
+      p:"UIT offers Undergraduate and Post-graduate courses for Bachelor, Diploma,  Master’s and Doctorate level students in a wide range of subject areas"
+    },
+    {
+      id:3,
+      logo: item3,
+      title:"Myanmar’s main center of research in ICT ",
+      p:"UIT promotes the productivity and the standard of living of the nation."
+    }
+  ]
   
-  const MyanText = "သမိုင်း";
-
-  const display = (language == "EN") ? title : MyanText;
-
-  const [dataFromNav, setDataFromNav] = useState(true);
-
-    const handleDataFromNav = (data) => {
-        setDataFromNav(data);
-    };
-
-  return (
+  return(
     <>
-     <Navbar sendDataToParent={handleDataFromNav} />
+      <UltiWrapper>
+        <Headline />
+        
+          <div className='flex flex-col md:grid md:grid-cols-2 p-[4%]'>
+            <div className='w-full flex justify-center'>
+            <img src={arrow} alt="" className='w-[350px] md:w-[450px]'/>
 
-<div className={windowWidth <= 1024 && !dataFromNav ? 'mainUnactive main px-2' : 'main px-2'}>
-
-  
-
- <motion.div initial={{ opacity: 0}} animate={{ opacity: 1}} exit={{ opacity: 0 }} >
-   <div className="hide hero ps-14 pt-[8rem]  lg:pb-24">
-<span className="overflow-hidden fade">
-<AnimatedText
-     once
-     text={display}
-     el="h1"
-     className="lg:text-7xl text-6xl font-medium"
-     language={language}
-   />
-</span>
-</div>
-<div className="sm:hidden hero ps-4 pt-[5rem] lg:pt-72">
-  <span className="overflow-hidden fade">
-   <AnimatedText
-  once
-  text={display}
-  el="h1"
-  className="text-5xl font-medium"
-  language={language}
-/>
-
-  </span>
-</div>
- </motion.div> 
- 
-
-
-</div>
-
-   
-    
-  
+            </div>
+          <span className=' ml-20 mt-12'>
+            <h1 className='text-2xl text-center'>History of UIT</h1>
+            <p className='p-5 text-justify'>The University Computer Center (UCC) was established in 1971 but it  changed into the Institute of Computer Science and Technology (ICST) in  1988. On 1st July, 1998, it became the University of Computer Studies,  Yangon. There are currently altogether 25 Computer Universities around  the country. The University of Computer Studies (Bahan Campus) was  separately established on 3rd December, 2012, as the Center of  Excellence to produce the competent computer professionals and  specialists who will become invaluable human resources in ICT sector.</p>
+          </span>
+          </div>
+          <div>
+            <img src={toward} alt="" />
+          </div>
+          
+          <ul className='flex flex-row xl:grid xl:grid-cols-3 xl:gap-x-[20px] gap-x-[15px] justify-center w-full items-center flex-wrap xl:gap-y-[20px] gap-y-[30px] mt-10 mb-12'>
+        {itemsData.map((item) => (
+          <li key={item.id}>
+            <div className='flex flex-col gap-[20px] justify-center items-center sm:justify-start sm:items-start'>
+              <div className='2xl:w-[520px] xl:w-[380px] xl:h-[380px] w-[300px] h-[350px] rounded-[32px] bg-[#f0f8ff] p-[15%] text-center'>
+                <div className='w-full h-14 flex justify-center'>
+                <img src={item.logo} alt="" />
+                </div>
+                <div className='text-lg h-[40px] mt-6 mb-10'>
+                  {item.title}
+                </div>
+                <div className='mt-3 text-gray-400'>
+                  {item.p}
+                </div>
+               
+              </div>
+              
+            </div>
+          </li>
+        ))}
+      </ul>
+        
+      </UltiWrapper>
     </>
   );
 

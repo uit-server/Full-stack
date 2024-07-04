@@ -5,13 +5,12 @@ import React,{ useState } from 'react';
 import { useSelector } from 'react-redux';
 import { motion } from "framer-motion";
 import sixyearjourney from '../Images/BookLibrary/photo/sixyearjourney.jpg';
-
     
 function Headline() {
   const language = useSelector((state) => state.language.value);
 
-  const title = "Calendar";
-  const MyanText = "ပြက္ခဒိန်";
+  const title = "History";
+  const MyanText = "သမိုင်းကြောင်း";
   const display = (language == "EN") ? title : MyanText;
 
   
@@ -23,7 +22,8 @@ function Headline() {
   
 
  <motion.div initial={{ opacity: 0}} animate={{ opacity: 1}} exit={{ opacity: 0 }} className='w-[120%] ms-[-5.6%] mt-[-5.6%] ' style={{backgroundImage: `url(${sixyearjourney})`,backgroundSize: 'cover',backgroundRepeat:'no-repeat',backgroundPosition: 'center'}}>
-   <div className="hide hero ps-20 py-13  lg:py-[4rem]">
+
+   <div className="hide hero ps-14 py-13  lg:py-[4rem]">
 <span className="overflow-hidden fade">
 <AnimatedText
      once
@@ -40,7 +40,7 @@ function Headline() {
   once
   text={display}
   el="h1"
-  className="text-5xl font-medium"
+  className="text-5xl font-medium text-[#fff]"
   language={language}
 />
 
