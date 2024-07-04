@@ -22,8 +22,8 @@ function ImageHeader({name}) {
 
     return (
       <Div className="py-[27.5px] lg:py-14 lg:px-97 relative">
-        <h1 className="relative z-10 ms-[5%] font-normal text-[40px] leading-[40px] lg:text-[80px] lg:leading-[80px] text-[#ffffff]">{name}</h1>
-        <Div2 className=" absolute top-0 w-full h-full"></Div2></Div>
+        <h1 className="relative ms-[5%] font-normal text-[40px] leading-[40px] lg:text-[80px] lg:leading-[80px] text-[#ffffff]" style={{ zIndex: 1}}>{name}</h1>
+        <Div2 className=" absolute top-0 w-full h-full z-0"></Div2></Div>
     );
   
    
