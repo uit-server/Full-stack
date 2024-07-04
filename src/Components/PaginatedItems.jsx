@@ -9,7 +9,7 @@ import axios from '../utils/axiosInstance';
 import { useDispatch } from 'react-redux';
 import { insertPostsData } from '../store/postsDataSlice';
 
-const PaginatedItems = () => {
+const PaginatedItems = ({urls}) => {
   const [currentPage, setCurrentPage] = useState(0);
   const itemsPerPage = 3; // limit for items on each page
   const windowWidth = useResize("News");
@@ -19,7 +19,7 @@ const PaginatedItems = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const dispatch = useDispatch();
   
-  const url = 'posts';
+  const url = urls;
 
   useEffect(() => {
     axios.get(url)

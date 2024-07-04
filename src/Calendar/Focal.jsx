@@ -1,7 +1,13 @@
 import styled from 'styled-components';
 import Desc from './Desc';
+import Calendar from '../Images/calendar.jfif'
 
-const Div = styled.div``;
+const Div = styled.div`
+  background: url(${Calendar});
+  background-size: cover;
+    object-fit: cover;
+    background-position: center center;
+`;
 
     
 function Focal() {
