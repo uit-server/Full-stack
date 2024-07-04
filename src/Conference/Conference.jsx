@@ -1,6 +1,5 @@
 
 import React,{useState,useEffect } from 'react';
-import Navbar from '../Nav/Navbar';
 import useResize from '../utils/useResize';
 import '../Styles/Degree.css';
 import Heading from './Heading';
@@ -13,8 +12,6 @@ import { useParams } from 'react-router-dom';
 
 
 function Conference() {
-
-  const [data, setData] = useState(null);
   const { id } = useParams();
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -31,7 +28,6 @@ function Conference() {
     axios.get(url)
       .then(response => {
         // Handle the successful response here
-        setData(response.data);
         dispatch(insertApiData(response.data));
         setLoading(false);
       })
@@ -41,7 +37,7 @@ function Conference() {
         console.error('Error fetching data:', error);
         setLoading(false);
       });
-  }, []);
+  }, [url,dispatch]);
 
   //comments
 

@@ -3,8 +3,8 @@ import '../../Styles/Faculty.css';
 import Headline from '../../Faculty/Components/Headline';
 import Vision from './Vision';
 import useResize from '../../utils/useResize';
-import React,{ useState } from 'react';
-import Major from '../../Faculty/Components/Major';
+import React from 'react';
+
 import Member from '../../Faculty/Components/Member';
 import UltiWrapper from '../../Components/UltiWrapper';
 import Img1 from '../../Images/Faculty/CS/Teachers/Teacher_1.png';
@@ -12,8 +12,7 @@ import Img2 from '../../Images/Faculty/CS/Teachers/Teacher_2.png';
 import Img3 from '../../Images/Faculty/CS/Teachers/Teacher_3.png';
 import Img4 from '../../Images/Faculty/CS/Teachers/Teacher_4.png';
 import Img5 from '../../Images/Faculty/CS/Teachers/Teacher_5.png';
-import High from '../../Images/Faculty/CS/Trivia/High_Performance_Computing.png';
-import Img from '../../Images/Faculty/CS/Trivia/Knowledge_Engineering.png';
+
 import SubjectOffer from '../../subLInks/Degree/Bachelor/Components/SubjectOffer';
 
 function Faculty(){
@@ -71,34 +70,34 @@ function Faculty(){
     
     ]
 
-    const numText = "two";
-    const faculty= "FCS";
-    const infoText = "lorem ipsum";
+    // const numText = "two";
+    // const faculty= "FCS";
+    // const infoText = "lorem ipsum";
 
-    const desktopLeftRow = [
-      {
-        name: "Software Engineering (SE)",
-        image: High
-      }
-    ]
+    // const desktopLeftRow = [
+    //   {
+    //     name: "Software Engineering (SE)",
+    //     image: High
+    //   }
+    // ]
 
-    const desktopRightRow = [
-      {
-        name: "Software Engineering (SE)",
-        image: Img
-      }
-    ]
+    // const desktopRightRow = [
+    //   {
+    //     name: "Software Engineering (SE)",
+    //     image: Img
+    //   }
+    // ]
 
-    const mobile = [
-      {
-        name: "Software Engineering (SE)",
-        image: High
-      },
-      {
-        name: "Business Information System (BIS)",
-        image: Img
-      }
-    ]
+    // const mobile = [
+    //   {
+    //     name: "Software Engineering (SE)",
+    //     image: High
+    //   },
+    //   {
+    //     name: "Business Information System (BIS)",
+    //     image: Img
+    //   }
+    // ]
 
 
  

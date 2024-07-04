@@ -1,10 +1,9 @@
 import '../../Styles/Degree.css';
 import '../../Styles/Faculty.css';
 import Headline from '../Components/Headline';
-import Navbar from '../../Nav/Navbar';
 import Vision from './Vision';
 import useResize from '../../utils/useResize';
-import React,{ useState } from 'react';
+import React from 'react';
 import Major from '../Components/Major';
 import Member from '../Components/Member';
 import UltiWrapper from '../../Components/UltiWrapper';

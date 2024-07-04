@@ -1,41 +1,43 @@
 import styled from 'styled-components'
 
+const Div = styled.div`
+
+background: url(${props => require(`../../Images/${props.image}`)});
+background-size: cover;
+width: 100%;
+aspect-ratio: 16/9;
+object-fit: cover;
+background-position: center center;
+border-radius: 32px;
 
 
-
-function MajorImg({Img,potrait,landscape}) {
-
-    const Div = styled.div`
-
-    background: url(${props => require(`../../Images/${props.image}`)});
-    background-size: cover;
-    width: 100%;
-    aspect-ratio: 16/9;
-    object-fit: cover;
-    background-position: center center;
-    border-radius: 32px;
     
+
+
+`;
+
+const Div2 = styled.div`
+
+background: url(${props => require(`../../Images/${props.image}`)});
+background-size: cover;
+width: 100%;
+aspect-ratio: 4/5;
+object-fit: cover;
+background-position: center center;
+border-radius: 32px;
+
+
     
-        
 
 
-    `;
-
-    const Div2 = styled.div`
-
-    background: url(${props => require(`../../Images/${props.image}`)});
-    background-size: cover;
-    width: 100%;
-    aspect-ratio: 4/5;
-    object-fit: cover;
-    background-position: center center;
-    border-radius: 32px;
-    
-    
-        
+`;
 
 
-    `;
+
+
+function MajorImg({potrait,landscape}) {
+
+  
 
     
 
@@ -69,7 +71,6 @@ function MajorImg({Img,potrait,landscape}) {
          
     }
 
-    console.log(data)
 
 
  
@@ -81,7 +82,7 @@ function MajorImg({Img,potrait,landscape}) {
                     <>
                         {item.landscape && <Div image={item.landscape}></Div> }
                     
-                            {(item.potrait.length != 0) &&
+                            {(item.potrait.length !== 0) &&
                             <div className="grid grid-cols-2 gap-x-[10px] lg:gap-x-8">
                                 {item.potrait[0] && <Div2  image={item.potrait[0]}></Div2>}    
                             

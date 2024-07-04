@@ -1,10 +1,9 @@
 
 
-import { useState,useEffect } from 'react';
+import { useState,useEffect,useRef } from 'react';
 import { AnimatePresence,motion } from 'framer-motion';
 import { useDispatch } from 'react-redux';
 import { changeRole } from '../store/RoleSlice';
-import { useSelector } from 'react-redux';
 import { HashLink } from 'react-router-hash-link';
 
 const dpData = [
@@ -42,42 +41,40 @@ const dpData = [
     }
 ]
 
-// "114px" : "136px"
+
 
 function Dropdown() {   
     const [signal, setSignal ] = useState(0);
-    const [define, setDefine ] = useState(true);
     const height = (window.innerWidth < 1024) ? "60px" : "68px";
     const bgHeight = (window.innerWidth <= 392) ? "156px" : (window.innerWidth < 1024) ? "114px" : (window.innerWidth <= 1280) ? "176px" :'136px';
     const justifyHeight = (window.innerWidth <= 392) ? "156px" : (window.innerWidth < 1024) ? "46px" : (window.innerWidth <= 1280) ? "156px" :'56px';
     const dispatch = useDispatch();
-    const test  = useSelector((state) => state.role.value);
-    let interval;
+    const interval = useRef(null);
 
+
+   
+    const roleChange = (event, index) => {
+    
+        dispatch(changeRole(index));
+    }
 
     const Trigger = (event, index) => {
         event.stopPropagation();
         setSignal(index);
-        return () => clearInterval(interval);
-    }
-
-    const roleChange = (event, index) => {
-    
-        dispatch(changeRole(index));
     }
 
     useEffect(() => {
         
 
         
-            interval = setInterval(() => {
+            interval.current = setInterval(() => {
                 setSignal((prevSignal) => (prevSignal < 3 ? prevSignal + 1 : 0));
                 }, 5000);
                
         
     
-        return () => clearInterval(interval);
-      }, [signal]);
+        return () => clearInterval(interval.current);
+      }, [signal,interval]);
 
      return(
         <AnimatePresence>
@@ -85,7 +82,7 @@ function Dropdown() {
             <span className=" hidden lg:inline-block absolute top-[-10px] left-0  text-xs font-normal me-[30px] lg:me-[55px]  lg:leading-[18px] lg:text-base">
             <div className=" inline-block relative bottom-[3.5px] px-[7px] text-xl text-[#3798A6]">.</div>
     
-                <span className="opacity-50 leading=[18px]">Types of member {test}</span>
+                <span className="opacity-50 leading=[18px]">Types of member </span>
         </span>
             <div className="w-full">
             {

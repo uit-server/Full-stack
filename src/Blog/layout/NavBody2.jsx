@@ -1,22 +1,10 @@
 import styled from 'styled-components'
 import { useState } from 'react';
 import React from 'react';
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { HashLink } from 'react-router-hash-link';
 
-
-function NavBody2() {
-
-    const [data, setData] = useState(0);
-    const [prev, setPrev] = useState(0);
-    const [appear, setAppear] = useState(false);
-
-    const links = [
-        ["Description","#overview"],
-        ["Photo","#photo"]
-    ]
-
-    const Ball = styled.div`
+const Ball = styled.div`
         width: 10px;
         height: 100%;
         position: absolute;
@@ -33,9 +21,22 @@ function NavBody2() {
             border-radius: 50%;
             position: absolute;
             transition: all .1s ease-out;
-        }
+        
 
     `;
+
+function NavBody2() {
+
+    const [data, setData] = useState(0);
+    const [prev, setPrev] = useState(0);
+    const [appear, setAppear] = useState(false);
+
+    const links = [
+        ["Description","#overview"],
+        ["Photo","#photo"]
+    ]
+
+    
 
     const handleClick = (event, index) => {
         event.stopPropagation();
@@ -49,7 +50,6 @@ function NavBody2() {
         setAppear(!appear);
     }
 
-    console.log(appear)
 
 
     return (

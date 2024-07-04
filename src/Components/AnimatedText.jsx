@@ -1,6 +1,6 @@
 import '../Styles/Degree.css';
-import { motion, useInView, useAnimation, Variant,AnimatePresence } from "framer-motion";
-import { useEffect, useRef } from "react";
+import { motion, useInView, AnimatePresence } from "framer-motion";
+import { useRef } from "react";
 
 
 const defaultAnimations = {

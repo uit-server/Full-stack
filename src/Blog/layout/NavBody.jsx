@@ -1,3 +1,4 @@
+
 import styled from 'styled-components'
 import { useState } from 'react';
 import React from 'react';
@@ -7,37 +8,40 @@ import ProgressBar from './ProgressBar';
 import ReadTime from './ReadTime';
 import ShareSpace from './ShareSpace';
 
+
+const Ball = styled.div`
+width: 10px;
+height: 100%;
+position: absolute;
+left: -9%;
+
+
+
+`;
+
+const Element = styled(motion.div)`
+    background-color: #1C1D20;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    position: absolute;
+    transition: all .1s ease-out;
+}
+
+`;
+
+
 function NavBody() {
 
     const [data, setData ] = useState(0);
     const [prev, setPrev ] = useState(0);
-    const history = [0];
 
     const links = [
         ["Description","#overview"],
         ["Photo","#photo"]
     ]
 
-    const Ball = styled.div`
-        width: 10px;
-        height: 100%;
-        position: absolute;
-        left: -9%;
-        
-
-
-    `;
-
-    const Element = styled(motion.div)`
-            background-color: #1C1D20;
-            width: 4px;
-            height: 4px;
-            border-radius: 50%;
-            position: absolute;
-            transition: all .1s ease-out;
-        }
-
-    `;
+  
 
     const handleClick = (event,index) => {
         event.stopPropagation();

@@ -4,11 +4,31 @@ import React from 'react';
 import { motion } from "framer-motion";
 import { HashLink } from 'react-router-hash-link';
 
+const Ball = styled.div`
+width: 10px;
+height: 100%;
+position: absolute;
+left: -9%;
+
+
+
+`;
+
+const Element = styled(motion.div)`
+    background-color: #1C1D20;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    position: absolute;
+    transition: all .1s ease-out;
+}
+
+`;
+
 function NavBody() {
 
     const [data, setData ] = useState(0);
     const [prev, setPrev ] = useState(0);
-    const history = [0];
 
     const links = [
         ["Calls for paper","#callsforpaper"],
@@ -18,26 +38,7 @@ function NavBody() {
         ["Deadline","#deadline"],
     ]
 
-    const Ball = styled.div`
-        width: 10px;
-        height: 100%;
-        position: absolute;
-        left: -9%;
-        
-
-
-    `;
-
-    const Element = styled(motion.div)`
-            background-color: #1C1D20;
-            width: 4px;
-            height: 4px;
-            border-radius: 50%;
-            position: absolute;
-            transition: all .1s ease-out;
-        }
-
-    `;
+   
 
     const handleClick = (event,index) => {
         event.stopPropagation();

@@ -19,11 +19,5 @@ function Date() {
   
   export default Date;
 
-//styleName: H6 - mobile;
-// font-family: Oldschool Grotesk;
-// font-size: 12px;
-// font-weight: 400;
-// line-height: 18px;
-// text-align: left;
 
 

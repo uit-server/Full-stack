@@ -1,7 +1,6 @@
 import '../Styles/Degree.css';
 import { AnimatedText } from '../Components/AnimatedText';
-import React,{ useState } from 'react';
-import { useSelector } from 'react-redux';
+import React from 'react';
 import { motion } from "framer-motion";
 
 
@@ -22,13 +21,8 @@ const headerMobile = [
     
 function Headline() {
 
-
   
 
-  // const title = "Admissions infromation and requirements";
-  // const MyanText = "Admissions infromation and requirements";
-
-  // const display = (language == "EN") ? title : MyanText;
 
   return (
     <>

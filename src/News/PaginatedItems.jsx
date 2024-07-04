@@ -33,7 +33,7 @@ const PaginatedItems = () => {
         setError(error.message);
         setLoading(false);
       });
-  }, []);
+  }, [url,dispatch]);
 
   const handlePageClick = (event) => {
     setCurrentPage(event.selected);
