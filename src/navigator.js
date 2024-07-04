@@ -38,6 +38,8 @@ import FaculHead from './FaculHead/FaculHead';
 // import ChildConference from './Conference/Conference';
 import Pdf from './PdfPage/PdfPage';
 
+import Research from './Research/Research';
+
 
 //sublink for majors
 import HPC from './subLInks/Degree/Bachelor/HPC/HPC';
@@ -68,7 +70,8 @@ export default function Navigator() {
             <Route path="/academic/library" element={<Library />} />
             <Route path="/academic/calendar" element={<Calendar />} />
             <Route path="/academic/campus" element={<Campus />} />
-           
+            <Route path="/academic/academic-rules" element={<AcademicRule />} />
+            <Route path="about/faculties" element={<FaculHead />} />
 
 
             <Route path="/about/vision-mission" element={<Visimisi />} />
@@ -81,9 +84,10 @@ export default function Navigator() {
             <Route path="/about/contacts" element={<Contact />} />
             <Route path="/about/maps" element={<Map />} />
             <Route path="/about/campus" element={<FaciCampus />} />
+            
 
-
-            <Route path="about/faculties" element={<FaculHead />} />
+            <Route path="/research" element={<Research />} />
+            
 
             {/* Faculty */}
             <Route path="/faculties/computer-science" element={<CS />} />

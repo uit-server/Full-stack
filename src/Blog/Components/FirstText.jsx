@@ -22,7 +22,7 @@ function FirstText() {
        
 
     </div>
-    <div className="lg:scale-100 scale-70"> <AnimationButton value='News Overview'  left='69%' /></div>
+    <div className="lg:scale-100 scale-70"> <AnimationButton value='News Overview' /></div>
    
 
         </div>

@@ -11,12 +11,12 @@ function Research(){
 
 
     const header = [
-        "Our Researches",
+        "Our Research",
     
       ]
 
       const headerMobile = [
-        "Our Researches",
+        "Our Research",
         
       ]
 

@@ -127,10 +127,10 @@ function Navbar({sendDataToParent}){
                         )}
                     </Link>
                     
-                </div>
+                </div>  
 
                 <div className="Menu" onMouseEnter={()=>handleHover("menu5")} onMouseLeave={handleLeave} onClick={()=>handleToggleAccordion("menu5")}>
-                    <a className={windowWidth>1429?"hoverActive menu5":"menu5"} style={{opacity:hoveredTab==='menu5'&&0.7}}>
+                    <Link reloadDocument to="/research" className={windowWidth>1429?"hoverActive menu5":"menu5"} style={{opacity:hoveredTab==='menu5'&&0.7}}>
                         <span>Research</span>
                         <svg width="18" height="9" viewBox="0 0 18 9" fill="none" xmlns="http://www.w3.org/2000/svg" className="arrow">
                             <path d={activeTab==="menu5"?"M17 8L8.57895 2L1 8":"M1 1.64285L9.42105 7.64285L17 1.64285"} stroke={windowWidth <= 1429 ? "white" : "black"} strokeWidth="2" strokeLinecap="round"/>
@@ -139,7 +139,7 @@ function Navbar({sendDataToParent}){
                         {(windowWidth <= 1429) && (
                             <div className={activeTab==="menu5"?"stick active":"stick"}></div>
                         )}
-                    </a>
+                    </Link>
                     
                 </div>
 

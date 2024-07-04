@@ -11,7 +11,7 @@ import PdfView from './PdfView';
     
 function SixYearJourney() {
 
-  const pdfFile = `${process.env.PUBLIC_URL}/Calendar.pdf`;
+  const pdfFile = `${process.env.PUBLIC_URL}/UIT6YearsJourney.pdf`;
   
 return (
   <>
