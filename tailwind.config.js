@@ -12,6 +12,11 @@ module.exports = {
         'lg': '1024px',   // Default large screen size
         'xl': '1280px',   // Default extra-large screen size
         '2xl': '1670px',  // Default 2x-large screen size
+        'max-1321': {'max': '1321px'},//for history page
+        'max-1052' : {'max': '1052px'},//for history page
+      },
+      backgroundImage:{
+        'his-bg': "url('/src/Images/his-bg.jpg')",
       }
     }
   },
