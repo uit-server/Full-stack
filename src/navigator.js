@@ -63,7 +63,7 @@ export default function Navigator() {
         <Routes>
             
             <Route path="/" element={<Home />} />
-            <Route path="/academic/diploma" element={<Diploma />} />
+            {/* <Route path="/academic/diploma" element={<Diploma />} /> */}
             <Route path="/academic/degree" element={<Degree />} />
             <Route path="/academic/admission-requirements" element={<Admission />} />
             <Route path="/academic/academic-rules" element={<AcademicRule />} />
