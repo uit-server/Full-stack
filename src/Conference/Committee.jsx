@@ -36,7 +36,7 @@ export default function Committee() {
                 {
                   sumChair.map(
                     (item,index) =>
-                      <div className=" flex justify-start gap-[10px] w-[350px]">
+                      <div className=" flex justify-start gap-[10px] w-[350px]" key={index}>
                   <Div className="flex-none w-[50px] md:w-[75px]  bg-[#ccc] rounded-md" image={item[0]}></Div>
                   <div className="flex flex-col">
                     <p className="text-[11px] md:text-[16px] text-[#3798a6]">{(index <= generalChair.length) ? "General chair by" : (index <= generalChair.length + generalCoChair.length) ? "General co-chair by" : "Program chair by"  }</p>
@@ -49,24 +49,7 @@ export default function Committee() {
                 }
                 
 
-                {/* <div className=" flex justify-start gap-[10px] w-[350px]">
-                  <div className="w-[50px] md:w-[75px]  bg-[#ccc] rounded-md"></div>
-                  <div className="flex flex-col">
-                    <p className="text-[11px] md:text-[16px] text-[#3798a6]">General co-chair by</p>
-                    <p className="text-[10px] md:text-[16px] text-[#1c1d20]">Senior Lecturer.Michael Brown</p>
-                    <p className="text-[12px] md:text-[16px] text-[#1c1d20] opacity-50">University of Melbourne Australia</p>
-                  </div>
-                  
-                </div>
-
-                <div className=" flex justify-start gap-[10px] w-[350px]">
-                  <div className="w-[50px] md:w-[75px]  bg-[#ccc] rounded-md"></div>
-                  <div className="flex flex-col">
-                    <p className="text-[11px] md:text-[16px] text-[#3798a6]">Program chair by</p>
-                    <p className="text-[10px] md:text-[16px] text-[#1c1d20]">Associate Professor.Jane Smith</p>
-                    <p className="text-[12px] md:text-[16px] text-[#1c1d20] opacity-50">University of Barcelona Spain</p>
-                  </div>
-                </div> */}
+              
             
             
         </div>

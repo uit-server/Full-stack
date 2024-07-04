@@ -1,7 +1,5 @@
 import React from 'react';
-import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import ButtonGroup from './ButtonGroup';
 import { AnimationButton } from '../../Components/Footer';
 
 function FirstText() {
@@ -33,10 +31,5 @@ function FirstText() {
 
 export default FirstText;
 
-// //styleName: H6;
-// font-family: Oldschool Grotesk;
-// font-size: 16px;
-// font-weight: 400;
-// line-height: 18px;
-// text-align: left;
+
 

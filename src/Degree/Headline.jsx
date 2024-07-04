@@ -1,18 +1,6 @@
 import '../Styles/Degree.css';
-import { AnimatedText } from '../Components/AnimatedText';
-import { motion } from "framer-motion";
 
 
-const header = [
-  "Degree Programs",
-  "We Offer"
-]
-
-const headerMobile = [
-  "Degree",
-  "Programs",
-  "We Offer"
-]
 
 
 

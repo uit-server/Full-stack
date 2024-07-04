@@ -44,29 +44,30 @@ export default function Major({numText,desktopLeftRow,desktopRightRow,mobile,fac
     
 
 
+const Div2 = styled.div`
+background: url(${props => props.image});
+background-size: cover;
+object-fit: cover;
+background-position: center center;
+`;
+
+const Div = styled.div`
+background: url(${props => props.image});
+background-size: cover;
+object-fit: cover;
+background-position: center center;
+
+
+
+
+
+
+`;
 
 
 function DesktopSize({numText,faculty,desktopLeftRow,desktopRightRow,infoText}){
 
-    const Div2 = styled.div`
-    background: url(${props => props.image});
-    background-size: cover;
-    object-fit: cover;
-    background-position: center center;
-`;
-
-const Div = styled.div`
-    background: url(${props => props.image});
-    background-size: cover;
-    object-fit: cover;
-    background-position: center center;
-
-
-
-    
-
-
-`;
+ 
 
 
     return(
@@ -74,8 +75,8 @@ const Div = styled.div`
                 <div className=" pt-[72px]">
                     <div className="leftMajor w-full">
                         <div className="grid grid-col-1 gap-32 w-full" >
-                            {desktopLeftRow.map((item) => 
-                            <div>
+                            {desktopLeftRow.map((item,index) => 
+                            <div key={index}>
                                 <Link to={item.link} id="navigation" >
                                 <Div2 className="fakeImg w-full aspect-square" image={item.image}></Div2>
                                 </Link>
@@ -101,8 +102,8 @@ const Div = styled.div`
                     </div>
                     <div className="rightMajor w-full">
                         <div className="grid grid-col-1 gap-32 w-full">
-                            {desktopRightRow.map((item) => 
-                            <div className="w-full">
+                            {desktopRightRow.map((item,index) => 
+                            <div key={index} className="w-full">
                                 
                                 <Link to={item.link} id="navigation" >
                                 <Div className="fakeImg w-full aspect-square" image={item.image}></Div>
@@ -124,14 +125,17 @@ const Div = styled.div`
     )
 }
 
+const Div3 = styled.div`
+background: url(${props => props.image});
+background-size: cover;
+object-fit: cover;
+background-position: center center;
+`;
+
+
 function MobileSize({numText,faculty,mobile,infoText}){
 
-    const Div2 = styled.div`
-    background: url(${props => props.image});
-    background-size: cover;
-    object-fit: cover;
-    background-position: center center;
-`;
+  
 
 
 
@@ -146,11 +150,11 @@ function MobileSize({numText,faculty,mobile,infoText}){
             </div>
             <div className="majorImgCon w-full">
                 {
-                    mobile.map((item) =>
-                <div className="grid grid-col-1 w-full">
+                    mobile.map((item,index) =>
+                <div className="grid grid-col-1 w-full" key={index}>
                     
                     <Link to={item.link} id="navigation" >
-                    <Div2 className="w-full aspect-square bg-[#d9d9d9] rounded-[32px] mb-[12px]" image={item.image}></Div2>
+                    <Div3 className="w-full aspect-square bg-[#d9d9d9] rounded-[32px] mb-[12px]" image={item.image}></Div3>
                                 </Link>
                     
                                 <Link to={item.link} id="navigation" >

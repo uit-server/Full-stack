@@ -76,8 +76,8 @@ function MainSec() {
       <div className="customHide py-22 sm:py-44 gap-2.5 h-fit w-100 ">
         <div className="degree-container w-3/4 h-fit m-auto center">
             <div className="compo-1 h-fit">
-              { headingLine.map((h1) => 
-                <div className="coverr">
+              { headingLine.map((h1,index) => 
+                <div className="coverr" key={index}>
                 
                   <h1 className="sm:text-6xl text-lg sm:py-10 font-medium"  onClick={onClick.bind(this,h1.id )}>
                     <AnimatePresence>
@@ -104,11 +104,11 @@ function MainSec() {
                 <div className="p-3">
         <div>
         {discription.map(
-          (item) => (
+          (item,index) => (
             item.id === activeId)
              &&
              <AnimatePresence>
-               <motion.div initial={{ x: 500, opacity: 0}} animate={{ x: 0, opacity: 1}} exit={{ x: 500, opacity: 0}}  transition={{type: "spring", stiffness: 70,}} >
+               <motion.div initial={{ x: 500, opacity: 0}} animate={{ x: 0, opacity: 1}} exit={{ x: 500, opacity: 0}}  transition={{type: "spring", stiffness: 70,}} key={index}>
                 <h1 className=" my-3 pt-8 font-medium text-3xl leading-10  text-left degreeHead">{item.category1}</h1>
                 <div className="px-6">
                   {item.title1.map((li) => (<Link reloadDocument to={li[1]} id="navigation" >
@@ -117,7 +117,7 @@ function MainSec() {
                 </div>
                   <h1 className="my-3 pt-8 font-medium text-3xl leading-10  text-left degreeHead">{item.category2}</h1>
                   <div className="px-6">
-                  {item.title2.map((li) => (<Link reloadDocument to={li[1]} id="navigation" >
+                  {item.title2.map((li,index) => (<Link reloadDocument to={li[1]} id="navigation" key={index}>
                   <li className="leading-9 font-medium text-lg smallLink ">{li[0]} </li>
                   </Link>))}
                   </div>
@@ -139,8 +139,8 @@ function MainSec() {
     <div className="hideMe pb-22 sm:pb-44 gap-2.5 h-fit w-100 ">
         <div className="degree-container w-3/4 h-fit m-auto center">
             <div className="compo-1 h-fit pt-22 sm:pt-44">
-              { headingLine.map((h1) => 
-                <div className="coverr">
+              { headingLine.map((h1,index) => 
+                <div className="coverr" key={index}>
                 
                   <h1 className="text-6xl sm:py-10 font-medium"  onClick={onClicker.bind(this,h1.id )}>
                     <AnimatePresence>
@@ -167,11 +167,11 @@ function MainSec() {
                 <div className="sm:p-3">
         <div>
         {discription.map(
-          (item) => (
+          (item,index) => (
             item.id === activeIds)
              &&
              <AnimatePresence>
-               <motion.div initial={{ y: -500, opacity: 0}} animate={{ y: 0, opacity: 1}} exit={{ y: -500, opacity: 0}}  transition={{type: "spring", stiffness: 70,}} >
+               <motion.div initial={{ y: -500, opacity: 0}} animate={{ y: 0, opacity: 1}} exit={{ y: -500, opacity: 0}}  transition={{type: "spring", stiffness: 70,}} key={index}>
                <h1 className="my-3 pt-8 font-medium text-base md:text-3xl leading-10  text-left degreeHead">{item.category1}</h1>
                 <div className="sm:px-6">
                   {item.title1.map((li) => (<Link reloadDocument to={li[1]} id="navigation" >
@@ -180,7 +180,7 @@ function MainSec() {
                 </div>
                   <h1 className="my-3 pt-8 font-medium  text-base md:text-3xl leading-10  text-left degreeHead">{item.category2}</h1>
                   <div className="md:px-6">
-                  {item.title2.map((li) => (<Link reloadDocument to={li[1]} id="navigation" >
+                  {item.title2.map((li,index) => (<Link reloadDocument to={li[1]} id="navigation" key={index}>
                   <li className="leading-9 font-medium text-base md:text-lg smallLink ">{li[0]}</li>
                   </Link>))}
                   </div>

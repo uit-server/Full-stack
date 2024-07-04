@@ -3,12 +3,9 @@ import React from 'react';
 import '../Styles/Faq.css';
 import '../Images/plus.svg';
 import '../Images/minus.svg';
-import Category from './Category';
 import Question from './Question';
-import Navbar from '../Nav/Navbar';
-import { motion, AnimatePresence } from "framer-motion"
-import useResize from '../utils/useResize';
-import { useState } from 'react';
+import HeadingStyle1 from '../Components/HeadingStyle1';
+import Name from '../utils/Name';
 import { useSelector } from 'react-redux';
 import UltiWrapper from '../Components/UltiWrapper';
 
@@ -29,12 +26,7 @@ import UltiWrapper from '../Components/UltiWrapper';
 
 function Faq() {
   const language = useSelector((state) => state.language.value);
-  const windowWidth = useResize("Frequently Asked Questions");
-  const [dataFromNav, setDataFromNav] = useState(true);
-
-    const handleDataFromNav = (data) => {
-        setDataFromNav(data);
-    };
+  Name("Frequently Asked Questions");
   const quiz = [
     {id :  1,
       questionEn: "When was the UIT founded?",
@@ -73,24 +65,26 @@ function Faq() {
   return (
     <>
      <UltiWrapper>
+      
+      <div className="py-14 lg:py-[72px] grid grid-cols-1 lg:grid-cols-[0.5fr_1fr] gap-10 lg:gap-[157px]">
+        
+        <HeadingStyle1 name="The answers to your questions" sizeLead="leading-12" size="text-5xl" mobileSize="text-4xl" mobileSizeLead="leading-[38px]" mobileSpace="pt-[30px]" space="pt-[38px]" tinyText="FAQS" />
+
+      
+
+
+<div className="w-full grid grid-cols-1 gap-5 lg:gap-6">
+{quiz.map((item,index) => (
+  <Question key={index} id={item.id} question={(language === "EN") ? item.questionEn : item.questionMyn } answer={(language === "EN") ? item.answerEn : item.answerMyn} />
+))}
+
+
+
+
+</div>
+      </div>
      
-      <div className="my-20 mt-40 sm:ml-10 sm:mt-50 mb-15">
-      <motion.span initial={{ y: 50,opacity: 0 }} animate={{ y: 0,opacity: 1 }} transition={{ type: "spring", stiffness: 100 }} className="text-6xl md:text-8xl  p-3.5 dd ">Frequently</motion.span>
-      <motion.span initial={{ y: 50,opacity: 0 }} animate={{ y: 0,opacity: 1 }} transition={{ type: "spring", stiffness: 100 }} className="text-6xl md:text-8xl  p-3.5 dd">asked</motion.span>
-      <motion.h3 className="text-6xl md:text-8xl w-50  p-3.5  "  initial={{ y: 50,opacity: 0 }} animate={{ y: 0,opacity: 1 }} transition={{ type: "spring", stiffness: 100 }} >questions</motion.h3>
-      </div>
-
-
-      <div className="w-90 main">
-      <div className="alignment"><Category name="General" /></div>
-      {quiz.map(item => (
-        <Question id={item.id} question={(language == "EN") ? item.questionEn : item.questionMyn } answer={(language == "EN") ? item.answerEn : item.answerMyn} />
-      ))}
-
-
-    
-
-      </div>
+      
       
       
       
@@ -103,3 +97,10 @@ function Faq() {
 }
 
 export default Faq;
+
+//styleName: H2 - mobile;
+// font-family: Oldschool Grotesk;
+// font-size: 36px;
+// font-weight: 400;
+// line-height: 38px;
+// text-align: left;

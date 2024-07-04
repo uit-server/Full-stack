@@ -9,9 +9,3 @@ function Heading({name}) {
 
 export default Heading;
 
-//styleName: H1 - mobile;
-// font-family: Oldschool Grotesk;
-// font-size: 40px;
-// font-weight: 400;
-// line-height: 40px;
-// text-align: left;

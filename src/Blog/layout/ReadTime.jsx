@@ -34,10 +34,3 @@ function ProgressBar() {
   }
   
   export default ProgressBar;
-
-  //styleName: H6;
-// font-family: Oldschool Grotesk;
-// font-size: 16px;
-// font-weight: 400;
-// line-height: 18px;
-// text-align: left;

@@ -74,8 +74,8 @@ function Role2() {
                                     <span className="opacity-50 leading=[18px]">I am </span>
                             </span>
                             {data.map(
-                                (item) => 
-                                    <Span className="text-2xl leading-7 font-normal color-[#1c1d20] inline-block me-[22px] relative mb-[2px]" after={item.number} signal={item.signal}>{item.content}</Span>
+                                (item,index) => 
+                                    <Span key={index} className="text-2xl leading-7 font-normal color-[#1c1d20] inline-block me-[22px] relative mb-[2px]" after={item.number} signal={item.signal}>{item.content}</Span>
                                 )}
                             </div>
                             <div className="mt-4">

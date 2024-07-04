@@ -35,7 +35,21 @@ function History() {
     }
   ]
   
+<<<<<<< HEAD
   return(
+=======
+  const MyanText = "သမိုင်း";
+
+  const display = (language === "EN") ? title : MyanText;
+
+  const [dataFromNav, setDataFromNav] = useState(true);
+
+    const handleDataFromNav = (data) => {
+        setDataFromNav(data);
+    };
+
+  return (
+>>>>>>> master
     <>
       <UltiWrapper>
         <Headline />
