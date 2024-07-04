@@ -20,6 +20,8 @@ function Contact() {
         setDataFromNav(data);
     };
 
+    
+
   return (
     <>
      <Navbar sendDataToParent={handleDataFromNav} />

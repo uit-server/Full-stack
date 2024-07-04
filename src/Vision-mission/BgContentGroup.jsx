@@ -3,6 +3,7 @@ import Name from '../utils/Name';
 import Vision from './Vision';
 import Mission from './Mission';
 import Value from './Value';
+
 function BgContentGroup() {
   const title = "Vision and Mission";
   Name(title);
@@ -12,6 +13,8 @@ function BgContentGroup() {
   // const MyanText = "မျှော်မှန်းချက်နှင့် မစ်ရှင်";
 
   // const display = (language == "EN") ? title : MyanText;
+
+ 
 
   return (
     <div className="ps-6 lg:pt-0 pt-10">
