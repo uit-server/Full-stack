@@ -54,6 +54,8 @@ import News from "./News/News";
 
 import Blog from './Blog/Blog';
 
+import Syllabus from './Syllabus/Syllabus';
+
 
 export default function Navigator() {
 
@@ -121,6 +123,8 @@ export default function Navigator() {
             <Route path="/academic/degree/master/se" element={<MasterSE />} />
 
             <Route path="/about/news/:id" element={<Blog />} />
+
+            <Route path="/about/degree/syllabus" element={<Syllabus />} />
 
             
 
