@@ -14,6 +14,7 @@ module.exports = {
         '2xl': '1670px',  // Default 2x-large screen size
         'max-1321': {'max': '1321px'},//for history page
         'max-1052' : {'max': '1052px'},//for history page
+        'max-940' : {'max':'940px'},//for contact page
       },
       backgroundImage:{
         'his-bg': "url('/src/Images/his-bg.jpg')",
