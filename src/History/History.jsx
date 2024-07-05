@@ -54,7 +54,7 @@ function History() {
           <div>
             <div className='mb-16 w-full flex flex-col'>
               <img src={uitlogo} alt="" className='w-full hidden max-1052:block' />
-              <div className='w-full hidden max-1052:block mt-[60px] text-[#077d81] text-[40px]'>
+              <div className='w-full hidden max-1052:block mt-[60px] text-[#077d81] text-[40px] bg-[#f0f8ff] p-[4%] rounded-md'>
                 <p className='text-center'>"Towards a brighter future through innovation in ICT"</p>
               </div>
             </div>
