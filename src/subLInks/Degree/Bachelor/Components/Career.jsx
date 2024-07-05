@@ -1,11 +1,11 @@
-function SubjectOffer({career}) {
+function SubjectOffer({career,title='Career opportunities'}) {
 
    
 
     return (
       <>
         <div className="py-7 md:py-8 w-full lg:scroll-mt-[194px]" id="career">
-        <h3 className="capital mb-[20px] leading-7 text-2xl md:text-[32px] md:leading-9 w-full">Career opportunities</h3>   
+        <h3 className="capital mb-[20px] leading-7 text-2xl md:text-[32px] md:leading-9 w-full">{title}</h3>   
         <div className="flex flex-row flex-wrap w-full justify-between">
             {career.map((item) => 
             <div className="flex flex-row  w-full md:w-[45%] items-start mb-[12px]">

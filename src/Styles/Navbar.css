@@ -225,7 +225,7 @@ header .nav-btn{
         justify-content: space-between;
         align-items: center;
     }
-    .item1,.item2{
+    .item1,.item2,.item3{
         display: flex;
         flex-direction: column;
         width: 100%;

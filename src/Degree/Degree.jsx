@@ -18,7 +18,7 @@ function App() {
       <UltiWrapper className="overflow-hidden">
       
           <Headline />
-            <div className="w-[112%] ms-[-6%] bg-[#1c1d20] h-fit text-[#ffffff] rounded-t-[32px] mb-[56px] lg:mb-[72px] overflow-hidden lg:mt-[72px] mt-14">
+            <div className="w-[112%] ms-[-6%] bg-[#f0f8ff] h-fit text-[#000] rounded-t-[32px] mb-[56px] lg:mb-[72px] overflow-hidden lg:mt-[72px] mt-14">
             <MainSec />
             <Trivia />
             </div>

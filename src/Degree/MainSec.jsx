@@ -74,15 +74,15 @@ function MainSec() {
 
   return (
     <>
-      <div className="customHide pt-24 h-fit w-100 text-[#ffffff] mt-[72px]">
+      <div className="customHide pt-24 h-fit w-100 text-[#000] mt-[72px]">
         <div className="degree-container h-fit ms-[96px] gap-[177px] ">
             <div className="compo-1 h-fit mb-[253px]">
               { headingLine.map((h1,index) => 
                 <div className="coverr" key={index}>
                 
-                  <h1 className="max-[1170px]:text-[70px] text-[108px]  font-normal leading-[96px]  lg:py-8 border-b border-[#ffffff] block w-[100%] "  onClick={onClick.bind(this,h1.id )}>
+                  <h1 className="max-[1170px]:text-[70px] text-[108px]  font-normal leading-[96px]  lg:py-8 border-b border-[#000] block w-[100%] "  onClick={onClick.bind(this,h1.id )}>
                     <AnimatePresence>
-                    <motion.span whileHover={{color:'#ffffff'}} className="animator " initial={{ color: "#1C1D2080"}} animate={{ color: (h1.id === activeId) ? "#ffffff" : "#FFFFFF80"}} exit={{ color: "#1C1D2080"}} transition={{ type: "spring", stiffness: 100 }}>{h1.heading}</motion.span>
+                    <motion.span whileHover={{color:'#000'}} className="animator " initial={{ color: "#077d81"}} animate={{ color: (h1.id === activeId) ? "#000" : "#077d81"}} exit={{ color: "#1C1D2080"}} transition={{ type: "spring", stiffness: 100 }}>{h1.heading}</motion.span>
                     </AnimatePresence>
                     
                   <AnimatePresence>
@@ -115,13 +115,13 @@ function MainSec() {
                 <h1 className={`text-[32px] leading-[45px] tracking-[0.06em] font-medium mb-3`}>{item.category1}</h1>
                 <div className="ps-6 pb-8">
                   {item.title1.map((li,index) => (<Link key={index} reloadDocument to={li[1]} id="navigation" >
-                  <li className={`leading-[35px] text-xl font-medium smallLink tracking-[0.06em] text-[#FFFFFF80] mb-2 hover:text-[#ffffff] transition duration-500`}>{li[0]} </li>
+                  <li className={`leading-[35px] text-xl font-medium smallLink tracking-[0.06em] text-[#000] mb-2 hover:text-[#077d81] transition duration-500`}>{li[0]} </li>
                   </Link>))}
                 </div>
                   <h1 className="text-[32px] leading-[45px] tracking-[0.06em] font-medium mb-3">{item.category2}</h1>
                   <div className="ps-6">
                   {item.title2.map((li,index) => (<Link key={index} reloadDocument to={li[1]} id="navigation" >
-                  <li className="leading-[35px] text-xl font-medium smallLink tracking-[0.06em] text-[#FFFFFF80] mb-2 "><span className="hover:text-[#ffffff] transition duration-500 ">{li[0]}</span> </li>
+                  <li className="leading-[35px] text-xl font-medium smallLink tracking-[0.06em] text-[#000] mb-2 "><span className="hover:text-[#077d81] transition duration-500 ">{li[0]}</span> </li>
                   </Link>))}
                   </div>
 

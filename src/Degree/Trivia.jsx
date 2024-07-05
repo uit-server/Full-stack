@@ -48,7 +48,7 @@ function Trivia() {
   const language = useSelector((state) => state.language.value);
 
   return (
-    <div className="h-fit  lg:pb-[72px] py-4 mx-auto triviaMain bg-[#1c1d20] text-[#ffffff] w-[90%]">
+    <div className="h-fit  lg:pb-[72px] py-4 mx-auto triviaMain bg-[#f0f8ff] text-[#000] w-[90%]">
         <div className=" w-[112%] grid lg:grid-cols-3 lg:gap-x-8">
             
               {(language === "EN") ? textsEn.map((item,index) => (
@@ -62,7 +62,7 @@ function Trivia() {
 </svg>
                   <h1 className="font-normal leading-7 lg:text-[32px] text-2xl lg:leading-9 triviaHead ">{item.head}</h1>
                 </div>
-                  <p className="lg:min-h-[324px] pb-7 lg:pb-0 mb-7 lg:mb-0 border-b border-[#ffffff]">
+                  <p className="lg:min-h-[324px] pb-7 lg:pb-0 mb-7 lg:mb-0 border-b border-[#000]">
                   { 
                   (item.type !== "para") && item.body.map((item,index) => 
             <div key={index} className="flex flex-row w-full md:w-[100%] mb-[8px]">
