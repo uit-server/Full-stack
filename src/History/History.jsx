@@ -11,6 +11,7 @@ import item3 from '../Images/buildingIcon.svg';
 import toward from '../Images/towards.svg';
 import UltiWrapper from '../Components/UltiWrapper';
 import Headline from './Headline';
+import uitlogo from '../Images/uitlogo.jpg'
     
 function History() {
 
@@ -51,10 +52,16 @@ function History() {
           </span>
           </div>
           <div>
-            <img src={toward} alt="" />
+            <div className='mb-16 w-full flex flex-col'>
+              <img src={uitlogo} alt="" className='w-full hidden max-1052:block' />
+              <div className='w-full hidden max-1052:block mt-[60px] text-[#077d81] text-[40px] bg-[#f0f8ff] p-[4%] rounded-md'>
+                <p className='text-center'>"Towards a brighter future through innovation in ICT"</p>
+              </div>
+            </div>
+            <img src={toward} alt="" className='w-full max-1052:hidden block' />
           </div>
           
-          <ul className='flex flex-row xl:grid xl:grid-cols-3 xl:gap-x-[20px] gap-x-[15px] justify-center w-full items-center flex-wrap xl:gap-y-[20px] gap-y-[30px] mt-10 mb-12'>
+          <ul className='flex flex-row xl:grid xl:grid-cols-3 xl:gap-x-[20px] gap-x-[15px] max-1052:justify-center justify-between w-full items-center flex-wrap xl:gap-y-[20px] gap-y-[30px] mt-10 mb-12'>
         {itemsData.map((item) => (
           <li key={item.id}>
             <div className='flex flex-col gap-[20px] justify-center items-center sm:justify-start sm:items-start'>

@@ -53,7 +53,7 @@ const IndividualMember = ({member}) => {
                     {member.degree.map((item,index)=>(
                     <li key={index} className='flex lg:items-center items-start gap-2'>
                         <div className='w-[10px] h-[10px] bg-[#077d81] rounded-full lg:mt-0 mt-[0.3rem]'></div>
-                        <p className='lg:text-[18px] text-[16px] lg:max-w-full xs:max-w-[335px] max-w-[250px]'>received <span className="text-[#077d81]">{item.type}</span> in {item.subject} from {item.palace}</p>
+                        <p className='lg:text-[18px] text-[16px] lg:w-full w-[250px]'>received <span className="text-[#077d81]">{item.type}</span> in {item.subject} from {item.palace}</p>
                     </li>
                     ))}
                     

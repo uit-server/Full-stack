@@ -18,11 +18,11 @@ const Div2 = styled.div`
   background: linear-gradient(187.79deg, rgba(233, 233, 233, 0.5) 5.9%, rgba(0, 0, 0, 0.5) 93.9%);
 `
 
-function ImageHeader({name}) {
+function ImageHeader({name,name1}) {
 
     return (
       <Div className="py-[27.5px] lg:py-14 lg:px-97 relative">
-        <h1 className="relative ms-[5%] font-normal text-[40px] leading-[40px] lg:text-[80px] lg:leading-[80px] text-[#ffffff]" style={{ zIndex: 1}}>{name}</h1>
+        <h1 className="flex lg:flex-row flex-col relative ms-[5%] font-normal text-[40px] leading-[40px] lg:text-[80px] lg:leading-[80px] text-[#ffffff]" style={{ zIndex: 1}}><span>{name}</span><span>{name1}</span></h1>
         <Div2 className=" absolute top-0 w-full h-full z-0"></Div2></Div>
     );
   

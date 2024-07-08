@@ -17,7 +17,7 @@ return (
     <Div className="rounded-[32px] my-[72px]  w-full">
       <div className="flex flex-col justify-center items-start">
         <UiLi value='Degree' des='/academic/degree'/>
-        <UiLi value='Collboration' des='#'/>
+        <UiLi value='Collaboration' des='#'/>
         <UiLi value='Research' des='/research'/>
         <UiLi value='Library' des='/about/library'/>
       </div>

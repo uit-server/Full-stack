@@ -1,6 +1,5 @@
 import { motion, AnimatePresence } from "framer-motion";
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 
 function Syllabus({syllabus}) {
 
@@ -37,7 +36,6 @@ function Syllabus({syllabus}) {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[1fr_1fr_1fr] gap-6 lg:gap-8 w-full justify-between">
             {syllabus.map((item,index) => 
             <>
-            <Link to= {`/about/degree/syllabus`} >
             <div className="relative w-full p-5 rounded-[20px] bg-[#F5F5F5] cursor-pointer"
             onMouseEnter={() => handleMouseEnter(index)}
               onMouseLeave={() => handleMouseLeave(index)}
@@ -54,8 +52,6 @@ function Syllabus({syllabus}) {
             <p className=" font-[350] leading-[27px] text-[#1C1D20] text-base md:text-lg">{item.name}</p>
             <p className="font-[350] leading-[27px] text-[#1C1D2080] text-base md:text-lg" >lorem ipsum</p>
             </div>
-            </Link>
-           
             </>
             )}
             

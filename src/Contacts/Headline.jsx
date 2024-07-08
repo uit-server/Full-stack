@@ -9,8 +9,8 @@ import bgHis from './../Images/his-bg.jpg';
 function Headline() {
   const language = useSelector((state) => state.language.value);
 
-  const title = "History";
-  const MyanText = "သမိုင်းကြောင်း";
+  const title = "Contact Us";
+  const MyanText = "အဆက်အသွယ်";
   const display = (language == "EN") ? title : MyanText;
 
   

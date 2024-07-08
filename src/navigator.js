@@ -47,6 +47,7 @@ import Research from './Research/Research';
 import HPC from './subLInks/Degree/Bachelor/HPC/HPC';
 import KE from './subLInks/Degree/Bachelor/KE/KE';
 import SE from './subLInks/Degree/Bachelor/SE/SE';
+import MasterSE from './subLInks/Degree/Master/SE/SE';
 import BIS from './subLInks/Degree/Bachelor/BIS/BIS';
 import ES from './subLInks/Degree/Bachelor/ES/ES';
 import Csec from './subLInks/Degree/Bachelor/Csec/Csec';
@@ -55,6 +56,8 @@ import News from "./News/News";
 
 import Blog from './Blog/Blog';
 
+import Syllabus from './Syllabus/Syllabus';
+
 
 export default function Navigator() {
 
@@ -62,7 +65,7 @@ export default function Navigator() {
         <Routes>
             
             <Route path="/" element={<Home />} />
-            <Route path="/academic/diploma" element={<Diploma />} />
+            {/* <Route path="/academic/diploma" element={<Diploma />} /> */}
             <Route path="/academic/degree" element={<Degree />} />
             <Route path="/academic/admission-requirements" element={<Admission />} />
             <Route path="/academic/academic-rules" element={<AcademicRule />} />
@@ -122,7 +125,11 @@ export default function Navigator() {
             <Route path="/academic/degree/bachelor/csec" element={<Csec />} />
             <Route path="/academic/degree/bachelor/networking" element={<Networking />} />
 
+            <Route path="/academic/degree/master/se" element={<MasterSE />} />
+
             <Route path="/about/news/:id" element={<Blog />} />
+
+            <Route path="/about/degree/syllabus" element={<Syllabus />} />
 
             
 
