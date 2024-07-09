@@ -1,9 +1,6 @@
-import { AnimatedText } from '../Components/AnimatedText';
-import Navbar from '../Nav/Navbar';
-import useResize from '../utils/useResize';
-import React,{ useState } from 'react';
-import { useSelector } from 'react-redux';
-import { motion } from "framer-motion";
+
+import React,{ useState,useRef } from 'react';
+
 import UltiWrapper from '../Components/UltiWrapper';
 import item1 from '../Images/phoneIcon.svg';
 import item2 from '../Images/mailIcon.svg';
@@ -11,9 +8,14 @@ import item3 from '../Images/locationIcon.svg';
 import item4 from '../Images/busIcon.svg';
 import Headline from './Headline';
 import { AnimationButton } from '../Components/Footer';
+import emailjs from "@emailjs/browser";
+import { AnimatePresence } from 'framer-motion';
+import Notification from '../Components/Notification';
 
     
 function Contact() {
+
+  const form = useRef();
   const items = [
     {
       id : 1,
@@ -58,6 +60,8 @@ function Contact() {
     message: ''
   });
 
+  const [showNotification, setShowNotification] = useState(false);
+
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -67,8 +71,30 @@ function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission logic here
-    console.log('Form submitted:', formData);
+
+    emailjs.sendForm('service_bjagpca', 'template_itqb59x', form.current, 'SmsJIRjEMi_ijHUKR')
+      .then((result) => {
+        setShowNotification(true);
+          
+        setTimeout(() => setShowNotification(false), 7000);
+      }, (error) => {
+      });
+
+      setFormData(
+        {
+          name: '',
+          email: '',
+          subject: '',
+          message: ''
+        }
+
+      );
+
+
+
+      e.target.reset();
+
+
   };
     return (
       <>
@@ -79,7 +105,7 @@ function Contact() {
         <Headline/>
         <div className='flex flex-col lg:flex-row w-full max-lg:items-center mt-[80px] mb-[40px]'>
             <div className='w-[65%] max-md:mb-[100px]'>
-            <form onSubmit={handleSubmit} className="space-y-6 bg-[#f0f8ff] rounded-3xl max-w-[700px] p-[5%]">
+            <form onSubmit={handleSubmit} className="space-y-6 bg-[#f0f8ff] rounded-3xl max-w-[700px] p-[5%]" ref={form}>
       {['name', 'email', 'subject', 'message'].map((field) => (
         <div className="relative" key={field}>
           <input
@@ -103,6 +129,9 @@ function Contact() {
       ))}
       <AnimationButton value='send'/>
     </form>
+    <AnimatePresence>
+        {showNotification && <Notification message="Email successfully sent!" />}
+      </AnimatePresence>
 
             </div>
             <ul className='w-[35%] lg:ml-[100px] max-lg:mt-[70px] max-md:mt-[-25px]'>

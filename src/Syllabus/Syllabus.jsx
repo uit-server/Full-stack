@@ -51,7 +51,7 @@ const dataHeader = [
       <>
       <UltiWrapper>
         <Heading name="High Performance Computing (HPC)" />
-        <AppendTiny name="Second year syllabus" date="Updated on 04 May 2024"/>
+        <AppendTiny name="Second year syllabus" date="Updated on 04 May 2024" />
         <div className="flex flex-col gap-y-8 lg:gap-y-12">
         <Conditioner />
         <Conditioner />
