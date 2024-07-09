@@ -22,7 +22,22 @@ function Upcoming() {
         {
             title: "Upcoming activities title",
             date: "16 July 2024 (Wednesday)"
-        }
+        },{
+        title: "Upcoming activities title",
+        date: "16 July 2024 (Wednesday)"
+    },
+    {
+        title: "Upcoming activities title",
+        date: "16 July 2024 (Wednesday)"
+    },
+    {
+        title: "Upcoming activities title",
+        date: "16 July 2024 (Wednesday)"
+    },
+    {
+        title: "Upcoming activities title",
+        date: "16 July 2024 (Wednesday)"
+    },
 
     ]
 
@@ -41,7 +56,7 @@ function Upcoming() {
             <HeadingStyle1 name="What're coming up" tinyText="upcoming activities" space="pt-[42px]" sizeLead="leading-[72px]" size="text-7xl" mobileSize="text-4xl" mobileSizeLead="leading-[38px]" mobileSpace="pt-8" />
         <div className="flex flex-col gap-6">
             {
-                data1.map((item, index) => 
+                data.map((item, index) => 
                     <Link to= {`/about/news/${item.id}`} >
                          <div key={index} className="w-full flex justify-between items-center lg:p-8 p-6 rounded-[24px] lg:rounded-[32px] bg-[#F0F8FF]">
                         <h5 className="font-normal lg:leading-7 text-base leading-[22px] lg:text-xl me-5">{item.title}</h5>

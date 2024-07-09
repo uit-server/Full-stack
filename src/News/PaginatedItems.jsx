@@ -19,7 +19,7 @@ const PaginatedItems = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const dispatch = useDispatch();
   
-  const url = 'posts/news';
+  const url = 'posts';
 
   useEffect(() => {
     axios.get(url)

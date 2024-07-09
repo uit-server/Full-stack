@@ -2,6 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import styled from 'styled-components'
 import {motion} from 'framer-motion'
+import { Link } from 'react-router-dom'
 
 export default function Footer(){
     return(
@@ -221,60 +222,35 @@ const Underline = styled(motion.div)`
 function LinksContainer(){
     return(
         <div className='flex justify-between w-[450px] flex-wrap gap-[30px] pr-[20px] md:[pr-0]'>
-            <Links title='CONTACT DETAILS' content='+95-1-9664254' contact='contact@uit.edu.mm'/>
-            <Links title='QUICK LINKS' content='About us' contact='Facebook'/>
-            <Links title='RESOURCES' contact='Facebook'/>
+            <Links title='CONTACT DETAILS' data={[{name: '+95-1-9664254',url: '#'},{name: 'contact@uit.edu.mm',url: '#'}]}/>
+            <Links title='QUICK LINKS' data={[{name: 'LMS',url: 'https://lms.uit.edu.mm/'},{name: 'Library',url: '/academic/library'}]}/>
+            <Links title='RESOURCES' data={[{name: 'Facebook',url: '#'},{name: 'X',url: '#'}]}/>
         </div>
     )
 }
 
-function Links({title,content,contact}){
+function Links({title,data}){
     return(
         <div className='flex flex-col gap-[8px]'>
                 <h5 className='text-[10px] md:text-[12px] opacity-50 text-[#fff]'>{title}</h5>
                 <div className='flex flex-col gap-[2px]'>
-                    <div>
-                    <motion.span 
-                        variants={LinkVariants} 
-                        initial='hidden' 
-                        whileHover='visible' 
-                        className='relative text-[13px] md:text-[16px] text-[#fff] cursor-alias'
-                    >
-                        {content?content:contact}
-                        <Underline 
-                            variants={UnderLineVariants} 
-                             
-                        />
-                    </motion.span>
-                    </div>
-                    <div>
-                    <motion.span 
-                        variants={LinkVariants} 
-                        initial='hidden' 
-                        whileHover='visible' 
-                        className='relative text-[13px] md:text-[16px] text-[#fff] cursor-alias'
-                    >
-                        {content?content:contact}
-                        <Underline 
-                            variants={UnderLineVariants} 
-                             
-                        />
-                    </motion.span>
-                    </div>
-                    <div>
-                    <motion.span 
-                        variants={LinkVariants} 
-                        initial='hidden' 
-                        whileHover='visible' 
-                        className='relative text-[13px] md:text-[16px] text-[#fff] cursor-alias'
-                    >
-                        {contact}
-                        <Underline 
-                            variants={UnderLineVariants} 
-                             
-                        />
-                    </motion.span>
-                    </div>
+
+                    {data.map((item,index) => (
+                        <Link reloadDocument to={item.url} key={index}>
+                        <motion.span 
+                            variants={LinkVariants} 
+                            initial='hidden' 
+                            whileHover='visible' 
+                            className='relative text-[13px] md:text-[16px] text-[#fff] cursor-alias'
+                        >
+                            {item.name}
+                            <Underline 
+                                variants={UnderLineVariants} 
+                                 
+                            />
+                        </motion.span>
+                        </Link> 
+                    ))}
                     
                 </div>
             </div>

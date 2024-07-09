@@ -53,8 +53,8 @@ const dataHeader = [
         <Heading name="High Performance Computing (HPC)" />
         <AppendTiny name="Second year syllabus" date="Updated on 04 May 2024" />
         <div className="flex flex-col gap-y-8 lg:gap-y-12">
-        <Conditioner />
-        <Conditioner />
+        <Conditioner name="Year 1 Semester 1" />
+        <Conditioner name="Year 1 Semester 2" />
         </div>
         
         <ForwardLink prevSyl="First year" nextSyl="Third year"/>
