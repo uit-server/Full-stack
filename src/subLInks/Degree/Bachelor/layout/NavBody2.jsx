@@ -4,20 +4,23 @@ import React from 'react';
 import { AnimatePresence, motion } from "framer-motion";
 import { HashLink } from 'react-router-hash-link';
 
+const links = [
+    ["Overview", "#overview"],
+    ["Research lab", "#image"],
+    ["Offering subjects", "#subjectOffer"],
+    ["Career opportunities", "#career"],
+    ["Syllabus", "#syllabus"],
+]
 
-function NavBody2() {
+
+function NavBody2({link=links}) {
+
 
     const [data, setData] = useState(0);
     const [prev, setPrev] = useState(0);
     const [appear, setAppear] = useState(false);
 
-    const links = [
-        ["Overview", "#overview"],
-        ["Research lab", "#image"],
-        ["Offering subjects", "#subjectOffer"],
-        ["Career opportunities", "#career"],
-        ["Syllabus", "#syllabus"],
-    ]
+    
 
     const Ball = styled.div`
         width: 10px;
@@ -118,7 +121,7 @@ function NavBody2() {
                                 <Element index={data} initial={{ top: `${20 * prev + 3}%` }} animate={{ top: `${20 * data + 3}%` }} ></Element>
                             </Ball>
                             <nav className="list-none flex-col text-left hover:cursor-pointer">
-                                {links.map((li, index) =>
+                                {link.map((li, index) =>
                                     <HashLink style={{ margin: 0, marginBottom: '8px', padding: 0 }} smooth to={li[1]} key={index} className="text-base font-normal leading-[18px] mb-[8px] text-[#1C1D20]" onClick={(event) => handleClick(event, index)}>{li[0]}</HashLink>)}
                             </nav>
                         </motion.div>

@@ -7,7 +7,8 @@ import { HashRouter as Router } from 'react-router-dom';
 import Navigator from './navigator.js';
 import { store } from './store/Store';
 import { Provider } from 'react-redux';
-
+import DDMLab from './subLInks/Labs/DDM/DDMLab.jsx';
+import Home from './Home/Home.jsx';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

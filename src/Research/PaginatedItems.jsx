@@ -7,9 +7,9 @@ import { Link } from 'react-router-dom';
 import {Network,Vision,HPC,DDM,ML} from '../Images/Images';
 
 const itemsData = [
-  { id: 1, name: 'Network Systems(NETsys) Lab', img: Network},
+  { id: 1, name: 'Network Systems (NETsys) Lab', img: Network},
   { id: 2, name: 'Vision and Learning Lab', img: Vision },
-  { id: 3, name: 'High Performance Computing(HPC) Lab', img: HPC },
+  { id: 3, name: 'High Performance Computing (HPC) Lab', img: HPC },
   { id: 4, name: 'Data Distribution Management (DDM) Lab', img: DDM },
   { id: 5, name: 'Deep Learning and Information Systems Lab', img: ML },
   
@@ -39,7 +39,7 @@ const PaginatedItems = () => {
                 
                   
                 <h5 className='text-[#1c1d20] text-[20px] ps-[5px]'>
-                <Link to= {``} className="hover:hoverMode" >{item.name}</Link>
+                <Link to= {`/research/ddm-lab`} className="hover:hoverMode text-2xl" >{item.name}</Link>
                 </h5>
               </div>
             </div>

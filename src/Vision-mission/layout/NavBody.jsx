@@ -12,7 +12,7 @@ function NavBody() {
     const links = [
         ["Vision","#vision"],
         ["Mission","#mission"],
-        ["Value","#value"],
+        ["Values","#value"],
         
         
     ]

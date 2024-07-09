@@ -103,9 +103,11 @@ function Contact() {
           <h1 className='p-[4%] text-white text-4xl lg:text-5xl'>Contact Us</h1>
         </div> */}
         <Headline/>
+
         <div className='flex flex-col lg:flex-row w-full max-lg:items-center mt-[80px] mb-[40px]'>
             <div className='w-[65%] max-md:mb-[100px]'>
             <form onSubmit={handleSubmit} className="space-y-6 bg-[#f0f8ff] rounded-3xl max-w-[700px] p-[5%]" ref={form}>
+
       {['name', 'email', 'subject', 'message'].map((field) => (
         <div className="relative" key={field}>
           <input
@@ -134,12 +136,12 @@ function Contact() {
       </AnimatePresence>
 
             </div>
-            <ul className='w-[35%] lg:ml-[100px] max-lg:mt-[70px] max-md:mt-[-25px]'>
+            <ul className='lg:w-[35%] ml-[100px]'>
                 {items && items.map((item)=>(
                   <li key={item.id}>
-                      <div className='flex justify-start mb-[80px] max-lg:flex-col max-lg:items-center'>
+                      <div className='flex justify-start mb-[80px]'>
                       <img src={item.icon} alt="" className='w-11'/>
-                      <div className='mx-[130px] max-1321:mx-[70px] max-lg:mt-9 w-[160px] flex flex-col max-lg:items-center justify-center '>
+                      <div className='mx-[130px] max-1321:mx-[70px]  w-[160px] flex flex-col justify-center '>
                         {item.infos &&
                           item.infos.map((info,i)=>(
                             <p key={i} className='mb-1'>{info}</p>

@@ -9,9 +9,9 @@ import item1 from '../Images/logoIcon.svg';
 import item2 from '../Images/graduateIcon.svg';
 import item3 from '../Images/buildingIcon.svg';
 import toward from '../Images/towards.svg';
-import uitlogo from '../Images/uitlogo.jpg';
 import UltiWrapper from '../Components/UltiWrapper';
 import Headline from './Headline';
+import uitlogo from '../Images/uitlogo.jpg'
     
 function History() {
 
@@ -54,7 +54,7 @@ function History() {
           <div>
             <div className='mb-16 w-full flex flex-col'>
               <img src={uitlogo} alt="" className='w-full hidden max-1052:block' />
-              <div className='w-full hidden max-1052:block mt-[60px] text-[#077d81] text-[40px]'>
+              <div className='w-full hidden max-1052:block mt-[60px] text-[#077d81] text-[40px] bg-[#f0f8ff] p-[4%] rounded-md'>
                 <p className='text-center'>"Towards a brighter future through innovation in ICT"</p>
               </div>
             </div>

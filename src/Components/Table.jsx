@@ -8,7 +8,7 @@ function Table({dataHeader, data, center}) {
                 {
                     dataHeader.map((item, index) =>
                     
-                            <th key={index} className={` bg-[ #006d71] text-white py-8 center ${item.style} font-normal leading-7 text-xl`}>{item.name}</th>
+                            <th key={index} className={` bg-[ #006d71] text-white py-8 center ${item.style} font-normal leading-7 text-2xl`}>{item.name}</th>
                         
                         
                     

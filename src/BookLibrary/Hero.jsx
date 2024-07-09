@@ -1,7 +1,7 @@
 
 import HeroText from './Herotext';
 import styled from 'styled-components';
-import Img from '../Images/BookLibrary/photo/library_5.png'
+import Img from '../Images/BookLibrary/photo/library1.jpg'
 
 const DivHero = styled.div`
 
