@@ -9,6 +9,7 @@ import LogoAnimation from "../Images/LogoAnimation";
 import Item3 from "./MenuTab3";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInfoCircle, faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+import Search from '../Components/Search/Search';
 
 function Navbar({sendDataToParent}){
     const navRef = useRef();
@@ -16,6 +17,9 @@ function Navbar({sendDataToParent}){
     const [hoveredTab, setHoveredTab] = useState(null);
     const [activeTab, setActiveTab] = useState(null);
     const [activeNav, setActiveNav] = useState(false);
+    const [isSearch, setIsSearch ] = useState('');
+
+    sessionStorage.setItem('search','')
     
 
     const handleHover = (tab) => {
@@ -51,6 +55,14 @@ function Navbar({sendDataToParent}){
         navRef.current.classList.toggle("responsive_nav");
         setActiveNav(!activeNav);
         sendDataToParent(activeNav);
+    }
+
+    const searchAppear = () => {
+        
+        setIsSearch('active')
+        
+            
+
     }
 
     
@@ -153,7 +165,7 @@ function Navbar({sendDataToParent}){
                     </svg>
                 </button>
             </nav>
-            <div className="bg-[#3798a6] flex justify-center items-center rounded-full p-[12px] cursor-pointer">
+            <div className="bg-[#3798a6] flex justify-center items-center rounded-full p-[12px] cursor-pointer" onClick={searchAppear}>
                 <FontAwesomeIcon icon={faMagnifyingGlass} className="text-[18px] text-[#fff]" />
             </div>
             <button className="nav-btn" onClick={showNavbar}>
@@ -162,6 +174,7 @@ function Navbar({sendDataToParent}){
                     <path d="M16 24H32" stroke="#1C1D20" strokeWidth="2" strokeLinecap="round"/>
                 </svg>
             </button>
+            { (isSearch === 'active') && <Search /> }
         </header>
     )
 }

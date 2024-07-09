@@ -93,8 +93,13 @@ export default function Navigator() {
             
 
             <Route path="/research" element={<Research />} />
-            <Route path="/research/ddm-lab" element={<DDMLab />} />
+
+           
+
+
+          <Route path="/research/ddm-lab" element={<DDMLab />} />
             
+
             
 
             {/* Faculty */}
