@@ -66,7 +66,7 @@ function Item1(){
             },
             {
               text: 'Search',
-              link: '/about/search'
+              link: window.location.href
             }
           ]
         }
