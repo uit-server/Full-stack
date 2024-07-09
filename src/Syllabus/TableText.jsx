@@ -16,9 +16,4 @@ function TableText({name,dataHeader,data}) {
   
   export default TableText;
   
-//   //styleName: H5;
-// font-family: Oldschool Grotesk;
-// font-size: 20px;
-// font-weight: 400;
-// line-height: 28px;
-// text-align: left;
+

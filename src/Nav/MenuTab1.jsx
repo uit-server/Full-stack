@@ -63,6 +63,10 @@ function Item1(){
             {
               text: 'Campus',
               link: '/about/campus'
+            },
+            {
+              text: 'Search',
+              link: '/about/search'
             }
           ]
         }
