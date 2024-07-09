@@ -33,27 +33,27 @@ function Faculty(){
 
       const members = [
         {
-            name: "Dr. Ei Chaw Htoon",
+            name: "Dr. ",
             title: "Pro-rector & Dean",
             image: Img1
         },
         {
-            name: "Dr. Ei Chaw Htoon",
+            name: "Dr. ",
             title: "Pro-rector & Dean",
             image: Img2
         },
         {
-            name: "Dr. Ei Chaw Htoon",
+            name: "Dr. ",
             title: "Pro-rector & Dean",
             image: Img3
         },
         {
-            name: "Dr. Ei Chaw Htoon",
+            name: "Dr. ",
             title: "Pro-rector & Dean",
             image: Img4
         },
         {
-            name: "Dr. Ei Chaw Htoon",
+            name: "Dr. ",
             title: "Pro-rector & Dean",
             image: Img5
         }

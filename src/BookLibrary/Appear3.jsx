@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
-import ImgThree from '../Images/BookLibrary/photo/library_3.png';
-import ImgFour from '../Images/BookLibrary/photo/library_4.png';
-import ImgFive from '../Images/BookLibrary/photo/library_5.png';
+import ImgThree from '../Images/BookLibrary/photo/moodle.jpg';
+import ImgFour from '../Images/BookLibrary/photo/moodle.jpg';
+import ImgFive from '../Images/BookLibrary/photo/moodle.jpg';
 
 const AppearThree = styled.div`
 

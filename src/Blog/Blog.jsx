@@ -27,7 +27,7 @@ function Blog() {
   const { id } = useParams();
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
-  const url = `news/${id}`;
+  const url = `posts/${id}`;
   const dispatch = useDispatch();
 
 

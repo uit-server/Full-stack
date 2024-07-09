@@ -39,11 +39,11 @@ nav{
 }
 
 nav a{
-    margin: 0 1rem;
+    /* margin: 0 1rem; */
     color: var(--clDark);
     text-decoration: none;
     font-size: 22px;
-    padding: 16px 24px 24px 24px;
+    padding: 16px 32px;
     position: relative;
     letter-spacing: 0.7px;
     display: flex;
@@ -116,11 +116,11 @@ header .nav-btn{
 }
 
 .item2{
-    width: 500%;
+    width: 550%;
 }
 
 .item3{
-    width: 100%;
+    width: 110%;
     left: 0;
 }
     
@@ -225,7 +225,7 @@ header .nav-btn{
         justify-content: space-between;
         align-items: center;
     }
-    .item1,.item2{
+    .item1,.item2,.item3{
         display: flex;
         flex-direction: column;
         width: 100%;

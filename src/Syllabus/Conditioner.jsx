@@ -1,6 +1,6 @@
 import TableText from './TableText';
 import TableTextMobile from './TableTextMobile';
-function TableConditioner() {
+function TableConditioner({name}) {
 
   const dataHeader = [
     {
@@ -31,7 +31,7 @@ function TableConditioner() {
     return (
       
      <>
-        {(window.innerWidth >= 1024 ) ? <TableText name="Year 1  Semester 1" dataHeader={dataHeader} data={data} /> : <TableTextMobile name="Year 1  Semester 2" dataHeader={dataHeader} data={data} />}
+        {(window.innerWidth >= 1024 ) ? <TableText name={name} dataHeader={dataHeader} data={data} /> : <TableTextMobile name={name} dataHeader={dataHeader} data={data} />}
     </>
     
 

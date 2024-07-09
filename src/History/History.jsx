@@ -9,9 +9,9 @@ import item1 from '../Images/logoIcon.svg';
 import item2 from '../Images/graduateIcon.svg';
 import item3 from '../Images/buildingIcon.svg';
 import toward from '../Images/towards.svg';
-import uitlogo from '../Images/uitlogo.jpg';
 import UltiWrapper from '../Components/UltiWrapper';
 import Headline from './Headline';
+import uitlogo from '../Images/uitlogo.jpg'
     
 function History() {
 

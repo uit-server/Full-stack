@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import ImgOne from '../Images/BookLibrary/photo/library_1.png';
+import ImgOne from '../Images/BookLibrary/photo/moodle.jpg';
 import ImgTwo from '../Images/BookLibrary/photo/library_2.png';
 
 const AppearOne = styled.div`
@@ -33,7 +33,7 @@ function Appear1() {
 
     return (
        
-                         <div className="py-14 grid grid-cols-1 gap-11">
+                         <div className="appear1 py-14 grid grid-cols-1 gap-11">
                             <div className="w-[50%] max-[388px]:h-[150px] h-[110px] flex items-end relative">
                                 <span className="inline-block absolute max-[920px]:top-0 top-[15px] left-0  text-xs font-normal me-[30px] lg:me-[55px]  lg:leading-[18px] lg:text-base">
                                 <div className="text-[#3798a6] inline-block relative bottom-[3.5px] px-[7px] text-xl">.</div>

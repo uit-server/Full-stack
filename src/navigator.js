@@ -21,6 +21,7 @@ import History from './History/History';
 import Map from './Maps/Map';
 import Visimisi from './Vision-mission/Visimisi';
 import Faq from './Faq/Faq';
+// import Faq from './Maps/Map';
 import CS from './Faculty/CS/CS';
 import C from './Faculty/C/C';
 import CST from './Faculty/CST/CST';
@@ -32,6 +33,7 @@ import Eng from './Department/Eng/Eng';
 import Phy from './Department/Phy/Phy';
 import Conference from './Conference/Conference';
 import ConferenceHead from './ConferenceHead/ConferenceHead';
+import DDMLab from "./subLInks/Labs/DDM/DDMLab";
 
 import FaculHead from './FaculHead/FaculHead';
 
@@ -88,8 +90,11 @@ export default function Navigator() {
             <Route path="/about/maps" element={<Map />} />
             <Route path="/about/campus" element={<FaciCampus />} />
             
+            
 
             <Route path="/research" element={<Research />} />
+            <Route path="/research/ddm-lab" element={<DDMLab />} />
+            
             
 
             {/* Faculty */}

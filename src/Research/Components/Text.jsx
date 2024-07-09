@@ -20,7 +20,7 @@ export default function Text({text}){
                 <div className="flex justify-center items-center flex-col gap-5">
                     <FontAwesomeIcon className="text-[45px]" icon={faMagnifyingGlass} style={{color: "#3798a6"}} />
                     <li className="mb-[10px] md:mb-[16px] w-full opacity-80"  >
-                        <p className="text-sm text-justify md:text-lg font-[350px] leading-5 md:leading-7 text-[#1c1d20] opacity-80 ">{item}</p>
+                        <p className="text-sm text-justify md:text-xl font-[350px] tracking-wide leading-5 md:leading-7 text-[#1c1d20] opacity-80 ">{item}</p>
                     </li>
                 </div>
                            
@@ -33,7 +33,7 @@ export default function Text({text}){
                 <div className="flex flex-col justify-center items-center gap-5">
                     <FontAwesomeIcon className="text-[45px]" icon={faLightbulb} style={{color: "#3798a6"}} />
                     <li className="mb-[10px] md:mb-[16px] opacity-80"  >
-                        <p className="text-sm text-justify md:text-lg font-thin leading-5 md:leading-7 text-[#1c1d20] opacity-80 ">{item}</p>    
+                        <p className="text-sm text-justify md:text-xl tracking-wide font-thin leading-5 md:leading-7 text-[#1c1d20] opacity-80 ">{item}</p>    
                     </li>
                 </div>
                 
