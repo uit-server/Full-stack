@@ -57,6 +57,7 @@ import News from "./News/News";
 import Blog from './Blog/Blog';
 
 import Syllabus from './Syllabus/Syllabus';
+import Alumni from "./Alumni/Alumni";
 
 
 export default function Navigator() {
@@ -89,6 +90,7 @@ export default function Navigator() {
             <Route path="/about/contacts" element={<Contact />} />
             <Route path="/about/maps" element={<Map />} />
             <Route path="/about/campus" element={<FaciCampus />} />
+            <Route path="/about/alumni" element={<Alumni />} />
             
             
 
