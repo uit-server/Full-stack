@@ -30,7 +30,7 @@ return (
         <TrivialText />
         
       </div>
-      <PaginatedItems urls="posts" />
+      <PaginatedItems urls="posts/calender" />
       <Upcoming />
      
 

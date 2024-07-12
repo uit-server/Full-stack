@@ -169,7 +169,7 @@ export function AnimationButton({value='Get in touch'}){
                 animate="rest"
                 
             >
-                <Button>{value}
+                <Button type="submit">{value}
                 <CircleDiv
                  
                 variants={circleVariants}

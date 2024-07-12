@@ -3,7 +3,7 @@ function isFutureDate(inputDate) {
     const today = new Date();
 
     // Compare the input date with today's date
-    return input < today;
+    return input > today;
 }
 
 export default isFutureDate;
