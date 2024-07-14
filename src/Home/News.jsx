@@ -20,7 +20,7 @@ const Container = styled.div`
 
 const News = () => {
   return (
-    <div>
+    <div className='px-[10%]'>
       <Container>
         <div className="aspect-square rounded-[32px] flex flex-col justify-start mt-[50px] items-start">
             <HeadingStyle2
