@@ -10,6 +10,7 @@ import EmailService from './EmailService/EmailService';
 import LMS from './LMS/LMS';
 import StudentRegister from './StudentRegisteration/StudentRegister';
 import Library from './BookLibrary/Library';
+import NewsSearch from './NewsSearch/NewssSearch.jsx';
 
 
 import Contact from './Contacts/Contact';
@@ -89,6 +90,10 @@ export default function Navigator() {
             <Route path="/about/contacts" element={<Contact />} />
             <Route path="/about/maps" element={<Map />} />
             <Route path="/about/campus" element={<FaciCampus />} />
+
+            <Route path="/search/:type" element={<NewsSearch />} />
+
+         
             
             
 
