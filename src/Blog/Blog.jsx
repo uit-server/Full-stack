@@ -14,7 +14,7 @@ import { useDispatch } from 'react-redux';
 import axios from '../utils/axiosInstance';
 import dateConvert from '../utils/dateConvert';
 import { insertNewsData } from '../store/newsDataSlice';
-
+import { insertPostsData } from '../store/postsDataSlice';
 
 function Blog() {
 
@@ -27,8 +27,10 @@ function Blog() {
   const { id } = useParams();
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
-  const url = `posts/${id}`;
+  const url = `news/${id}`;
+  const url2 = 'posts/news';
   const dispatch = useDispatch();
+
 
 
   useEffect(() => {
@@ -48,6 +50,16 @@ function Blog() {
         setError(error.message);
         console.error('Error fetching data:', error);
         setLoading(false);
+      });
+
+
+      axios.get(url2)
+      .then(response => {
+        dispatch(insertPostsData(response.data));
+        sessionStorage.setItem('news',JSON.stringify(response.data));
+       
+      })
+      .catch(error => {
       });
 
       
