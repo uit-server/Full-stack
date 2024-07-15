@@ -1,5 +1,5 @@
 import '../Styles/Degree.css';
-import Headline from './Headline';
+import Headline from '../Components/Headline';
 import Navbar from '../Nav/Navbar';
 import Frame4 from './Frame4';
 import Frame6 from './Frame6';
@@ -21,11 +21,13 @@ function Admission(){
     return (
         <>
             <UltiWrapper>
-                    <Headline />
+                    <Headline title='Admission Information and Requirements' MyanText='Admission Information and Requirements'/>
                     
+                    <div className='px-[5%]'>
                     <Frame4 />
                     <Frame6 />
                     <Frame7 />
+                    </div>
                 </UltiWrapper>
 
             

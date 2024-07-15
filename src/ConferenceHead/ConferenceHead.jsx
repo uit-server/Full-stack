@@ -58,7 +58,7 @@ function Conference() {
   return (
       <>
       <UltiWrapper>
-        <div className="flex flex-col gap-x-20px">
+        <div className="flex flex-col gap-x-20px p-[5%]">
       {data.map(
         (item,index) => <Link key={index} to= {`/about/conference/${item.id}`} className="underline text-2xl mb-9 pb-9 decoration-solid " ><span className="hover:hoverMode">{item.name}</span></Link>
         

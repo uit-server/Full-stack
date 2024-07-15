@@ -106,7 +106,7 @@ function Faculty(){
     
     return (
         <div className='faculty overflow-x-hidden' style={{background:'#fff'}}>
-            <UltiWrapper>
+            <UltiWrapper className='p-[5%]'>
                     <Headline header={header} headerMobile={headerMobile} />
                     <Vision />
                     <Major numText={numText} desktopLeftRow={desktopLeftRow} desktopRightRow={desktopRightRow} mobile={mobile} faculty={faculty} infoText={infoText}/>

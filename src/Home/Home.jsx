@@ -35,7 +35,11 @@ function Home() {
 
   return (
     <>
+<<<<<<< HEAD
+    <UltiWrapper className='p-[5%]'>
+=======
     <Navbar/>
+>>>>>>> upstream/master
     <Heading name="The University of Information Technology" />
     <WhoWeAre/>
     <Description/>

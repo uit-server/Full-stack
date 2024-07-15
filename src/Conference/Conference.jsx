@@ -63,8 +63,10 @@ function Conference() {
   return (
       <>
      <UltiWrapper>
+     <div className='p-[5%]'>
      <Heading />
-      <BodyPart />
+     <BodyPart />
+     </div>
      </UltiWrapper>
       
       

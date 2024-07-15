@@ -45,6 +45,10 @@ function Item1(){
             {
               text: 'Email Service',
               link: '/about/facilities-email-service'
+            },
+            {
+              text: 'Alumni',
+              link: '/about/alumni' 
             }
           ]
           

@@ -17,7 +17,7 @@ function App() {
   
   return (
       <>
-          <UltiWrapper>
+          <UltiWrapper className='p-[5%]'>
           
           <Headline />
           <Image />

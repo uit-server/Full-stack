@@ -22,7 +22,7 @@ function Research(){
 
     return (
         <div className='research overflow-x-hidden' style={{background:'#fff'}}>
-            <UltiWrapper>
+            <UltiWrapper className='p-[5%]'>
                     <Headline header={header} headerMobile={headerMobile} />
                     <GoalMission />
                     <PaginatedItems />

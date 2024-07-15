@@ -9,13 +9,14 @@ import { store } from './store/Store';
 import { Provider } from 'react-redux';
 import DDMLab from './subLInks/Labs/DDM/DDMLab.jsx';
 import Home from './Home/Home.jsx';
+import CarouselSlider from './Components/CarouselSlider.jsx';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   
     <Provider store={store}>
     <Router>
-      <Navigator />
+      <CarouselSlider />
 
     </Router>
     </Provider>

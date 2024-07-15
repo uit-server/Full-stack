@@ -5,7 +5,7 @@ import React,{ useState } from 'react';
 import { useSelector } from 'react-redux';
 import { motion } from "framer-motion";
 import UltiWrapper from '../Components/UltiWrapper';
-import Headline from './Headline';
+import Headline from './../Components/Headline';
 import PdfView from './PdfView';
 
     
@@ -16,8 +16,10 @@ function SixYearJourney() {
 return (
   <>
     <UltiWrapper>
-      <Headline/>
+      <Headline title='Six Year Journey' MyanText='ခြောက်နှစ်တာခရီးစဥ်'/>
+      <div className='p-[5%]'>
       <PdfView file={pdfFile} />
+      </div>
     </UltiWrapper>
   </>
 )

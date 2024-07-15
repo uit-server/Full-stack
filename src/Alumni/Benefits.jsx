@@ -7,15 +7,15 @@ import { Link } from 'react-router-dom';
 import {Network,Vision,HPC,DDM,ML} from '../Images/Images';
 
 const itemsData = [
-  { id: 1, name: 'Network Systems (NETsys) Lab', img: Network},
-  { id: 2, name: 'Vision and Learning Lab', img: Vision },
-  { id: 3, name: 'High Performance Computing (HPC) Lab', img: HPC },
+  { id: 1, name: 'Events and Reunions', img: Network, note: 'Reunion of alumni and events'},
+  { id: 2, name: 'Career Services', img: Vision , note: 'Access personalized career advice, job search assistance, and professional development resources'},
+  { id: 3, name: 'Networking', img: HPC, note: 'Join exclusive events, connect with fellow alumni, and expand your professional network.' },
   { id: 4, name: 'Data Distribution Management (DDM) Lab', img: DDM },
   { id: 5, name: 'Deep Learning and Information Systems Lab', img: ML },
   
 ];
 
-const PaginatedItems = () => {
+const Benefits = () => {
   const [currentPage, setCurrentPage] = useState(0);
   const itemsPerPage = 3;
 
@@ -28,19 +28,23 @@ const PaginatedItems = () => {
   const pageCount = Math.ceil(itemsData.length / itemsPerPage);
 
   return (
-    <div className='pt-[56px] pb-[72px] flex flex-col gap-[56px]'>
-      <h1 className="text-[#1c1d20] text-[16px] md:text-[32px]">Research Labs</h1>
-      <ul className='flex flex-row xl:grid xl:grid-cols-3 xl:gap-x-[30px] gap-x-[15px] justify-center w-full items-center flex-wrap xl:gap-y-[20px] gap-y-[30px]'>
+    <div className='px-[5%] pt-[56px] pb-[72px] flex flex-col gap-[56px] bg-[#f0f8ff] rounded-[30px] '>
+      <h1 className="text-[#1c1d20] text-[16px] md:text-[32px]">Benefits and Opportunities</h1>
+      <ul className='flex flex-row xl:grid xl:grid-cols-3 xl:gap-x-[50px] gap-x-[15px] justify-center w-full items-center flex-wrap xl:gap-y-[20px] gap-y-[30px] xs:justify-start'>
         {currentItems.map((item) => (
-          <li key={item.id}>
+          <li key={item.id} className='h-[488px]'>
             <div className='flex flex-col gap-[20px] justify-center items-center sm:justify-start sm:items-start'>
               <div className='2xl:w-[520px] xl:w-[380px] xl:h-[380px] w-[300px] h-[350px] rounded-[32px]' style={{backgroundImage: `url(${item.img})`, backgroundSize: 'cover', aspectRatio: 16/9, objectFit: 'cover', backgroundPosition: 'center center'}}></div>
               <div className='flex flex-col gap-[8px] '>
                 
                   
                 <h5 className='text-[#1c1d20] text-[20px] ps-[5px]'>
-                <Link to= {`/research/ddm-lab`} className="hover:hoverMode text-2xl" >{item.name}</Link>
+                    <Link to= {`/research/ddm-lab`} className="hover:hoverMode text-2xl" >{item.name}</Link>
                 </h5>
+                <div className='flex gap-[10px] '>
+                    <div><div className='mt-2 w-[6px] h-[6px] bg-[#3798a6] rounded-full'></div></div>
+                    <p className='text-[16px] opacity-50 xl:w-[500px] w-[250px]'>{item.note}</p>
+                </div>
               </div>
             </div>
           </li>
@@ -63,7 +67,7 @@ const PaginatedItems = () => {
   );
 };
 
-export default PaginatedItems;
+export default Benefits;
 
 const StyledPaginate = styled(ReactPaginate)`
   display: flex;
