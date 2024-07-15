@@ -19,7 +19,7 @@ const PaginatedItems = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const dispatch = useDispatch();
   
-  const url = 'posts';
+  const url = 'posts/all';
 
   useEffect(() => {
     axios.get(url)
@@ -71,7 +71,7 @@ const PaginatedItems = () => {
   }
 
   return (
-    <div className=' pb-14  flex flex-col gap-[56px]'>
+    <div className=' pb-14  flex flex-col gap-[56px] '>
       <ul className='grid md:grid-cols-2 grid-cols-1 lg:grid-cols-3 lg:gap-x-5  sm:justify-between  w-full sm:gap-[20px] gap-[32px]'>
         {currentItems.map((item) => (
           <li key={item.id}>

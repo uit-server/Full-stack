@@ -4,6 +4,7 @@ import RoleReducer from './RoleSlice';
 import apiDataReducer from './apiDataSlice';
 import newsDataReducer from './newsDataSlice';
 import postsDataReducer from './postsDataSlice';
+import searchReducer from './searchSlice';
 
 export const store = configureStore({
   reducer: {
@@ -11,6 +12,7 @@ export const store = configureStore({
     role: RoleReducer,
     data: apiDataReducer,
     blog: newsDataReducer,
-    post: postsDataReducer
+    post: postsDataReducer,
+    search: searchReducer
   },
 })

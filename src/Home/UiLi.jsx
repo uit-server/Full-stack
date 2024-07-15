@@ -1,21 +1,19 @@
 import React from 'react'
 import { motion } from 'framer-motion';
-import styled from 'styled-components';
-import { Link } from 'react-router-dom';
-const Div = styled.div`
+import { useNavigate } from 'react-router-dom';
 
-`;
+function UiLi({value="Hello",des, img}) {
 
-function UiLi({value="Hello",des}) {
+  let navigate = useNavigate()
   return (
     <div className='border-b-4 w-full overflow-hidden'>
     <motion.div initial={{x:-150}} whileHover={{x:0,opacity:0.6}} className='flex py-[10px] items-center justify-start'>
         <div className='flex flex-row'>
-          <Div className="aspect-square h-[120px] rounded-[32px] w-[140px] bg-[#d9d9d9]"></Div>
+          <img className="h-[120px] w-[140px] " src={img}/>
         </div>
-          <Link reloadDocument to={des} >
-            <p className='text-[80px] ps-[50px] pt-[20px]'>{value}</p>
-          </Link>
+          <div onClick={() => navigate(des)} >
+            <p className='text-[80px] ps-[20px] pt-[20px]'>{value}</p>
+          </div>
     </motion.div>
     </div>
   )
