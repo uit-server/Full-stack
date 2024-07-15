@@ -1,5 +1,4 @@
 
-import Heading from './Heading';
 import useResize from '../utils/useResize';
 import React,{ useState } from 'react';
 
@@ -13,34 +12,15 @@ import Navbar from '../Nav/Navbar';
 import Footer from '../Components/Footer';
 import AcademicProgram from './AcademicProgram';
 import Speech from './Speech';
+import CarouselSlider from './CarouselSlider';
 
 
     
 function Home() {
-
-
-  const language = useSelector((state) => state.language.value);
-
-  const title = "Home";
-  const MyanText = "အိမ်";
-
-  const display = (language === "EN") ? title : MyanText;
-  const windowWidth = useResize(title);
-
-  const [dataFromNav, setDataFromNav] = useState(true);
-
-    const handleDataFromNav = (data) => {
-        setDataFromNav(data);
-    };
-
   return (
     <>
-<<<<<<< HEAD
-    <UltiWrapper className='p-[5%]'>
-=======
     <Navbar/>
->>>>>>> upstream/master
-    <Heading name="The University of Information Technology" />
+    <CarouselSlider/>
     <WhoWeAre/>
     <Description/>
     <AcademicProgram/>
