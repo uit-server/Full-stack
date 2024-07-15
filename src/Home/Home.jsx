@@ -31,7 +31,7 @@ function Home() {
 
   return (
     <>
-    <UltiWrapper>
+    <UltiWrapper className='p-[5%]'>
     <Heading name="The University of Information Technology" />
     <WhoWeAre/>
     <Innovation/>

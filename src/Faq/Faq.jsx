@@ -64,7 +64,7 @@ function Faq() {
   ]
   return (
     <>
-     <UltiWrapper>
+     <UltiWrapper className='p-[5%]'>
       
       <div className="py-14 lg:py-[72px] grid grid-cols-1 lg:grid-cols-[0.5fr_1fr] gap-10 lg:gap-[157px]">
         

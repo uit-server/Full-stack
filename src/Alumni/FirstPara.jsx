@@ -1,9 +1,9 @@
 export default function FirstPara() {
     return (
-        <div className="py-[72px]">
-            <div className="grid grid-cols-2 items-center">
-                <div className="flex flex-col gap-[30px] px-10">
-                    <h3 className="text-[48px]">Our Community</h3>
+        <div className="pt-[72px] ">
+            <div className="xl:grid xl:grid-cols-2 items-center">
+                <div className="flex flex-col gap-[30px] pr-10">
+                    <h3 className="xl:text-[48px] text-[35px]">Our Community</h3>
                     <p className="text-[18px] text-justify leading-[27px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore aut neque dolorem deleniti provident. Dolores cumque, ea hic similique dolor ex beatae architecto at, officiis nulla aut autem. Quaerat, doloremque?Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore aut neque dolorem deleniti provident. Dolores cumque, ea hic similique dolor ex beatae architecto at, officiis nulla aut autem. Quaerat, doloremque?</p>
                 </div>
                 <div className="py-[72px]">

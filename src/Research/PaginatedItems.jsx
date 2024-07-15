@@ -30,7 +30,7 @@ const PaginatedItems = () => {
   return (
     <div className='pt-[56px] pb-[72px] flex flex-col gap-[56px]'>
       <h1 className="text-[#1c1d20] text-[16px] md:text-[32px]">Research Labs</h1>
-      <ul className='flex flex-row xl:grid xl:grid-cols-3 xl:gap-x-[20px] gap-x-[15px] justify-center w-full items-center flex-wrap xl:gap-y-[20px] gap-y-[30px]'>
+      <ul className='flex flex-row xl:grid xl:grid-cols-3 xl:gap-x-[30px] gap-x-[15px] justify-center w-full items-center flex-wrap xl:gap-y-[20px] gap-y-[30px]'>
         {currentItems.map((item) => (
           <li key={item.id}>
             <div className='flex flex-col gap-[20px] justify-center items-center sm:justify-start sm:items-start'>

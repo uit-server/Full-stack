@@ -5,7 +5,7 @@ import React,{ useState } from 'react';
 import { useSelector } from 'react-redux';
 import { motion } from "framer-motion";
 import UltiWrapper from '../Components/UltiWrapper';
-import Headline from './Headline';
+import Headline from '../Components/Headline';
 import PdfView from './PdfView';
 
     
@@ -16,8 +16,10 @@ function AcademicRule() {
 return (
   <>
     <UltiWrapper>
-      <Headline/>
+      <Headline title='Academic Rules' MyanText='ပညာရေးဆိုင်ရာ စည်းမျဥ်းစည်းကမ်းများ'/>
+      <div className='px-[5%]'>
       <PdfView file={pdfFile} />
+      </div>
     </UltiWrapper>
   </>
 )

@@ -5,6 +5,8 @@ import React,{ useState } from 'react';
 import { useSelector } from 'react-redux';
 import { motion } from "framer-motion";
 import sixyearjourney from '../Images/BookLibrary/photo/sixyearjourney.jpg';
+import Img from '../Images/BookLibrary/photo/library1.jpg'
+
 
     
 function Headline() {
@@ -21,25 +23,29 @@ function Headline() {
      
 
   
-     <motion.div initial={{ opacity: 0}} animate={{ opacity: 1}} exit={{ opacity: 0 }} className='w-[120%] ms-[-5.6%] mt-[-5.6%] ' style={{backgroundImage: `url(${sixyearjourney})`,backgroundSize: 'cover',backgroundRepeat:'no-repeat',backgroundPosition: 'center'}}>
-   <div className="hide hero ps-14 py-13  lg:py-[4rem]">
+     <motion.div initial={{ opacity: 0}} animate={{ opacity: 1}} exit={{ opacity: 0 }} className='relative' >
+      <div className='relative'>
+        <img src={sixyearjourney} className='lg:h-[40vh] h-[30vh]  w-full'/>
+        <div className='absolute z-3 bg-gradient-to-bottom w-full lg:h-[40vh] h-[30vh] top-0 '></div>
+      </div>
+   <div className="hide hero ps-14 absolute top-[50%]">
 <span className="overflow-hidden fade">
 <AnimatedText
      once
      text={display}
      el="h1"
-     className="lg:text-7xl text-6xl text-white font-medium"
+     className="lg:text-7xl text-6xl text-white opacity-90 font-medium"
      language={language}
    />
 </span>
 </div>
-<div className="sm:hidden hero ps-4 pt-[5rem] lg:pt-72">
+<div className="sm:hidden hero ps-4 absolute top-[20%]">
   <span className="overflow-hidden fade">
    <AnimatedText
   once
   text={display}
   el="h1"
-  className="text-5xl font-medium"
+  className="text-4xl font-medium text-white opacity-90"
   language={language}
 />
 

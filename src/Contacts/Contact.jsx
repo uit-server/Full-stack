@@ -6,7 +6,7 @@ import item1 from '../Images/phoneIcon.svg';
 import item2 from '../Images/mailIcon.svg';
 import item3 from '../Images/locationIcon.svg';
 import item4 from '../Images/busIcon.svg';
-import Headline from './Headline';
+import Headline from './../Components/Headline';
 import { AnimationButton } from '../Components/Footer';
 import emailjs from "@emailjs/browser";
 import { AnimatePresence } from 'framer-motion';
@@ -98,12 +98,13 @@ function Contact() {
   };
     return (
       <>
-        <UltiWrapper>
+        <UltiWrapper className=''>
         {/* <div className="h-[95px] lg:h-[192px] ms-[-5.5%] w-[112%] mt-[-5.6%] border shadow-sm bg-his-bg bg-cover opacity-85">
           <h1 className='p-[4%] text-white text-4xl lg:text-5xl'>Contact Us</h1>
         </div> */}
-        <Headline/>
+        <Headline title='Contact Us' MyanText='အဆက်အသွယ်'/>
 
+        <div className='p-[5%]'>
         <div className='flex flex-col lg:flex-row w-full max-lg:items-center mt-[80px] mb-[40px]'>
             <div className='w-[65%] max-md:mb-[100px]'>
             <form onSubmit={handleSubmit} className="space-y-6 bg-[#f0f8ff] rounded-3xl max-w-[700px] p-[5%]" ref={form}>
@@ -152,6 +153,7 @@ function Contact() {
                   </li>
                 ))}
             </ul>
+        </div>
         </div>
         </UltiWrapper>
       </>

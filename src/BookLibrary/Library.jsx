@@ -26,12 +26,14 @@ function Library() {
   return (
     <>
      <UltiWrapper>
-     <Heading name="Step inside and let your study begin - at our library"/>
-      <Hero />
-      <MainFocus />
-      <RoleDiffer />
-      <ImgPartDiffer />
-      <ImgPartDiffer2 />
+        <div className='p-[5%]'>
+          <Heading name="Step inside and let your study begin - at our library"/>
+          <Hero />
+          <MainFocus />
+          <RoleDiffer />
+          <ImgPartDiffer />
+          <ImgPartDiffer2 />
+        </div>
      </UltiWrapper>
       
 

@@ -28,9 +28,9 @@ const Benefits = () => {
   const pageCount = Math.ceil(itemsData.length / itemsPerPage);
 
   return (
-    <div className='px-[5%] pt-[56px] pb-[72px] flex flex-col gap-[56px] bg-[#f0f8ff] rounded-[30px] w-[110.5%] ml-[-5%]'>
+    <div className='px-[5%] pt-[56px] pb-[72px] flex flex-col gap-[56px] bg-[#f0f8ff] rounded-[30px] '>
       <h1 className="text-[#1c1d20] text-[16px] md:text-[32px]">Benefits and Opportunities</h1>
-      <ul className='flex flex-row xl:grid xl:grid-cols-3 xl:gap-x-[20px] gap-x-[15px] justify-center w-full items-center flex-wrap xl:gap-y-[20px] gap-y-[30px] xs:justify-start'>
+      <ul className='flex flex-row xl:grid xl:grid-cols-3 xl:gap-x-[50px] gap-x-[15px] justify-center w-full items-center flex-wrap xl:gap-y-[20px] gap-y-[30px] xs:justify-start'>
         {currentItems.map((item) => (
           <li key={item.id} className='h-[488px]'>
             <div className='flex flex-col gap-[20px] justify-center items-center sm:justify-start sm:items-start'>

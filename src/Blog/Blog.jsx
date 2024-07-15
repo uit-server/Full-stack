@@ -82,10 +82,12 @@ const heading = data.title;
   return (
       <>
       <UltiWrapper>
-      <Heading name={heading} />
-      <Idendity title={title} name={name} date={date} />
-      <MajorImg Img={Img}/>
-      <BodyPart />
+        <div className='p-[5%]'>
+          <Heading name={heading} />
+          <Idendity title={title} name={name} date={date} />
+          <MajorImg Img={Img}/>
+          <BodyPart />
+        </div>
       </UltiWrapper>
           
       

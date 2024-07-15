@@ -18,6 +18,7 @@ module.exports = {
       },
       backgroundImage:{
         'his-bg': "url('/src/Images/his-bg.jpg')",
+        'gradient-to-bottom': 'linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1))',
       }
     }
   },

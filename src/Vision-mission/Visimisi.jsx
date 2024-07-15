@@ -19,7 +19,7 @@ function Visimisi() {
   // const display = (language == "EN") ? title : MyanText;
 
   return (
-    <UltiWrapper>
+    <UltiWrapper className='p-[5%]'>
       <ImageHeader name="Vision and Mission" />
       <BodyPart />
       

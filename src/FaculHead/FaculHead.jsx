@@ -22,7 +22,7 @@ function Conference() {
   
   return (
       <div className='FaculHead '>
-      <UltiWrapper>
+      <UltiWrapper className='p-[5%]'>
         <FaculTitle/>
         <FaculCon/>
         <DepartmentTitle/>

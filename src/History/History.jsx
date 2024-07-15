@@ -10,7 +10,7 @@ import item2 from '../Images/graduateIcon.svg';
 import item3 from '../Images/buildingIcon.svg';
 import toward from '../Images/towards.svg';
 import UltiWrapper from '../Components/UltiWrapper';
-import Headline from './Headline';
+import Headline from './../Components/Headline';
 import uitlogo from '../Images/uitlogo.jpg'
     
 function History() {
@@ -39,8 +39,9 @@ function History() {
   return(
     <>
       <UltiWrapper>
-        <Headline />
+        <Headline title='History' MyanText='သမိုင်းကြောင်း'/>
         
+          <div className=''>
           <div className='flex flex-col md:grid md:grid-cols-2 p-[4%]'>
             <div className='w-full flex justify-center'>
             <img src={arrow} alt="" className='w-[350px] md:w-[450px]'/>
@@ -61,7 +62,7 @@ function History() {
             <img src={toward} alt="" className='w-full max-1052:hidden block' />
           </div>
           
-          <ul className='flex flex-row xl:grid xl:grid-cols-3 xl:gap-x-[20px] gap-x-[15px] max-1052:justify-center justify-between w-full items-center flex-wrap xl:gap-y-[20px] gap-y-[30px] mt-10 mb-12'>
+          <ul className='px-10 flex flex-row xl:grid xl:grid-cols-3 xl:gap-x-[20px] gap-x-[15px] max-1052:justify-center justify-between w-full items-center flex-wrap xl:gap-y-[20px] gap-y-[30px] mt-10 mb-12'>
         {itemsData.map((item) => (
           <li key={item.id}>
             <div className='flex flex-col gap-[20px] justify-center items-center sm:justify-start sm:items-start'>
@@ -82,6 +83,7 @@ function History() {
           </li>
         ))}
       </ul>
+          </div>
         
       </UltiWrapper>
     </>
