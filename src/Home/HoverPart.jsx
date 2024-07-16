@@ -23,13 +23,13 @@ function HoverPart() {
 
   
 return (
-  <div className="border-t-[1px] border-[#F5F5F5] bg-[#F0F8FF] flex">
+  <div className="border-t-[1px] border-[#F5F5F5] bg-[#F0F8FF] flex lg:flex-row flex-col">
 
-    <div className='flex-grow w-1/3 my-[72px] ms-[10%] me-[5%] items-center justify-center'>
-      <IMG className='aspect-square rounded-[32px] w-[533px] h-[677px]'/>
+    <div className='flex-grow lg:w-1/3 w-full my-[72px] lg:ms-[10%] lg:me-[5%] items-center justify-center'>
+      <IMG className='aspect-square rounded-[32px] w-[80%] h-[100%] mx-[10%] lg:w-[533px] lg:h-[677px]'/>
     </div>
 
-    <Div className="rounded-[32px] my-[72px] flex-grow w-2/3">
+    <Div className="rounded-[32px] my-[72px] flex-grow lg:w-2/3 w-full">
       <div className="flex flex-col justify-center items-start">
         <UiLi value='Degree' des='/academic/degree' img={degree}/>
         <UiLi value='Collaboration' des='#' img={collab}/>
